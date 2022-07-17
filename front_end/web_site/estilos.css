@@ -1,0 +1,73 @@
+
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
+body{
+  background-color: #f1f1f1;
+  margin: 7% 0 0 0;
+}
+
+header{
+  background-color: gray;
+  display: block;
+  min-height: 80px;
+  max-height: 100px;
+}
+
+h2{
+  font-size:x-large;
+}
+
+.navbar  {
+  
+  background-color: #1688e5;
+  
+}
+
+
+li{
+  display: inline-block;
+  font-size: 100%;
+  width: 10%;
+  padding: 0 5% 0 5%;
+  text-align: justify;
+  color: white;
+}
+
+.nav-link {
+  margin:0 7% 0 7%;
+
+}
+
+
+.seccion_central{
+  width: 60%;
+  background-color: white;
+  
+  display: inline-block;
+  position: absolute;
+  margin: 2% 0 0 2%;
+  border-radius: 7px;
+  padding: 0 1% 5% 1%;
+  
+  
+}
+
+
+
+
+
+.black_font{
+ color: black; 
+}
+
+
+
+@media only screen and (max-width: 450px)
+{
+  body{
+    background-color: pink;
+  }
+}
