@@ -11,7 +11,7 @@ if(isset($_REQUEST['opcion'])){
     switch($opcion){
         case '1':      //crear
             $tutor=new Tutor();
-            $tutor->nombres=$_REQUEST['nombres'];
+            $tutor->nombre=$_REQUEST['nombre'];
             $tutor->correo=$_REQUEST['correo'];
             $tutor->telefono=$_REQUEST['telefono'];
             $resultado='';
@@ -22,7 +22,7 @@ if(isset($_REQUEST['opcion'])){
 
             case '2': 
             $tutor=new Tutor();
-            $tutor->nombres=$_REQUEST['nombres'];
+            $tutor->nombre=$_REQUEST['nombre'];
             $tutor->correo=$_REQUEST['correo'];
             $tutor->telefono=$_REQUEST['telefono'];
             $tutor->id_tutor=$_REQUEST['id_tutor'];
@@ -40,6 +40,7 @@ if(isset($_REQUEST['opcion'])){
                 break;
             default: echo"opcion invalida";
     }
+
 
     header('Location: ../../front_end/vistas/tutor_modal/index.php?resultado='.$resultado);
     exit(); 
