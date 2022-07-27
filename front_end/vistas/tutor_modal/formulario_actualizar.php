@@ -6,6 +6,12 @@ if(isset($_GET['resultado'])){
   }
   
 
+  $tutor=new Tutor();
+  if(isset($_GET['id_tutor']) && isset($_GET['editar'])){
+    $tutor->id_tutor=$_GET['id_tutor'];
+    $tutor=$tutor->leer_id();
+    
+  
 ?>
 
 
@@ -24,43 +30,48 @@ $(document).ready(function(){
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+
       <div class="modal-header">
         <h5 class="modal-title mx-auto" id="exampleModalLabel">Actualizar Tutor</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
       <div class="modal-body">
 
 
-<form class="needs-validation" novalidate action="../../../back_end/controladores/tutor_controlador.php" method="GET" enctype="multipart/form-data">
+        <form class="needs-validation" novalidate action="../../../back_end/controladores/tutor_controlador.php" method="GET" enctype="multipart/form-data">
 
-  <input type="hidden" name="opcion" value="2">
-  <input type="hidden" name="id_tutor" value="<?php echo $tutor->id_tutor?>">
+          <input type="hidden" name="opcion" value="2">
+          <input type="hidden" name="id_tutor" value="<?php echo $tutor->id_tutor?>">
+
 
   <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
-  <div class="form-row"> 
-          <div class="col">
-            <label for="validationCustom01">Nombre(s)</label>
-            <input type="text" class="form-control" id="validationCustom01" name="nombre" required>
+          <div class="form-row"> 
+            <div class="col">
+              <label for="validationCustom01">Nombre</label>
+              <input type="text" class="form-control" id="validationCustom01" name="nombre" value="<?php echo $tutor->nombre?>" required>
+            </div>
+
+            <div class="col">
+              <label for="validationCustom02">Correo</label>
+              <input type="text" class="form-control" id="validationCustom02" name="correo" value="<?php echo $tutor->correo?>" required>
+            </div>
+
+            <div class="col">
+              <label for="validationCustom03">Telefono</label>
+              <input type="text" class="form-control" id="validationCustom02" name="telefono" value="<?php echo $tutor->telefono?>" required>
+            </div>
           </div>
 
-          <div class="col">
-            <label for="validationCustom02">Correo</label>
-            <input type="text" class="form-control" id="validationCustom02" name="correo" required>
-          </div>
-
-          <div class="col">
-            <label for="validationCustom03">Telefono</label>
-            <input type="text" class="form-control" id="validationCustom03" name="telefono" required>
-          </div>
-        </div>
-
-        <br>
+          <br>
+  <!---- <button class="btn btn-primary" type="submit">Submit form</button>------->
+  
       </div>
-
       <div class="modal-footer">
-        <input type="submit" class=" col-8 btn btn-warning mx-auto" value="Actualizar Tutor">
+      <input type="submit" class="col-8 btn btn-success mx-auto" value="Actualizar Tutor">
+
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
@@ -102,3 +113,8 @@ $(document).ready(function(){
 })();
 </script>
 
+  <?php
+
+  }
+
+  ?>

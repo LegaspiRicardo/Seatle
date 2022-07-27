@@ -2,7 +2,7 @@
 
 <?php
 
- echo $_GET['resultado'];
+ //echo $_GET['resultado'];
 
 
 
