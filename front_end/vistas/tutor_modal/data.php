@@ -35,10 +35,10 @@
 
       
 
-      <td> <a href="index.php?id=<?php echo $tutor->id_tutor ?>&editar">Editar </a></td >
+      <td> <a href="index.php?id_tutor=<?php echo $tutor->id_tutor ?>&editar">Editar </a></td >
       
 
-      <td><a href="index.php?id=<?php echo $tutor->id_tutor ?>&borrar">Borrar</a></td>
+      <td><a href="index.php?id_tutor=<?php echo $tutor->id_tutor ?>&borrar">Borrar</a></td>
   </tr>
   
   <?php 
