@@ -44,9 +44,8 @@
 
       
 
-      <td> <a href="index.php?id_horario_profe=<?php echo $horario_profe->id_horario_profe ?>&editar">Editar </a></td >
-      
-
+      <td><a href="index.php?id_horario_profe=<?php echo $horario_profe->id_horario_profe ?>&editar">Editar </a></td >
+  
       <td><a href="index.php?id_horario_profe=<?php echo $horario_profe->id_horario_profe ?>&borrar">Borrar</a></td>
   </tr>
   

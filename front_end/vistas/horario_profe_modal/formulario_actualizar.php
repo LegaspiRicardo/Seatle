@@ -9,12 +9,9 @@ if(isset($_GET['resultado'])){
   $horario_profe=new Horario_profe();
   if(isset($_GET['id_horario_profe']) && isset($_GET['editar'])){
     $horario_profe->id_horario_profe=$_GET['id_horario_profe'];
-    $horario_profe=$horario_profe->leer_id();
+    $horario_profesores=$horario_profe->leer_id();
     
   
-
-  
-
 ?>
 
 
@@ -35,7 +32,7 @@ $(document).ready(function(){
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title mx-auto" id="exampleModalLabel">Actualizar horario Profe</h5>
+        <h5 class="modal-title mx-auto" id="exampleModalLabel">Actualizar Horario</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -50,8 +47,8 @@ $(document).ready(function(){
           <input type="hidden" name="id_horario_profe" value="<?php echo $horario_profe->id_horario_profe?>">
 
 
-  <!------------------------------------Update Form------------------------------------------>
-          
+  <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
+         
   <div class="form-row "> 
 
 <div class="col mx-auto" >
@@ -59,42 +56,46 @@ $(document).ready(function(){
       <select id="validationCustom01" class="form-control" name="id_profesor"  hidden>
 
       
-      <option  value="<?php echo $profesor->id_profesor  ?>"> <?php echo $profesor->id_profesor?> </option>  
+      <option  value="<?php echo $profesor->id_profesor ?>"> <?php echo $horario_profe->id_profesor?> </option>  
 
       </select> 
   </div>
-
   
-
-
 </div>
+
+
 
 <div class="form-row mb-3"> 
 
   <div class="col mx-auto">
 
-      <label for="validationCustom07">Profesor</label>
-        <input id="validationCustom01" class="form-control"  name="id_profesor" required>
-          <?php
-            foreach($profesores as $profesor){
-          ?>
-            <option value="<?php echo $horario_profe->id_profesor?>" <?php  echo ($profesor->id_profesor==$horario_profe->id_profesor) ? "selected" : ""  ?> > <?php echo $profesor->nombres . " ". $profesor->apellidos ?></option>
+      <label for="validationCustom07" >Profesor</label>
+      <select id="validationCustom01"  class="form-control"  name="id_profesor" required>
+          <?php 
+            foreach($profesores as $profesor){ 
+            ?>
+            <option value="<?php echo $profesor->id_profesor?>" <?php echo ($profesor->id_profesor==$horario_profe->id_profesor) ? "selected" : "" ?> > <?php echo $profesor->nombres . " " . $profesor->apellidos ?> </option>
+
           <?php
               }
-          ?>
+            ?>
 
-            </input> 
+          </select> 
     </div>
 
-    
 
 
+
+    <div class="col mx-auto" >
+
+    <label for="validationCustom02">Notas</label>
+           <input type="text" class="form-control" id="validationCustom02" name="notas" value="<?php echo $horario_profe->notas?>" required>
+
+      
   </div>
 
 
-
-
-
+  </div>
 
 
           <br>
@@ -102,10 +103,10 @@ $(document).ready(function(){
   
       </div>
       <div class="modal-footer">
-      <input type="submit" class="col-8 btn btn-success mx-auto" value="Actualizar Tutor">
+      <input type="submit" class="col-8 btn btn-success mx-auto" value="Actualizar Horario">
 
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+       
       </div>
 
       </form>
