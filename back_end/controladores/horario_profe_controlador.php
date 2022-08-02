@@ -25,8 +25,8 @@ if(isset($_REQUEST['opcion'])){
             case '2': 
             $horario_profe=new Horario_profe();
             $horario_profe->id_profesor=$_REQUEST['id_profesor'];
-            $horario_profe->notas=$_REQUEST['notas'];
             $horario_profe->id_horario_profe=$_REQUEST['id_horario_profe'];
+            $horario_profe->notas=$_REQUEST['notas'];
             $resultado='';
             echo $horario_profe->actualizar();
                 break;  //Actualizar

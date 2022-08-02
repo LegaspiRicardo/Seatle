@@ -65,12 +65,22 @@
         include_once('formulario_crear.php');
         include_once('formulario_actualizar.php');
         include_once('formulario_borrar.php');
-        include_once ('data.php');  
+        
       ?>
       
      
   
+      <div class="table">
+      <br>
+
+      <?php  
+      include_once ('data.php');
       
+      ?>
+
+
+      
+      </div>
 
 
 </div>

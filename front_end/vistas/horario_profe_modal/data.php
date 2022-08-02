@@ -32,7 +32,7 @@
       <td><?php $profesor=new Profesor();
               $profesor->id_profesor=$horario_profe->id_profesor;
               $prof=$profesor->leer_id();
-              echo $prof->nombres." ".$prof->apellidos. " ";
+              echo $prof->id_profesor." ".$prof->nombres." ".$prof->apellidos. " ";
         ?>
       </td>
 

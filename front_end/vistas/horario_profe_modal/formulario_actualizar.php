@@ -70,16 +70,12 @@ $(document).ready(function(){
       <label for="validationCustom07" >Profesor</label>
       <select id="validationCustom01"  class="form-control"  name="id_profesor"  required>
 
-<?php
+          <?php
+
             foreach($profesores as $horario_profe){
           ?>
 
-<option value="<?php echo $horario_profe->id_profesor ?>" 
-<?php echo ($profesor->id_profesor==$horario_profe->id_profesor) ? "selected" : "" ?>
- >   
-<?php  echo $horario_profe->nombres .  " " . $horario_profe->apellidos ?>
-</option>
-
+<option value="<?php echo $horario_profe->id_profesor?>" <?php  echo ($profesor->id_profesor==$horario_profesores->id_profesor) ? "selected" : ""  ?> > <?php echo $horario_profe->nombres . " ". $horario_profe->apellidos ?></option>
 
 
           <?php
@@ -95,7 +91,7 @@ $(document).ready(function(){
     <div class="col mx-auto" >
 
     <label for="validationCustom02">Notas</label>
-           <input type="text" class="form-control" id="validationCustom02" name="notas" value="<?php echo $horario_profe->notas?>" required> 
+           <input type="text" class="form-control" id="validationCustom02" name="notas" value="<?php echo $horario_profesores->notas?>" required> 
 
       
   </div>
