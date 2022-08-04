@@ -18,6 +18,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
+
+body{}
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -59,19 +62,23 @@
 
 
 
-<div class="table col-xs-10 mx-auto">
+<div class="col-10 ml-3 mb-3" >
       <br>
 
       <?php  
       include_once('formulario_crear.php');
       include_once('formulario_actualizar.php');
       include_once('formulario_borrar.php');
-      include_once 'data.php';      
+      
       ?>  
  
     </div>
      
-  
+  <div class="table col-xs-10 mx-auto">
+  <?php 
+include_once 'data.php';      
+?>  
+  </div>
       
 
 

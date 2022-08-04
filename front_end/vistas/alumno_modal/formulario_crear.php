@@ -16,7 +16,9 @@
 Registrar Alumno
 </button>
 
-
+<button type="text" class="btn btn-info ml-3">
+Buscar Alumno
+</button>
 <!-- <script>
 $(document).ready(function(){
 $("#exampleModal1").modal('show');
@@ -24,11 +26,26 @@ $("#exampleModal1").modal('show');
 </script> -->
 
 
+<!-- Styles for the inputs  -->
+<style>
+  .inputForm{
+  border: none;
+  border-bottom: 1px solid #ddd;
+  }
+
+  .inputForm:focus{
+    background-color: rgb(121, 172, 210, 0.2);
+  }
+
+</style>
+
+
+
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-
       <div class="modal-header">
        <h5 class="modal-title mx-auto" id="exampleModalLabel">Registrar en Alumnos</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -41,48 +58,64 @@ $("#exampleModal1").modal('show');
 
         <input type="hidden" name="opcion" value="1">
 
-        <!------------------------------------Nombres, Apellidos------------------------------------------>
+        <!------------------------------------Nombres, Sexo------------------------------------------>
         <div class="form-row"> 
           <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" required>
             <label for="validationCustom01">Nombre(s)</label>
-            <input type="text" class="form-control" id="validationCustom01" name="nombres" required>
           </div>
 
           <div class="col">
-            <label for="validationCustom02">Apellido Paterno</label>
             <input type="text" class="form-control" id="validationCustom02" name="apellido_pat" required>
+            <label for="validationCustom02">Sexo</label>
+          </div>
+
+        </div>
+
+
+        <div class="form-row"> 
+          <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" required>
+            <label for="validationCustom01">Apellido Paterno</label>
           </div>
 
           <div class="col">
-            <label for="validationCustom03">Apellido Materno</label>
-            <input type="text" class="form-control" id="validationCustom03" name="apellido_mat" required>
+            <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" required>
+            <label for="validationCustom02">Apellido Materno</label>
           </div>
+
         </div>
+       
+
+<br>
+<br>
+
+
 
      <!------------------------------------Domicilio------------------------------------------>
    
 
         <div class="form-row"> 
           <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom01" name="calle" required>
             <label for="validationCustom01">Calle</label>
-            <input type="text" class="form-control" id="validationCustom01" name="calle" required>
           </div>
 
           <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom02" name="numero" required>
             <label for="validationCustom02">Numero</label>
-            <input type="text" class="form-control" id="validationCustom02" name="numero" required>
           </div>
         </div>
 
         <div class="form-row"> 
           <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="colonia" required>
             <label for="validationCustom03">Colonia</label>
-            <input type="text" class="form-control" id="validationCustom03" name="colonia" required>
           </div>
           
           <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="cp" required>
             <label for="validationCustom03">Codigo Postal</label>
-            <input type="text" class="form-control" id="validationCustom03" name="cp" required>
           </div>
         </div>
 

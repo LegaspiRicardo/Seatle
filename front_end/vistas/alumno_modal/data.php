@@ -9,9 +9,39 @@
    
     ?>
 
+    <style>
+
+.table{
+        width:90%;
+        max-height:500px;
+        overflow: scroll;
+        border-collapse:collapse;
+        border:1px solid #ddd;
+        border-radius:3px;
+      }
+
+
+th{
+  text-align:left;
+  font-size:1em;
+  color:white;
+  text-shadow:1px 1px black;
+  background-color:rgb(121, 172, 210, 0.8);
+  
+}
+
+  td{
+    text-align:center;
+    border-bottom: 1px solid #dddd;
+  }
+  tr:hover {background-color: rgb(121, 172, 210, 0.4);}
+
+    </style>
 
     
-<table class="table table-active table-striped">
+
+
+<table class="tabla table-active mx-auto">
   <thead>
     <tr>
       <th scope="col">id_alumno</th>
