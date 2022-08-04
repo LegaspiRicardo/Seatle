@@ -70,8 +70,7 @@ class Horario_profe implements CRUD
                 $stmt = $conn->prepare("
                 DELETE FROM horario_profe  
                 WHERE id_horario_profe=:id_horario_profe");
-                $stmt->bindParam(':id_profesor', $this->id_profesor);
-                $stmt->bindParam(':notas', $this->notas);
+                $stmt->bindParam(':id_horario_profe', $this->id_horario_profe);
                 $stmt->execute();
                 $cambios=$stmt->rowCount();
             } 

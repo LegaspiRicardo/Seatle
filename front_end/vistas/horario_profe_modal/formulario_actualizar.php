@@ -75,8 +75,8 @@ $(document).ready(function(){
             foreach($profesores as $horario_profe){
           ?>
 
-<option value="<?php echo $horario_profe->id_profesor?>" <?php  echo ($profesor->id_profesor==$horario_profesores->id_profesor) ? "selected" : ""  ?> > <?php echo $horario_profe->nombres . " ". $horario_profe->apellidos ?></option>
 
+<option value="<?php echo $horario_profe->id_profesor?>" <?php  echo ($profesor->id_profesor==$horario_profesores->id_profesor) ? "selected" : ""  ?> > <?php echo $horario_profe->nombres . " ". $horario_profe->apellidos ?></option>
 
           <?php
               }
