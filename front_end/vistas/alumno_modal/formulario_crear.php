@@ -37,6 +37,8 @@ $("#exampleModal1").modal('show');
     background-color: rgb(121, 172, 210, 0.2);
   }
 
+
+
 </style>
 
 
@@ -58,6 +60,8 @@ $("#exampleModal1").modal('show');
 
         <input type="hidden" name="opcion" value="1">
 
+
+
         <!------------------------------------Nombres, Sexo------------------------------------------>
         <div class="form-row"> 
           <div class="col">
@@ -66,7 +70,11 @@ $("#exampleModal1").modal('show');
           </div>
 
           <div class="col">
-            <input type="text" class="form-control" id="validationCustom02" name="apellido_pat" required>
+           <select name="sexo" class="form-control">
+              <option value="masculino" > Masculino</option>
+              <option value="femenino" >Femenino</option>
+
+           </select>
             <label for="validationCustom02">Sexo</label>
           </div>
 
