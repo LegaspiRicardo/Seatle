@@ -37,6 +37,9 @@ $("#exampleModal1").modal('show');
     background-color: rgb(121, 172, 210, 0.2);
   }
 
+#img_modal{
+  width: 100%;
+}
 
 
 </style>
@@ -49,7 +52,7 @@ $("#exampleModal1").modal('show');
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-       <h5 class="modal-title mx-auto" id="exampleModalLabel">Registrar en Alumnos</h5>
+       <h4 class="modal-title  ml-auto" id="exampleModalLabel">Registro Alumnos</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -63,45 +66,59 @@ $("#exampleModal1").modal('show');
 
 
         <!------------------------------------Nombres, Sexo------------------------------------------>
-        <div class="form-row"> 
-          <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" required>
-            <label for="validationCustom01">Nombre(s)</label>
+        
+<h4>Información personal</h4>
+<div class="row mt-1">
+
+        <div class="col-4  mt-3">  
+          <img src="usuario_masculino.png" alt="" id="img_modal">
+
+          <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" required> 
+ 
+
+        </div>
+        
+        <div class="col-8 ml-auto pt-3">
+          <div class="form-row"> 
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" required>
+              <label for="validationCustom01">Nombre(s)</label>
+            </div>
+
+            <div class="col-3 ">
+            <select name="sexo" class="form-control" >
+                <option value="masculino" > Masculino</option>
+                <option value="femenino" >Femenino</option>
+
+            </select>
+              <label for="validationCustom02">Sexo</label>
+            </div>
+
           </div>
 
-          <div class="col">
-           <select name="sexo" class="form-control">
-              <option value="masculino" > Masculino</option>
-              <option value="femenino" >Femenino</option>
 
-           </select>
-            <label for="validationCustom02">Sexo</label>
+          <div class="form-row"> 
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" required>
+              <label for="validationCustom01">Apellido Paterno</label>
+            </div>
+
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" required>
+              <label for="validationCustom02">Apellido Materno</label>
+            </div>
           </div>
-
         </div>
 
 
-        <div class="form-row"> 
-          <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" required>
-            <label for="validationCustom01">Apellido Paterno</label>
-          </div>
 
-          <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" required>
-            <label for="validationCustom02">Apellido Materno</label>
-          </div>
-
-        </div>
-       
-
+      </div>
 <br>
 <br>
-
-
 
      <!------------------------------------Domicilio------------------------------------------>
    
+<h4>Domicilio</h4>
 
         <div class="form-row"> 
           <div class="col">
