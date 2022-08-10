@@ -1,7 +1,8 @@
 <?php
 
-  include_once '../../../back_end/modelos/horario_profe.php';
-  include_once '../../../back_end/modelos/profesor.php';
+  include_once '../../../back_end/modelos/alumno.php';
+  include_once '../../../back_end/modelos/tutor.php';
+  
 
 ?>
 
@@ -13,10 +14,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Dashboard Template · Bootstrap v4.6</title>
+    <title>Alumno modal</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
+
+body{}
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -54,24 +58,30 @@
 
 
 
-<div class="container-fluid" >
+<div class="container-fluid p-2" >
 
 
 
-<div class="table col-md-10 mx-auto">
+<div class="col-10 ml-3 mb-3" >
       <br>
 
-      <?php   
-        include_once('formulario_crear.php');
-        include_once('formulario_actualizar.php');
-        include_once('formulario_borrar.php');
-        include_once 'data.php';
-      ?>
+      <?php  
+      include_once('formulario_crear.php');
+      include_once('formulario_actualizar.php');
+      include_once('formulario_borrar.php');
       
+      ?>  
+ 
+    </div>
      
-  
+  <div class="table col-xs-10 mx-auto">
+  <?php 
+include_once 'data.php';      
+?>  
+  </div>
+      
 
-      </div>
+
 </div>
 
 
