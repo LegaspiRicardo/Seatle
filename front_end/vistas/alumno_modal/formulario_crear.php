@@ -4,7 +4,9 @@
 
  //echo $_GET['resultado'];
 
-
+ $tutor=new Tutor();
+ $tutores=$tutor->leer_todo();
+ 
 
 
 
@@ -49,6 +51,11 @@ $("#exampleModal1").modal('show');
   padding-bottom:2%;
 }
 
+#img_busqueda{
+  width:10%;
+  margin-left:5%;
+}
+
 h4{
   display:inline;
   padding-right:5%;
@@ -57,12 +64,13 @@ h4{
 
 .styled-select select {
    background: transparent;
-   border: none;
+   border: none;  
 }
 
 .borde_inferior{
   border-top:solid 1px;
   border-color:#c9c9c9;
+  padding-left:0%;
 }
 
 
@@ -105,12 +113,13 @@ h4{
                 <label for="validationCustom01">Nombre(s)</label>
               </div>
 
-              <div class="col-3 ">
+              <div class="col-3 styled-select black rounded ">
                 <select name="sexo" class="form-control" >
-                    <option value="masculino" > Masculino</option>
+                    <option value="masculino"> Masculino</option>
                     <option value="femenino" >Femenino</option>
+                    <option value=" " selected hidden> </option>
                 </select>
-                <label for="validationCustom02">Sexo</label>
+                <label for="validationCustom02" class=" col borde_inferior">Sexo</label>
               </div>
             </div>
 
@@ -125,11 +134,41 @@ h4{
                 <label for="validationCustom02">Apellido Materno</label>
               </div>
             </div>
+
+<div class="form-row">
+<div class="col-6">
+<input type="date" name="fecha_ing"  value="<?php echo date("Y-m-d");?>" id="validationCustom01" class="form-control" hidden>
+</div>
+
+
+            <div class="col-6 ml-auto">
+          <input type="search" name="id_tutor" list="tutors" id="validationCustom01" class="form-control" required>
+         
+          <datalist   id="tutors" >
+          <?php foreach($tutores as $tutor){ ?>
+            <option value="<?php echo $tutor->id_tutor?>"> <?php echo $tutor->nombre  ?></option>
+          <?php
+              }
+            ?>
+            </datalist> 
+            
+          <label for="validationCustom07" >Tutor</label>
+          <img src="buscar.png" alt="Lupa de busqueda" id="img_busqueda">
+        </div>
+    </div>   
           </div>
         </div>
-        <br>
+        
+        
         <br>
         <!------------------------------------Domicilio------------------------------------------>
+        
+        
+        
+        
+        
+        
+        
         <div class="Subtitulo ">
         <h4 >Domicilio</h4>
         <img src="ubicacion.png" class="img_subtitulo" alt="">
@@ -170,16 +209,19 @@ h4{
                 <select name="alberca" class="form-control" >
                     <option value="Sta Tere" >Sta Tere</option>
                     <option value="Zapopan" >Zapopan</option>
+                    <option value=" " selected hidden> </option>
                 </select>
             <label for="validationCustom01" class=" col borde_inferior" >Alberca</label>
           </div>
 
-          <div class="col">
+          <div class="col styled-select black rounded ">
                 <select name="tipo_clase" class="form-control" >
                     <option value="Particular" >Particular </option>
                     <option value="Grupal" >Grupal</option>
                     <option value="Mixto" >Mixto</option>
-                </select><label for="validationCustom02">Tipo de clase</label>
+                    <option value=" " selected hidden> </option>
+                </select>
+              <label for="validationCustom02" class=" col borde_inferior">Tipo de clase</label>
           </div>
         </div>
 
@@ -194,6 +236,17 @@ h4{
             <label for="validationCustom03">Comentarios</label>
           </div>
         </div>
+
+        <div class="form-row">
+        <div class="col-6 styled-select mx-auto black rounded ">
+                <select name="status" class="form-control" >
+                    <option value="Activo" >Activo </option>
+                    <option value="Pausa" >Pausa</option>
+                    <option value="Baja" >Baja</option>
+                    <option value=" " selected hidden> </option>
+                </select>
+              <label for="validationCustom02" class=" col borde_inferior">Estatus</label>
+          </div>
 
         <br>
         </div>
