@@ -135,10 +135,11 @@ h4{
               </div>
             </div>
 
-<div class="form-row">
-<div class="col-6">
-<input type="date" name="fecha_ing"  value="<?php echo date("Y-m-d");?>" id="validationCustom01" class="form-control" hidden>
-</div>
+            <!------------------------------------Fecha Ingreso, Tutor------------------------------------------>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="date" name="fecha_ing"  value="<?php echo date("Y-m-d");?>" id="validationCustom01" class="form-control" hidden>
+          </div>
 
 
             <div class="col-6 ml-auto">
@@ -162,13 +163,6 @@ h4{
         
         <br>
         <!------------------------------------Domicilio------------------------------------------>
-        
-        
-        
-        
-        
-        
-        
         <div class="Subtitulo ">
         <h4 >Domicilio</h4>
         <img src="ubicacion.png" class="img_subtitulo" alt="">
@@ -199,7 +193,7 @@ h4{
 
        <br>
        <br>
-        <!------------------------------------Domicilio------------------------------------------>
+        <!------------------------------------Alberca Info------------------------------------------>
         <div class="Subtitulo ">
         <h4 >Alberca Info</h4>
         <img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
@@ -251,13 +245,13 @@ h4{
         <br>
         </div>
 
+      <br>
 
-
-
+            <!-----------------------------------Modal footer------------------------------------------>
 
         <div class="modal-footer">
           <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Registrar Alumno">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
 
