@@ -149,8 +149,8 @@ $("#exampleModal1").modal('show');
        <br>
         <!------------------------------------Alberca Info------------------------------------------>
         <div class="Subtitulo ">
-        <h4 >Alberca Info</h4>
-        <img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
+          <h4 >Alberca Info</h4>
+          <img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
         </div>
         <div class="form-row"> 
           <div class="col styled-select black rounded ">

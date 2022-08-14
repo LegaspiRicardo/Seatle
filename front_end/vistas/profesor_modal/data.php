@@ -45,8 +45,12 @@ th{
       <th scope="col">Nombre(s)</th>
       <th scope="col">Apellidos</th>
       <th scope="col">Telefono</th>
+      <th scope="col">Fecha Nacimiento</th>
+      <th scope="col">Fecha Ingreso</th>
+      <th scope="col">Alberca</th>
       <th scope="col">Sueldo</th>
       <th scope="col">Estatus</th>
+      <th scope="col">Comentarios</th>
       <th scope="col">Editar</th>
       <th scope="col">Borrar</th>
     </tr>
@@ -61,8 +65,11 @@ th{
       <td><?php echo $profesor->nombres ?></td>
       <td><?php echo $profesor->apellidos ?></td>
       <td><?php echo $profesor->telefono ?></td>
+      <td><?php echo $profesor->fecha_nac ?></td>
+      <td><?php echo $profesor->fecha_ing ?></td>
       <td><?php echo $profesor->sueldo ?></td>
       <td><?php echo $profesor->status ?></td>
+      <td><?php echo $profesor->comentarios ?></td>
 
       
 

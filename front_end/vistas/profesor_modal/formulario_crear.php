@@ -50,7 +50,7 @@ $("#exampleModal1").modal('show');
       <div class="row mt-1">
           <div class="col-4  mt-3">  
             <img src="usuario_masculino.png" alt="" id="img_modal">
-            <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" required> 
+            <input type="date" class="form-control inputForm" id="validationCustom03" name="fecha_nac" required> 
           </div>
           
         <div class="col-8 ml-auto pt-3">
@@ -77,7 +77,14 @@ $("#exampleModal1").modal('show');
               <label for="validationCustom03">Color</label>
               <img src="buscar.png" alt="Lupa de busqueda" id="img_busqueda_profe">
             </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-6 mx-auto">
+              <input type="date" name="fecha_ing"  value="<?php echo date("Y-m-d");?>" id="validationCustom01" class="form-control inputForm" hidden>
             </div>
+          </div>
+
         </div> 
       </div>          
         <!------------------------------------Alberca Info------------------------------------------>
@@ -87,25 +94,42 @@ $("#exampleModal1").modal('show');
           <img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
         </div>
 
-        <div class="form-row">
-          <div class="col">
+      <div class="row mt-1">
+          <div class="col-6 styled-select black rounded ">
+            <select name="alberca" class="form-control" >
+                <option value="Sta Tere" >Sta Tere</option>
+                <option value="Zapopan" >Zapopan</option>
+                <option value=" " selected hidden> </option>
+            </select>
+              <label for="validationCustom01" class=" col borde_inferior" >Alberca</label>
+          </div>
+
+
+          <div class="col-6 styled-select mx-auto black rounded ">
+            <select name="status" class="form-control" >
+                <option value="Activo" >Activo </option>
+                <option value="Baja" >Baja</option>
+                <option value=" " selected hidden> </option>
+            </select>
+              <label for="validationCustom02" class=" col borde_inferior">Estatus</label>
+          </div>
+        </div>       
+
+
+        <div class="row">
+          <div class="col-6">
             <input type="text" class="form-control inputForm" id="validationCustom01" name="sueldo" required>
             <label for="validationCustom01">Sueldo</label>
           </div>
 
-          <div class="col styled-select mx-auto black rounded ">
-                <select name="status" class="form-control" >
-                    <option value="Activo" >Activo </option>
-                    <option value="Baja" >Baja</option>
-                    <option value=" " selected hidden> </option>
-                </select>
-              <label for="validationCustom02" class=" col borde_inferior">Estatus</label>
+          <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios">
+            <label for="validationCustom03">Comentarios</label>
           </div>
-
         </div>
-
+ 
+        </div>
        <br>
-      </div>
 
       <div class="modal-footer">
         <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Registrar Profesor">

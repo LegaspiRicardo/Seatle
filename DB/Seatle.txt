@@ -36,8 +36,12 @@ id_profesor INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 nombres  VARCHAR(60) NOT NULL,
 apellidos  VARCHAR(60) NOT NULL,
 telefono  VARCHAR(20) NOT NULL,
+fecha_nac DATE NOT NULL,
+fecha_ing DATE NOT NULL,
+alberca  VARCHAR(60) NOT NULL,
 sueldo  VARCHAR(20),
-status VARCHAR(20));
+status VARCHAR(20),
+comentarios  VARCHAR(250));
 
 CREATE TABLE horario_profe (
 id_profesor INT NOT NULL,

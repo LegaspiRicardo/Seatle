@@ -8,8 +8,12 @@ class Profesor implements CRUD
     public $nombres;
     public $apellidos;
     public $telefono;
+    public $fecha_nac;
+    public $fecha_ing;
+    public $alberca;
     public $sueldo;
     public $status;
+    public $comentarios;
 
     function crear()
     {
@@ -17,14 +21,18 @@ class Profesor implements CRUD
                 $c=new Conexion();
                 $conn=$c->getConection();
                 $stmt = $conn->prepare("
-                    INSERT INTO profesor (nombres, apellidos, telefono, sueldo, status)
-                    VALUES (:nombres, :apellidos, :telefono, :sueldo, :status)");
+                    INSERT INTO profesor (nombres, apellidos, telefono, fecha_nac, fecha_ing, alberca, sueldo, status, comentarios)
+                    VALUES (:nombres, :apellidos, :telefono, :fecha_nac, :fecha_ing, :alberca, :sueldo, :status, :comentarios)");
                 
                 $stmt->bindParam(':nombres', $this->nombres);
                 $stmt->bindParam(':apellidos', $this->apellidos);
                 $stmt->bindParam(':telefono', $this->telefono);
+                $stmt->bindParam(':fecha_nac', $this->fecha_nac);
+                $stmt->bindParam(':fecha_ing', $this->fecha_ing);
+                $stmt->bindParam(':alberca', $this->alberca);
                 $stmt->bindParam(':sueldo', $this->sueldo);
                 $stmt->bindParam(':status',$this->status);
+                $stmt->bindParam(':comentarios', $this->comentarios);
                 $stmt->execute();
                 return $stmt->rowCount();
             }
@@ -46,14 +54,18 @@ class Profesor implements CRUD
                 $conn=$c->getConection();
 
                 $stmt = $conn->prepare("
-                UPDATE profesor SET nombres=:nombres, apellidos=:apellidos, telefono=:telefono, sueldo=:sueldo, status=:status  
+                UPDATE profesor SET nombres=:nombres, apellidos=:apellidos, telefono=:telefono, fecha_nac=:fecha_nac, fecha_ing=:fecha_ing, alberca=:alberca, sueldo=:sueldo, status=:status, comentarios=:comentarios  
                 WHERE id_profesor=:id_profesor");
 
                 $stmt->bindParam(':nombres', $this->nombres);
                 $stmt->bindParam(':apellidos', $this->apellidos);
                 $stmt->bindParam(':telefono', $this->telefono);
+                $stmt->bindParam(':fecha_nac', $this->fecha_nac);
+                $stmt->bindParam(':fecha_ing', $this->fecha_ing);
+                $stmt->bindParam(':alberca', $this->alberca);
                 $stmt->bindParam(':sueldo', $this->sueldo);
                 $stmt->bindParam(':status',$this->status);
+                $stmt->bindParam(':comentarios', $this->comentarios);
                 $stmt->bindParam(':id_profesor',$this->id_profesor);
                 $stmt->execute();
 
