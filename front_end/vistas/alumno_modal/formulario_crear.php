@@ -28,58 +28,12 @@ $("#exampleModal1").modal('show');
 </script> -->
 
 
-<!-- Styles for the inputs  -->
-<style>
-  .inputForm{
-  border: none;
-  border-bottom: 1px solid #ddd;
-  }
-
-  .inputForm:focus{
-    background-color: rgb(121, 172, 210, 0.2);
-  }
-
-#img_modal{
-  width: 100%;
-}
-
-
-.img_subtitulo{
-  width: 6%;
-  display:inline-block;
-  
-  padding-bottom:2%;
-}
-
-#img_busqueda{
-  width:10%;
-  margin-left:5%;
-}
-
-h4{
-  display:inline;
-  padding-right:5%;
-}
-
-
-.styled-select select {
-   background: transparent;
-   border: none;  
-}
-
-.borde_inferior{
-  border-top:solid 1px;
-  border-color:#c9c9c9;
-  padding-left:0%;
-}
-
-
-</style>
+<!----------- Styles----------------->
+<link rel="stylesheet" href="../estilos.css">
 
 
 
-
-<!-- Modal -->
+<!------------------------------ Modal ------------------------------>
 <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -89,7 +43,7 @@ h4{
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-
+<!------------------------------ Initialiced form ------------------------------>
     <div class="modal-body">
       <form class="needs-validation " novalidate action="../../../back_end/controladores/alumno_controlador.php" method="POST" enctype="multipart/form-data" >
 
@@ -256,27 +210,9 @@ h4{
         </div>
 
       </form>
-
-
-      
-
-
-
-
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
   <script>
   // Example starter JavaScript for disabling form submissions if there are invalid fields

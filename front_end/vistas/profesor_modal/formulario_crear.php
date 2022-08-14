@@ -22,15 +22,17 @@ $(document).ready(function(){
 $("#exampleModal1").modal('show');
 });
 </script> -->
+<!----------- Styles----------------->
+<link rel="stylesheet" href="../estilos.css">
+
 
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
  <div class="modal-dialog">
    <div class="modal-content">
-
      <div class="modal-header">
-      <h5 class="modal-title mx-auto" id="exampleModalLabel">Registrar en Profesores</h5>
+      <h3 class="modal-title ml-auto" id="exampleModalLabel">Registro Profesores</h3>
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
          <span aria-hidden="true">&times;</span>
        </button>
@@ -40,49 +42,76 @@ $("#exampleModal1").modal('show');
      <form class="needs-validation" novalidate action="../../../back_end/controladores/profesor_controlador.php" method="POST" enctype="multipart/form-data" >
 
        <input type="hidden" name="opcion" value="1">
-
        <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
-       <div class="form-row"> 
-         <div class="col">
-           <label for="validationCustom01">Nombre(s)</label>
-           <input type="text" class="form-control" id="validationCustom01" name="nombres" required>
-         </div>
-
-         <div class="col">
-           <label for="validationCustom02">Apellidos</label>
-           <input type="text" class="form-control" id="validationCustom02" name="apellidos" required>
-         </div>
-
-         <div class="col">
-           <label for="validationCustom03">Telefono</label>
-           <input type="text" class="form-control" id="validationCustom03" name="telefono" required>
-         </div>
+       <div class="Subtitulo">
+        <h4>Información personal</h4>
        </div>
 
+      <div class="row mt-1">
+          <div class="col-4  mt-3">  
+            <img src="usuario_masculino.png" alt="" id="img_modal">
+            <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" required> 
+          </div>
+          
+        <div class="col-8 ml-auto pt-3">
+          <div class="form-row"> 
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" required>
+              <label for="validationCustom01">Nombre(s)</label>
+            </div>
+
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom02" name="apellidos" required>
+              <label for="validationCustom02">Apellidos</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom03" name="telefono" required>
+              <label for="validationCustom03">Telefono</label>
+            </div>
+
+            <div class="col-3 ">
+              <input type="color" class="form-control inputForm colorPicker " id="validationCustom03" name="color">
+              <label for="validationCustom03">Color</label>
+              <img src="buscar.png" alt="Lupa de busqueda" id="img_busqueda_profe">
+            </div>
+            </div>
+        </div> 
+      </div>          
+        <!------------------------------------Alberca Info------------------------------------------>
+     
+        <div class="Subtitulo mt-5">
+          <h4 >Alberca Info</h4>
+          <img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
+        </div>
 
         <div class="form-row">
           <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom01" name="sueldo" required>
             <label for="validationCustom01">Sueldo</label>
-            <input type="text" class="form-control" id="validationCustom01" name="sueldo" required>
           </div>
 
-          <div class="col">
-            <label for="validationCustom01">Estatus</label>
-            <input type="text" class="form-control" id="validationCustom01" name="status" required>
+          <div class="col styled-select mx-auto black rounded ">
+                <select name="status" class="form-control" >
+                    <option value="Activo" >Activo </option>
+                    <option value="Baja" >Baja</option>
+                    <option value=" " selected hidden> </option>
+                </select>
+              <label for="validationCustom02" class=" col borde_inferior">Estatus</label>
           </div>
 
         </div>
 
        <br>
-   </div>
+      </div>
 
-
-
-     <div class="modal-footer">
-       <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Registrar Profesor">
-       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-     </div>
+      <div class="modal-footer">
+        <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Registrar Profesor">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
 
      </form>
    </div>
