@@ -14,8 +14,12 @@ if(isset($_REQUEST['opcion'])){
             $profesor->nombres=$_REQUEST['nombres'];
             $profesor->apellidos=$_REQUEST['apellidos'];
             $profesor->telefono=$_REQUEST['telefono'];
+            $profesor->fecha_nac=$_REQUEST['fecha_nac'];
+            $profesor->fecha_ing=$_REQUEST['fecha_ing'];
+            $profesor->alberca=$_REQUEST['alberca'];
             $profesor->sueldo=$_REQUEST['sueldo'];
             $profesor->status=$_REQUEST['status'];
+            $profesor->comentarios=$_REQUEST['comentarios'];
             $resultado='';
             echo $profesor->crear();
 
@@ -30,8 +34,12 @@ if(isset($_REQUEST['opcion'])){
             $profesor->nombres=$_REQUEST['nombres'];
             $profesor->apellidos=$_REQUEST['apellidos'];
             $profesor->telefono=$_REQUEST['telefono'];
+            $profesor->fecha_nac=$_REQUEST['fecha_nac'];
+            $profesor->fecha_ing=$_REQUEST['fecha_ing'];
+            $profesor->alberca=$_REQUEST['alberca'];
             $profesor->sueldo=$_REQUEST['sueldo'];
             $profesor->status=$_REQUEST['status'];
+            $profesor->comentarios=$_REQUEST['comentarios'];
             $profesor->id_profesor=$_REQUEST['id_profesor'];
             $resultado='';
             echo $profesor->actualizar();

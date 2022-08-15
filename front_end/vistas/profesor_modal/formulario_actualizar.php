@@ -26,13 +26,19 @@ $(document).ready(function(){
 });
 </script>
 
+<style>
+  .labels{
+          font-family:Sans-serif;
+        }
+</style>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title mx-auto" id="exampleModalLabel">Actualizar Profesor</h5>
+        <h3 class="modal-title ml-auto" id="exampleModalLabel">Actualizar Profesor</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -48,52 +54,103 @@ $(document).ready(function(){
 
 
  <!------------------------------------Campos del formulario------------------------------------------>
- <div class="form-row"> 
-         <div class="col">
-           <label for="validationCustom01">Nombre(s)</label>
-           <input type="text" class="form-control" id="validationCustom01" name="nombres" value="<?php echo $profesor->nombres?>" required>
-         </div>
+ 
 
-         <div class="col">
-           <label for="validationCustom02">Apellidos</label>
-           <input type="text" class="form-control" id="validationCustom02" name="apellidos" value="<?php echo $profesor->apellidos?>" required>
-         </div>
-
-         <div class="col">
-           <label for="validationCustom03">Telefono</label>
-           <input type="text" class="form-control" id="validationCustom03" name="telefono" value="<?php echo $profesor->telefono?>" required>
-         </div>
+ <div class="Subtitulo">
+        <h4>Información personal</h4>
        </div>
 
+      <div class="row mt-1">
+          <div class="col-4  mt-3">  
+            <img src="usuario_masculino.png" alt="" id="img_modal">
+            <input type="date" class="form-control inputForm" id="validationCustom03" name="fecha_nac" value="<?php echo $profesor->fecha_nac?>" required> 
+            <label for="validationCustom03" class="labels"> Fecha nacimiento</label>
+          </div>
+          
+        <div class="col-8 ml-auto pt-3">
+          <div class="form-row"> 
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" value="<?php echo $profesor->nombres?>" required>
+              <label for="validationCustom01" class="labels" > Nombre(s) </label>
+            </div>
 
-        <div class="form-row">
-          <div class="col">
-            <label for="validationCustom01">Sueldo</label>
-            <input type="text" class="form-control" id="validationCustom01" name="sueldo" value="<?php echo $profesor->sueldo?>" required>
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom02" name="apellidos" value="<?php echo $profesor->apellidos?>" required>
+              <label for="validationCustom02" class="labels" > Apellidos </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control inputForm" id="validationCustom03" name="telefono" value="<?php echo $profesor->telefono?>" required>
+              <label for="validationCustom03" class="labels"> Telefono </label>
+            </div>
+
+            <div class="col-3 ">
+              <input type="color" class="form-control inputForm colorPicker " id="validationCustom03" value="<?php echo $profesor->color?>" name="color">
+              <label for="validationCustom03" class="labels"> Color </label>
+              <img src="buscar.png" alt="Lupa de busqueda" id="img_busqueda_profe">
+            </div>
+          </div>
+
+          <!------------------------------------Fecha ingreso hidden------------------------------------------>
+          <div class="form-row">
+            <div class="col-6 mx-auto">
+              <input type="date" name="fecha_ing"  value="<?php echo date("Y-m-d");?>" id="validationCustom01" class="form-control inputForm" value="<?php echo $profesor->fecha_ing?>">
+              <label for="validationCustom03" class="labels"> Fecha ingreso</label>
+            </div>
+          </div>
+
+        </div> 
+      </div>          
+        <!------------------------------------Alberca Info------------------------------------------>
+     
+        <div class="Subtitulo mt-3">
+          <h4 >Alberca Info</h4>
+          <img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
+        </div>
+
+      <div class="row mt-1">
+          <div class="col-6 styled-select black rounded ">
+            <select name="alberca" class="form-control" value="<?php echo $profesor->alberca?>" >
+                <option value="Sta Tere" >Sta Tere</option>
+                <option value="Zapopan" >Zapopan</option>
+            </select>
+              <label for="validationCustom01" class=" col borde_inferior labels" > Alberca </label>
+          </div>
+
+
+          <div class="col-6 styled-select mx-auto black rounded ">
+            <select name="status" class="form-control" value="<?php echo $profesor->status?>" >
+                <option value="Activo" >Activo </option>
+                <option value="Baja" >Baja</option>
+            </select>
+              <label for="validationCustom02" class=" col borde_inferior labels"> Estatus </label>
+          </div>
+        </div>       
+
+
+        <div class="row">
+          <div class="col-6">
+            <input type="text" class="form-control inputForm" id="validationCustom01" name="sueldo" value="<?php echo $profesor->sueldo?>" required>
+            <label for="validationCustom01" class="labels"> Sueldo </label>
           </div>
 
           <div class="col">
-            <label for="validationCustom01">Estatus</label>
-            <input type="text" class="form-control" id="validationCustom01" name="status" value="<?php echo $profesor->status?>" required>
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios" value="<?php echo $profesor->comentarios?>">
+            <label for="validationCustom03" class="labels"> Comentarios </label>
           </div>
-
+        </div>
+ 
         </div>
 
 
-
-
-
-
-
-
-          <br>
   <!---- <button class="btn btn-primary" type="submit">Submit form</button>------->
   
-      </div>
       <div class="modal-footer">
       <input type="submit" class="col-8 btn btn-success mx-auto" value="Actualizar Profesor">
 
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
 
