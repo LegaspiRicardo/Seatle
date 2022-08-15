@@ -67,6 +67,7 @@ th{
       <td><?php echo $profesor->telefono ?></td>
       <td><?php echo $profesor->fecha_nac ?></td>
       <td><?php echo $profesor->fecha_ing ?></td>
+      <td><?php echo $profesor->alberca ?></td>
       <td><?php echo $profesor->sueldo ?></td>
       <td><?php echo $profesor->status ?></td>
       <td><?php echo $profesor->comentarios ?></td>
