@@ -61,19 +61,21 @@
 
 
 <div class="col-11 ml-3 mb-3" >
-      <br>
+      
 
       <?php  
       include_once('formulario_crear.php');
-      include_once('formulario_actualizar.php');
-      include_once('formulario_borrar.php');
+      
       
       ?>  
  
     </div>
      
   <div class="table col-xs-10 mx-auto">
-    <?php include_once 'data.php';  ?>  
+    <?php include_once 'data.php';
+    
+    include_once('formulario_actualizar.php');
+    include_once('formulario_borrar.php');  ?>  
   </div>
       
 

@@ -34,12 +34,6 @@ if(isset($_REQUEST['opcion'])){
         
           //  header('Location:../../');
 
-
-
-
-
-
-
             break;
 
             case '2': 
@@ -63,6 +57,8 @@ if(isset($_REQUEST['opcion'])){
             $alumno->id_alumno=$_REQUEST['id_alumno'];
             $resultado='';
             echo $alumno->actualizar();
+            header('Location:../../front_end/web_site/home.html');
+
                 break;  //Actualizar
             
 
