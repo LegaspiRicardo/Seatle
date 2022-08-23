@@ -18,9 +18,7 @@
 Registrar Alumno
 </button>
 
-<button type="text" class="btn btn-info ml-3">
-Buscar Alumno
-</button>
+
 <!-- <script>
 $(document).ready(function(){
 $("#exampleModal1").modal('show');

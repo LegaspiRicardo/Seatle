@@ -45,6 +45,9 @@ th{
   <thead>
     <tr>
       <th scope="col">id_alumno</th>
+      
+      <th scope="col">Editar</th>
+      <th scope="col">Borrar</th>
       <th scope="col">Nombres</th>
       <th scope="col">Apellido Materno</th>
       <th scope="col">Apellido Paterno</th>
@@ -62,8 +65,6 @@ th{
       <th scope="col">Alberca</th>
       <th scope="col">Estatus</th>      
 
-      <th scope="col">Editar</th>
-      <th scope="col">Borrar</th>
     </tr>
   </thead>
   <tbody>
@@ -73,6 +74,10 @@ th{
       ?>
   <tr>
       <td><?php echo $alumno->id_alumno ?></td>
+      <td> <a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&editar">Editar </a></td >
+      
+
+      <td><a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&borrar">Borrar</a></td>
       <td><?php echo $alumno->nombres ?></td>
       <td><?php echo $alumno->apellido_pat ?></td>
       <td><?php echo $alumno->apellido_mat ?></td>
@@ -90,10 +95,7 @@ th{
       <td><?php echo $alumno->alberca ?></td>
       <td><?php echo $alumno->status ?></td>
 
-      <td> <a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&editar">Editar </a></td >
-      
 
-      <td><a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&borrar">Borrar</a></td>
   </tr>
   
   <?php 
