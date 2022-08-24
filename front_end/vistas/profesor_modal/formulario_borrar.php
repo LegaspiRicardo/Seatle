@@ -57,7 +57,7 @@ $(document).ready(function(){
 
       <div class="row mt-1">
           <div class="col-4  mt-3">  
-            <img src="usuario_masculino.png" alt="" id="img_modal">
+            <img src="../../PNGs/usuario_masculino.png" alt="" id="img_modal">
             <input type="date" class="form-control inputForm" id="validationCustom03" name="fecha_nac" value="<?php echo $profesor->fecha_nac?>" disabled> 
             <label for="validationCustom03" class="labels"> Fecha nacimiento</label>
           </div>
@@ -84,7 +84,7 @@ $(document).ready(function(){
             <div class="col-3 ">
               <input type="color" class="form-control inputForm colorPicker " id="validationCustom03" value="<?php echo $profesor->color?>" name="color" disabled>
               <label for="validationCustom03" class="labels"> Color </label>
-              <img src="buscar.png" alt="Lupa de busqueda" id="img_busqueda_profe">
+              <img src="../../PNGs/buscar.png" alt="Lupa de busqueda" id="img_busqueda_profe">
             </div>
           </div>
 
@@ -102,7 +102,7 @@ $(document).ready(function(){
      
         <div class="Subtitulo mt-3">
           <h4 >Alberca Info</h4>
-          <img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
+          <img src="../../PNGs/tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
         </div>
 
       <div class="row mt-1">

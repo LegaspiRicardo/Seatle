@@ -13,6 +13,7 @@
 }
 
 
+
 .img_subtitulo{
   width: 6%;
   display:inline-block;
@@ -51,3 +52,51 @@ h4{
   border-radius: 100%;
 }
 
+
+
+
+.pasos_ingreso{
+  background-color: rgb(187, 177, 177);
+  max-height: 300px;
+  border-radius: 5%;
+}
+
+.paso_tutor{
+  background-color: #204e81;
+  border-radius: 5%;
+}
+
+.paso_alumno{
+  background-color: #069e9e;
+  border-radius: 5%;
+}
+
+.btn_alumno{
+  background-color: white;
+  color: #204e81;
+}
+
+.btn_tutor{
+  background-color: white;
+  color: #204e81;
+  margin: 0;
+}
+
+.titulo_pasos{
+  color: white;
+  text-shadow:1px 1px black;
+
+}
+
+.subtitulo_pasos{
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+h2{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: 400%;
+}

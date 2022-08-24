@@ -42,7 +42,7 @@ if(isset($_REQUEST['opcion'])){
     }
 
 
-    header('Location: ../../front_end/vistas/tutor_modal/index.php?resultado='.$resultado);
+    header('Location: ../../front_end/vistas/dashboard/index.php?resultado='.$resultado);
     exit(); 
 
 }
