@@ -1,4 +1,10 @@
+<?php
 
+  include_once '../../../back_end/modelos/alumno.php';
+  include_once '../../../back_end/modelos/mensualidad.php';
+  
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -8,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Panel de Control</title>
+    <title>Mensualidad modal</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
@@ -36,48 +42,38 @@
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-   
-<link rel="stylesheet" href="dashboard.css">
 
   </head>
 
  
 
-<body >
-<section class="col-8 mx-auto pb-2 pasos_ingreso">
+<body>
+   
+
+
+
+
+<div class="container-fluid" >
+
+
+
+<div class="table col-md-10 mx-auto">
+      <br>
+
+      <?php  
+      include_once('formulario_crear.php');
+      include_once 'data.php';      
+      ?>  
+ 
+    </div>
+     
   
-<h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
-  <div class="row ">
-      <div class="col-3 mx-auto paso_tutor">
-            <h5 class="subtitulo_pasos ">Primer paso</h5>
-            
-            <h2 class="numero_pasos ">1</h2>
-            <?php 
-              include_once ("../tutor_modal/index_dash.php");
-            ?>
-      </div>
+      
 
-      <div class="col-3 mx-auto paso_alumno">
-            <h5 class="subtitulo_pasos_blanco ">Segundo paso</h5>
-            
-            <h2 class="numero_pasos_blanco ">2</h2>
-            <?php 
-              include_once ("../alumno_modal/index_dash.php");
-            ?>
-      </div>
-      </div>
-          <div class="col-3 mx-auto paso_mensualidad">
-          <h5 class="subtitulo_pasos ">Tercer paso</h5>
-            
-            <h2 class="numero_pasos ">3</h2>
-          <?php 
 
-            include_once ("../mensualidad_modal/index_dash.php");
-            
-          ?>
-          </div>
-          
-  </div>
-</section>     
-</body>
+</div>
+
+
+      
+  </body>
 </html>

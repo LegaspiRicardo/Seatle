@@ -202,7 +202,7 @@ $("#exampleModal1").modal('show');
             <!-----------------------------------Modal footer------------------------------------------>
 
         <div class="modal-footer">
-          <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Registrar Alumno">
+          <input type="submit" class=" col-8 btn btn_tutor mx-auto" value="Registrar Alumno">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
