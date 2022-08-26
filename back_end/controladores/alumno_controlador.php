@@ -57,7 +57,6 @@ if(isset($_REQUEST['opcion'])){
             $alumno->id_alumno=$_REQUEST['id_alumno'];
             $resultado='';
             echo $alumno->actualizar();
-            header('Location:../../front_end/web_site/home.html');
 
                 break;  //Actualizar
             
@@ -72,7 +71,7 @@ if(isset($_REQUEST['opcion'])){
             default: echo"opcion invalida";
     }
 
-    header('Location: ../../front_end/vistas/alumno_modal/index.php?resultado='.$resultado);
+    header('Location: ../../front_end/vistas/dashboard/index.php?resultado='.$resultado);
     exit(); 
 
 }

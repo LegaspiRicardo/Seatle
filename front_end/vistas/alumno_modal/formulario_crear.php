@@ -14,7 +14,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal10">
+<button type="button" class="btn btn-info btn_alumno" data-toggle="modal" data-target="#exampleModal10">
 Registrar Alumno
 </button>
 
@@ -54,7 +54,7 @@ $("#exampleModal1").modal('show');
 
         <div class="row mt-1">
           <div class="col-4  mt-3">  
-            <img src="usuario_masculino.png" alt="" id="img_modal">
+            <img src="../../PNGs/usuario_masculino.png" alt="" id="img_modal">
             <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" required> 
           </div>
         
@@ -106,7 +106,7 @@ $("#exampleModal1").modal('show');
             </datalist> 
             
           <label for="validationCustom07" >Tutor</label>
-          <img src="buscar.png" alt="Lupa de busqueda" id="img_busqueda">
+          <img src="../../PNGs/buscar.png" alt="Lupa de busqueda" id="img_busqueda">
         </div>
     </div>   
           </div>
@@ -117,7 +117,7 @@ $("#exampleModal1").modal('show');
         <!------------------------------------Domicilio------------------------------------------>
         <div class="Subtitulo ">
         <h4 >Domicilio</h4>
-        <img src="ubicacion.png" class="img_subtitulo" alt="">
+        <img src="../../PNGs/ubicacion.png" class="img_subtitulo" alt="">
         </div>
         <div class="form-row"> 
           <div class="col">
@@ -148,7 +148,7 @@ $("#exampleModal1").modal('show');
         <!------------------------------------Alberca Info------------------------------------------>
         <div class="Subtitulo ">
           <h4 >Alberca Info</h4>
-          <img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
+          <img src="../../PNGs/tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
         </div>
         <div class="form-row"> 
           <div class="col styled-select black rounded ">
@@ -202,7 +202,7 @@ $("#exampleModal1").modal('show');
             <!-----------------------------------Modal footer------------------------------------------>
 
         <div class="modal-footer">
-          <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Registrar Alumno">
+          <input type="submit" class=" col-8 btn btn_tutor mx-auto" value="Registrar Alumno">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
