@@ -15,7 +15,7 @@ body{
 }
 
 .paso_alumno{
-  background-color: #069e9e;
+  background-color: #4e93cc;
   border-radius: 5%;
 }
 
@@ -30,12 +30,12 @@ body{
 }
 
 .btn_tutor{
-  background-color: #069e9e;
+  background-color: #4e93cc;
   margin: 0;
 }
 
 .numero_pasos{
-  color: #069e9e;
+  color: #4e93cc;
 }
 
 .numero_pasos_blanco{
@@ -48,14 +48,16 @@ body{
   width: 100%;
   font-size: 200%;
   text-align: center;
-  color: rgb(90, 90, 90);
+  color: rgb(39, 39, 39);
    text-shadow:1px 1px white;
 }
 
 .subtitulo_pasos{
   width: 100%;
   text-align: center;
-  color: #069e9e;
+  color: #3c73a0;
+  
+   text-shadow:1px  black;
 }
 
 .subtitulo_pasos_blanco{

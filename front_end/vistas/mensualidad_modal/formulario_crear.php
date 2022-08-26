@@ -44,7 +44,7 @@ $("#exampleModal1").modal('show');
 
         <input type="hidden" name="opcion" value="1">
 
-        <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
+        <!------------------------------------Alumno------------------------------------------>
         <div class="form-row mb-3">
           <div class="Subtitulo ">
         <h4 >Alumno</h4>

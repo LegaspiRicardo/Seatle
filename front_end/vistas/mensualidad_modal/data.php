@@ -19,6 +19,7 @@
       <th scope="col">Tipo Clase</th>
       <th scope="col">Precio Clase</th>
       <th scope="col">Clases</th>
+      <th scope="col">Total</th>
       <th scope="col">Editar</th>
       <th scope="col">Borrar</th>
     </tr>

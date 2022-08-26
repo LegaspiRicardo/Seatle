@@ -62,7 +62,8 @@
 
       <?php  
       include_once('formulario_crear.php');
-      include_once 'data.php';      
+      include_once('formulario_actualizar.php');
+      include_once ('data.php');      
       ?>  
  
     </div>
