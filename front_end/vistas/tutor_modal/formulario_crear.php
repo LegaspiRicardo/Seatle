@@ -12,7 +12,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1">
+<button type="button" class="btn btn-info btn_tutor" data-toggle="modal" data-target="#exampleModal1">
 Registrar tutor
 </button>
 
@@ -22,7 +22,8 @@ $(document).ready(function(){
 $("#exampleModal1").modal('show');
 });
 </script> -->
-
+<!----------- Styles----------------->
+<link rel="stylesheet" href="../estilos.css">
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -30,7 +31,7 @@ $("#exampleModal1").modal('show');
     <div class="modal-content">
 
       <div class="modal-header">
-       <h5 class="modal-title mx-auto" id="exampleModalLabel">Registrar en Tutor</h5>
+       <h3 class="modal-title mx-auto" id="exampleModalLabel">Registro de Tutor</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -43,27 +44,28 @@ $("#exampleModal1").modal('show');
 
         <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
         <div class="form-row"> 
-          <div class="col">
+          <div class="col-8">
+            <input type="text" class="form-control inputForm" id="validationCustom01" name="nombre" required>
             <label for="validationCustom01">Nombre(s)</label>
-            <input type="text" class="form-control" id="validationCustom01" name="nombre" required>
           </div>
 
-          <div class="col">
-            <label for="validationCustom02">Correo</label>
-            <input type="text" class="form-control" id="validationCustom02" name="correo" required>
-          </div>
-
-          <div class="col">
+          <div class="col-4">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="telefono" required>
             <label for="validationCustom03">Telefono</label>
-            <input type="text" class="form-control" id="validationCustom03" name="telefono" required>
           </div>
         </div>
 
-        <br>
+        <div class="form-row">
+        <div class="col-8 mx-auto">
+            <input type="text" class="form-control inputForm" id="validationCustom02" name="correo" required>          
+            <label for="validationCustom02">Correo</label>
+          </div>
+        </div>
+
     </div>
 
       <div class="modal-footer">
-        <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Registrar Tutor">
+        <input type="submit" class=" col-8 btn btn_tutor mx-auto" value="Registrar Tutor">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>

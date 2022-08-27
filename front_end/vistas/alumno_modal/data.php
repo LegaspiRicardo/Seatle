@@ -59,7 +59,6 @@ th{
       <th scope="col">Sexo</th>
       <th scope="col">Fecha_ingreso</th>
       <th scope="col">Tutor</th>
-      <th scope="col">Tipo Clase</th>
       <th scope="col">Nivel</th>
       <th scope="col">Comentarios</th>
       <th scope="col">Alberca</th>
@@ -89,7 +88,6 @@ th{
       <td><?php echo $alumno->sexo ?></td>
       <td><?php echo $alumno->fecha_ing ?></td>
       <td><?php echo $alumno->id_tutor ?></td>
-      <td><?php echo $alumno->tipo_clase ?></td>
       <td><?php echo $alumno->nivel ?></td>
       <td><?php echo $alumno->comentarios ?></td>
       <td><?php echo $alumno->alberca ?></td>

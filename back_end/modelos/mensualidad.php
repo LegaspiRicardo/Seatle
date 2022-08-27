@@ -20,10 +20,35 @@ class Mensualidad implements CRUD
                     INSERT INTO mensualidad (id_alumno, tipo_clase, precio_clase, num_clases, total)
                     VALUES (:id_alumno, :tipo_clase, :precio_clase, :num_clases, :total)");
                 
-                $stmt->bindParam(':id_alummo', $this->id_alumno);
+                $stmt->bindParam(':id_alumno', $this->id_alumno);
                 $stmt->bindParam(':tipo_clase', $this->tipo_clase);
                 $stmt->bindParam(':precio_clase', $this->precio_clase);
+                $stmt->bindParam(':num_clases', $this->num_clases);
                 $stmt->bindParam(':total', $this->total);
+                $stmt->execute();
+                return $stmt->rowCount();
+            }
+            catch(PDOException $e)
+            {
+                echo "Error: " . $e->getMessage();
+            }
+            finally
+            {
+                $conn = null;
+                $c->desconectar();
+            }
+    }
+
+    function last_alumno()
+    {
+        try{
+                $c=new Conexion();
+                $conn=$c->getConection();
+                $stmt = $conn->prepare("
+                    SELECT LAST_INSERT_ID alumno (id_alumno)
+                    VALUES (:id_alumno)");
+                
+                $stmt->bindParam(':id_alumno', $this->id_alumno);
                 $stmt->execute();
                 return $stmt->rowCount();
             }
@@ -45,12 +70,13 @@ class Mensualidad implements CRUD
                 $conn=$c->getConection();
 
                 $stmt = $conn->prepare("
-                UPDATE mensualidad SET id_alumno=:id_alumno, tipo_clase=:tipo_clase, precio_clase=:precio_clase, total=:total
+                UPDATE mensualidad SET id_alumno=:id_alumno, tipo_clase=:tipo_clase, precio_clase=:precio_clase, num_clases=:num_clases, total=:total
                 WHERE id_mensualidad=:id_mensualidad");
 
                 $stmt->bindParam(':id_alumno', $this->id_alumno);
                 $stmt->bindParam(':tipo_clase', $this->tipo_clase);
                 $stmt->bindParam(':precio_clase', $this->precio_clase);
+                $stmt->bindParam(':num_clases', $this->num_clases);
                 $stmt->bindParam(':total', $this->total);
                 $stmt->bindParam(':id_mensualidad',$this->id_mensualidad);
                 $stmt->execute();

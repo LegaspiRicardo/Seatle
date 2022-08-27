@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 <div class="row mt-1">
 <div class="col-4  mt-3">  
-  <img src="usuario_masculino.png" alt="" id="img_modal">
+  <img src="../../PNGs/usuario_masculino.png" alt="" id="img_modal">
   <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" value="<?php echo $alumno->fecha_nac?>" required> 
 </div>
 
@@ -100,7 +100,7 @@ $(document).ready(function(){
   </datalist> 
   
 <label for="validationCustom07" >Tutor</label>
-<img src="buscar.png" alt="Lupa de busqueda" id="img_busqueda">
+<img src="../../PNGs/buscar.png" alt="Lupa de busqueda" id="img_busqueda">
 </div>
 </div>   
 </div>
@@ -111,7 +111,7 @@ $(document).ready(function(){
 <!------------------------------------Domicilio------------------------------------------>
 <div class="Subtitulo ">
 <h4 >Domicilio</h4>
-<img src="ubicacion.png" class="img_subtitulo" alt="">
+<img src="../../PNGs/ubicacion.png" class="img_subtitulo" alt="">
 </div>
 <div class="form-row"> 
 <div class="col">
@@ -142,7 +142,7 @@ $(document).ready(function(){
 <!------------------------------------Alberca Info------------------------------------------>
 <div class="Subtitulo ">
 <h4 >Alberca Info</h4>
-<img src="tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
+<img src="../../PNGs/tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
 </div>
 <div class="form-row"> 
 <div class="col styled-select black rounded ">

@@ -13,6 +13,7 @@
 }
 
 
+
 .img_subtitulo{
   width: 6%;
   display:inline-block;
@@ -51,3 +52,21 @@ h4{
   border-radius: 100%;
 }
 
+
+.btn_tutor{
+  background-color: #4e93cc;
+  color: white;
+  text-shadow:1px 1px black;
+}
+
+.btn_tutor:hover{
+  background-color:#4e93ccc7 ;
+  color: white;
+  text-shadow:1px 1px black;
+}
+
+.btn_alumno:hover{
+  background-color: #e8ecee;
+  color: #4478a3;
+  text-shadow:1px  black;
+}

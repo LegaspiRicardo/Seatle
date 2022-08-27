@@ -47,9 +47,18 @@ if(isset($_REQUEST['opcion'])){
                 
                 break;
             default: echo"opcion invalida";
+
+            
+            case '4':
+                $mensualidad=new Mensualidad();
+                $alumno->id_alumno=$_REQUEST['id_alumno'];
+                $resultado='';
+                echo $mensualidad->last_alumno();
+
+
     }
 
-    header('Location: ../../front_end/vistas/mensualidad_modal/index.php?resultado='.$resultado);
+    header('Location: ../../front_end/vistas/dashboard/index.php?resultado='.$resultado);
     exit(); 
 
 }
