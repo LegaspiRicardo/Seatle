@@ -1,6 +1,7 @@
 <?php
 
 include_once '../modelos/mensualidad.php';
+include_once '../modelos/alumno_paga_mensualidad.php';
 /*if(isset($_REQUEST)){
     print_r($_REQUEST);
 }

@@ -38,8 +38,8 @@ $(document).ready(function(){
   <div class="modal-dialog">
     <div class="modal-content">
 
-      <div class="modal-header">
-        <h3 class="modal-title mx-auto" id="exampleModalLabel">Actualizar Alumno</h3>
+      <div class="modal-header cabecera_actualizar">
+        <h3 class="modal-title mx-auto" id="exampleModalLabel">Editar Alumno</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -205,7 +205,7 @@ $(document).ready(function(){
             <!-----------------------------------Modal footer------------------------------------------>
 
         <div class="modal-footer">
-          <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Actualizar Alumno">
+          <input type="submit" class=" col-8 btn btn-success mx-auto" value="Actualizar Alumno">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>

@@ -36,6 +36,14 @@ th{
   }
   tr:hover {background-color: rgb(121, 172, 210, 0.4);}
 
+
+.tableIcon{
+  width:40%;
+}
+
+.tableIcon1{
+  width:70%;
+}
     </style>
 
     
@@ -47,7 +55,7 @@ th{
       <th scope="col">id_alumno</th>
       
       <th scope="col">Editar</th>
-      <th scope="col">Borrar</th>
+      <th scope="col">Baja</th>
       <th scope="col">Nombres</th>
       <th scope="col">Apellido Materno</th>
       <th scope="col">Apellido Paterno</th>
@@ -62,7 +70,8 @@ th{
       <th scope="col">Nivel</th>
       <th scope="col">Comentarios</th>
       <th scope="col">Alberca</th>
-      <th scope="col">Estatus</th>      
+      <th scope="col">Estatus</th>  
+      <th scope="col">Borrar</th>    
 
     </tr>
   </thead>
@@ -73,10 +82,8 @@ th{
       ?>
   <tr>
       <td><?php echo $alumno->id_alumno ?></td>
-      <td> <a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&editar">Editar </a></td >
-      
-
-      <td><a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&borrar">Borrar</a></td>
+      <td> <a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&editar"><img src="../../PNGs/editar.png" class="tableIcon">  </a></td >
+      <td><a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&baja"><img src="../../PNGs/human-error.png" class="tableIcon1"></a></td>
       <td><?php echo $alumno->nombres ?></td>
       <td><?php echo $alumno->apellido_pat ?></td>
       <td><?php echo $alumno->apellido_mat ?></td>
@@ -92,6 +99,7 @@ th{
       <td><?php echo $alumno->comentarios ?></td>
       <td><?php echo $alumno->alberca ?></td>
       <td><?php echo $alumno->status ?></td>
+      <td><a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&borrar"><img src="../../PNGs/delete.png" class="tableIcon"></a></td>
 
 
   </tr>

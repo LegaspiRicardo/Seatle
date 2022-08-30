@@ -24,12 +24,16 @@ $(document).ready(function(){
 });
 </script>
 
+
+<!----------- Styles----------------->
+<link rel="stylesheet" href="../estilos.css">
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title mx-auto" id="exampleModalLabel">Eliminar Alumno</h5>
+      <div class="modal-header cabecera_eliminar">
+        <h3 class="modal-title mx-auto" id="exampleModalLabel">Eliminar Alumno</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -50,18 +54,19 @@ $(document).ready(function(){
 <div class="row mt-1">
 <div class="col-4  mt-3">  
   <img src="../../PNGs/usuario_masculino.png" alt="" id="img_modal">
-  <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" value="<?php echo $alumno->fecha_nac?>" required> 
+  <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" value="<?php echo $alumno->fecha_nac?>" disabled> 
+      <label for="validationCustom01">Fecha Nac.</label>
 </div>
 
 <div class="col-8 ml-auto pt-3">
   <div class="form-row"> 
     <div class="col">
-      <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" value="<?php echo $alumno->nombres?>" required>
+      <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" value="<?php echo $alumno->nombres?>" disabled>
       <label for="validationCustom01">Nombre(s)</label>
     </div>
 
     <div class="col-3 styled-select black rounded ">
-      <select name="sexo" class="form-control" value="<?php echo $alumno->id_sexo?>">
+      <select name="sexo" class="form-control" value="<?php echo $alumno->id_sexo?>" disabled>
           <option value="masculino"> Masculino</option>
           <option value="femenino" >Femenino</option>
       </select>
@@ -71,12 +76,12 @@ $(document).ready(function(){
 
   <div class="form-row"> 
     <div class="col">
-      <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" value="<?php echo $alumno->apellido_pat?>" required>
+      <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" value="<?php echo $alumno->apellido_pat?>" disabled>
       <label for="validationCustom01">Apellido Paterno</label>
     </div>
 
     <div class="col">
-      <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" value="<?php echo $alumno->apellido_mat?>" required>
+      <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" value="<?php echo $alumno->apellido_mat?>" disabled>
       <label for="validationCustom02">Apellido Materno</label>
     </div>
   </div>
@@ -84,12 +89,13 @@ $(document).ready(function(){
   <!------------------------------------Fecha Ingreso, Tutor------------------------------------------>
 <div class="form-row">
 <div class="col-6">
-  <input type="date" name="fecha_ing"  value="<?php echo $alumno->fecha_ing?>" id="validationCustom01" class="form-control" required>
+  <input type="date" name="fecha_ing"  value="<?php echo $alumno->fecha_ing?>" id="validationCustom01" class="form-control" disabled>
+      <label for="validationCustom01">Fecha Ingreso</label>
 </div>
 
 
   <div class="col-6 ml-auto">
-<input type="search" name="id_tutor" list="tutors" id="validationCustom01" class="form-control" value="<?php echo $alumno->id_tutor?>" required>
+<input type="search" name="id_tutor" list="tutors" id="validationCustom01" class="form-control" value="<?php echo $alumno->id_tutor?>" disabled>
 
 <datalist   id="tutors" >
 <?php foreach($tutores as $tutor){ ?>
@@ -115,24 +121,24 @@ $(document).ready(function(){
 </div>
 <div class="form-row"> 
 <div class="col">
-  <input type="text" class="form-control inputForm" id="validationCustom01" name="calle" value="<?php echo $alumno->calle?>" required>
+  <input type="text" class="form-control inputForm" id="validationCustom01" name="calle" value="<?php echo $alumno->calle?>" disabled>
   <label for="validationCustom01">Calle</label>
 </div>
 
 <div class="col">
-  <input type="text" class="form-control inputForm" id="validationCustom02" name="numero" value="<?php echo $alumno->numero?>" required>
+  <input type="text" class="form-control inputForm" id="validationCustom02" name="numero" value="<?php echo $alumno->numero?>" disabled>
   <label for="validationCustom02">Numero</label>
 </div>
 </div>
 
 <div class="form-row"> 
 <div class="col">
-  <input type="text" class="form-control inputForm" id="validationCustom03" name="colonia" value="<?php echo $alumno->colonia?>" required>
+  <input type="text" class="form-control inputForm" id="validationCustom03" name="colonia" value="<?php echo $alumno->colonia?>" disabled>
   <label for="validationCustom03">Colonia</label>
 </div>
 
 <div class="col">
-  <input type="text" class="form-control inputForm" id="validationCustom03" name="cp" value="<?php echo $alumno->cp?>" required>
+  <input type="text" class="form-control inputForm" id="validationCustom03" name="cp" value="<?php echo $alumno->cp?>" disabled>
   <label for="validationCustom03">Codigo Postal</label>
 </div>
 </div>
@@ -141,54 +147,47 @@ $(document).ready(function(){
 <br>
 <!------------------------------------Alberca Info------------------------------------------>
 <div class="Subtitulo ">
-<h4 >Alberca Info</h4>
-<img src="../../PNGs/tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
-</div>
-<div class="form-row"> 
-<div class="col styled-select black rounded ">
-      <select name="alberca" class="form-control" value="<?php echo $alumno->alberca?>" >
-          <option value="Sta Tere" >Sta Tere</option>
-          <option value="Zapopan" >Zapopan</option>
-      </select>
-  <label for="validationCustom01" class=" col borde_inferior" >Alberca</label>
-</div>
+          <h4 >Alberca Info</h4>
+          <img src="../../PNGs/tarjeta-de-identificacion.png" class="img_subtitulo" alt="">
+        </div>
+        <div class="form-row"> 
+          <div class="col styled-select black rounded ">
+                <select name="alberca" class="form-control" value="<?php echo $alumno->alberca?>" disabled>
+                    <option value="Sta Tere" >Sta Tere</option>
+                    <option value="Zapopan" >Zapopan</option>
+                </select>
+            <label for="validationCustom01" class=" col borde_inferior" >Alberca</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="nivel" value="<?php echo $alumno->nivel?>" disabled>
+            <label for="validationCustom03">Nivel</label>
+          </div>
+          
+        </div>
 
-<div class="col styled-select black rounded ">
-      <select name="tipo_clase" class="form-control" value="<?php echo $alumno->tipo_clase?>" >
-          <option value="Particular" >Particular </option>
-          <option value="Grupal" >Grupal</option>
-          <option value="Mixto" >Mixto</option>
-      </select>
-    <label for="validationCustom02" class=" col borde_inferior">Tipo de clase</label>
-</div>
-</div>
+        <div class="form-row"> 
+          
+          
+          <div class="col-8">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios" value="<?php echo $alumno->comentarios?>">
+            <label for="validationCustom03">Comentarios</label>
+          </div>
 
-<div class="form-row"> 
-<div class="col">
-  <input type="text" class="form-control inputForm" id="validationCustom03" name="nivel" value="<?php echo $alumno->nivel?>" >
-  <label for="validationCustom03">Nivel</label>
-</div>
+          <div class="col-3 styled-select mx-auto black rounded ">
+                <select name="status" class="form-control" value="<?php echo $alumno->status?>" disabled >
+                    <option value="Activo" >Activo </option>
+                    <option value="Pausa" >Pausa</option>
+                    <option value="Baja" >Baja</option>
+                </select>
+              <label for="validationCustom02" class=" col borde_inferior">Estatus</label>
+          </div>
+        </div>
 
-<div class="col">
-  <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios" value="<?php echo $alumno->comentarios?>">
-  <label for="validationCustom03">Comentarios</label>
-</div>
-</div>
-
-<div class="form-row">
-<div class="col-6 styled-select mx-auto black rounded ">
-      <select name="status" class="form-control" value="<?php echo $alumno->status?>" >
-          <option value="Activo" >Activo </option>
-          <option value="Pausa" >Pausa</option>
-          <option value="Baja" >Baja</option>
-      </select>
-    <label for="validationCustom02" class=" col borde_inferior">Estatus</label>
-</div>
+       
 
 <br>
 </div>
 
-<br>
 
   <!-----------------------------------Modal footer------------------------------------------>
 
