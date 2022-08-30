@@ -1,6 +1,7 @@
 <?php
 
 include_once '../modelos/mensualidad.php';
+include_once '../modelos/alumno_paga_mensualidad.php';
 /*if(isset($_REQUEST)){
     print_r($_REQUEST);
 }
@@ -47,6 +48,15 @@ if(isset($_REQUEST['opcion'])){
                 
                 break;
             default: echo"opcion invalida";
+
+            
+            case '4':
+                $mensualidad=new Mensualidad();
+                $alumno->id_alumno=$_REQUEST['id_alumno'];
+                $resultado='';
+                echo $mensualidad->last_alumno();
+
+
     }
 
     header('Location: ../../front_end/vistas/dashboard/index.php?resultado='.$resultado);

@@ -51,7 +51,7 @@ $("#exampleModal1").modal('show');
         <img src="../../PNGs/usuarios.png" class="img_subtitulo" alt="">
         </div> 
           <div class="col-8">
-          <input type="search" name="id_alumno" list="Alumnos" id="validationCustom01"  class="form-control inputForm" required>
+          <input type="search" name="id_alumno" list="Alumnos" id="validationCustom01" " class="form-control inputForm" required>
          
             <datalist   id="Alumnos"  >
             <?php foreach($alumnos as $alumno){ ?>

@@ -9,7 +9,7 @@ public function __CONSTRUCT(){
 
 	try {
 		
-	  $this->con=new PDO("mysql:host=localhost; dbname=seatle", 'root','');
+	  $this->con=new PDO("mysql:host=localhost; dbname=seatle1", 'root','');
 	  $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	 

@@ -16,7 +16,6 @@ class Alumno implements CRUD
     public $sexo;
     public $fecha_ing;
     public $id_tutor;
-    public $tipo_clase;
     public $nivel;
     public $comentarios;
     public $alberca;
@@ -28,8 +27,8 @@ class Alumno implements CRUD
                 $c=new Conexion();
                 $conn=$c->getConection();
                 $stmt = $conn->prepare("
-                    INSERT INTO alumno (nombres, apellido_pat, apellido_mat, calle, numero, colonia, cp, fecha_nac, sexo, fecha_ing, id_tutor, tipo_clase, nivel, comentarios, alberca, status)
-                    VALUES (:nombres, :apellido_pat, :apellido_mat, :calle, :numero, :colonia, :cp, :fecha_nac, :sexo, :fecha_ing, :id_tutor, :tipo_clase, :nivel, :comentarios, :alberca, :status)");
+                    INSERT INTO alumno (nombres, apellido_pat, apellido_mat, calle, numero, colonia, cp, fecha_nac, sexo, fecha_ing, id_tutor, nivel, comentarios, alberca, status)
+                    VALUES (:nombres, :apellido_pat, :apellido_mat, :calle, :numero, :colonia, :cp, :fecha_nac, :sexo, :fecha_ing, :id_tutor, :nivel, :comentarios, :alberca, :status)");
                 
                 $stmt->bindParam(':nombres', $this->nombres);
                 $stmt->bindParam(':apellido_pat', $this->apellido_pat);
@@ -42,7 +41,6 @@ class Alumno implements CRUD
                 $stmt->bindParam(':sexo', $this->sexo);
                 $stmt->bindParam(':fecha_ing', $this->fecha_ing);
                 $stmt->bindParam(':id_tutor', $this->id_tutor);
-                $stmt->bindParam(':tipo_clase', $this->tipo_clase);
                 $stmt->bindParam(':nivel', $this->nivel);
                 $stmt->bindParam(':comentarios', $this->comentarios);
                 $stmt->bindParam(':alberca', $this->alberca);
@@ -68,7 +66,7 @@ class Alumno implements CRUD
                 $conn=$c->getConection();
 
                 $stmt = $conn->prepare("
-                UPDATE alumno SET nombres=:nombres, apellido_pat=:apellido_pat, apellido_mat=:apellido_mat, calle=:calle, numero=:numero, colonia=:colonia, cp=:cp, fecha_nac=:fecha_nac, sexo=:sexo, fecha_ing=:fecha_ing, id_tutor=:id_tutor, tipo_clase=:tipo_clase, nivel=:nivel, comentarios=:comentarios, status=:status  
+                UPDATE alumno SET nombres=:nombres, apellido_pat=:apellido_pat, apellido_mat=:apellido_mat, calle=:calle, numero=:numero, colonia=:colonia, cp=:cp, fecha_nac=:fecha_nac, sexo=:sexo, fecha_ing=:fecha_ing, id_tutor=:id_tutor, nivel=:nivel, comentarios=:comentarios, status=:status  
                 WHERE id_alumno=:id_alumno");
 
                 $stmt->bindParam(':nombres', $this->nombres);
@@ -82,7 +80,6 @@ class Alumno implements CRUD
                 $stmt->bindParam(':sexo', $this->sexo);
                 $stmt->bindParam(':fecha_ing', $this->fecha_ing);
                 $stmt->bindParam(':id_tutor', $this->id_tutor);
-                $stmt->bindParam(':tipo_clase', $this->tipo_clase);
                 $stmt->bindParam(':nivel', $this->nivel);
                 $stmt->bindParam(':comentarios', $this->comentarios);
                 $stmt->bindParam(':alberca', $this->alberca);

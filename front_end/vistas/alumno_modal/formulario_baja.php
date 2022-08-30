@@ -1,75 +1,81 @@
 
-
 <?php
 
- //echo $_GET['resultado'];
+if(isset($_GET['resultado'])){
+  echo $_GET['resultado'];
+  }
+  
+  
+  $alumno=new Alumno();
+  if(isset($_GET['id_alumno']) && isset($_GET['baja'])){
+    $alumno->id_alumno=$_GET['id_alumno'];
+    $alumno=$alumno->leer_id();
 
- $tutor=new Tutor();
- $tutores=$tutor->leer_todo();
- 
-
-
-
+    
+    
+  
 ?>
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn_alumno" data-toggle="modal" data-target="#exampleModal10">
-Registrar Alumno
-</button>
+  <!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal2">
+  Actualizar producto
+</button>    -->
 
-
-<!-- <script>
+<script>
 $(document).ready(function(){
-$("#exampleModal1").modal('show');
+  $("#exampleModal13").modal('show');
 });
-</script> -->
+</script>
 
 
 <!----------- Styles----------------->
 <link rel="stylesheet" href="../estilos.css">
 
 
-
-<!------------------------------ Modal ------------------------------>
-<div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-       <h3 class="modal-title  ml-auto" id="exampleModalLabel">Registro Alumnos</h3>
+
+      <div class="modal-header cabecera_baja">
+        <h3 class="modal-title mx-auto" id="exampleModalLabel">Baja Alumnos</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-<!------------------------------ Initialiced form ------------------------------>
-    <div class="modal-body">
-      <form class="needs-validation " novalidate action="../../../back_end/controladores/alumno_controlador.php" method="POST" enctype="multipart/form-data" >
 
-        <input type="hidden" name="opcion" value="1">
+      <div class="modal-body">
 
-        <!------------------------------------Img, Nombres, Sexo------------------------------------------>
-        <div class="Subtitulo">
+
+        <form class="needs-validation" novalidate action="../../../back_end/controladores/alumno_controlador.php" method="GET" enctype="multipart/form-data">
+
+          <input type="hidden" name="opcion" value="2">
+          <input type="hidden" name="id_alumno" value="<?php echo $alumno->id_alumno?>">
+
+
+   <!------------------------------------Img, Nombres, Sexo------------------------------------------>
+   <div class="Subtitulo">
         <h4>Información personal</h4>
         </div>
 
         <div class="row mt-1">
           <div class="col-4  mt-3">  
             <img src="../../PNGs/usuario_masculino.png" alt="" id="img_modal">
-            <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" required> 
+            <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" value="<?php echo $alumno->fecha_nac?>" disabled> 
           </div>
         
           <div class="col-8 ml-auto pt-3">
             <div class="form-row"> 
               <div class="col">
-                <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" required>
+                <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" value="<?php echo $alumno->nombres?>" disabled>
                 <label for="validationCustom01">Nombre(s)</label>
               </div>
 
               <div class="col-3 styled-select black rounded ">
-                <select name="sexo" class="form-control" >
-                    <option value="Masculino"> Masculino</option>
-                    <option value="Femenino" >Femenino</option>
-                    <option value=" " selected hidden> </option>
+                <select name="sexo" class="form-control" value="<?php echo $alumno->id_sexo?>" disabled>
+                    <option value="masculino"> Masculino</option>
+                    <option value="femenino" >Femenino</option>
                 </select>
                 <label for="validationCustom02" class=" col borde_inferior">Sexo</label>
               </div>
@@ -77,12 +83,12 @@ $("#exampleModal1").modal('show');
 
             <div class="form-row"> 
               <div class="col">
-                <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" required>
+                <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" value="<?php echo $alumno->apellido_pat?>" disabled>
                 <label for="validationCustom01">Apellido Paterno</label>
               </div>
 
               <div class="col">
-                <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" required>
+                <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" value="<?php echo $alumno->apellido_mat?>" disabled>
                 <label for="validationCustom02">Apellido Materno</label>
               </div>
             </div>
@@ -90,12 +96,12 @@ $("#exampleModal1").modal('show');
             <!------------------------------------Fecha Ingreso, Tutor------------------------------------------>
         <div class="form-row">
           <div class="col-6">
-            <input type="date" name="fecha_ing"  value="<?php echo date("Y-m-d");?>" id="validationCustom01" class="form-control" hidden>
+            <input type="date" name="fecha_ing"  value="<?php echo $alumno->fecha_ing?>" id="validationCustom01" class="form-control" disabled>
           </div>
 
 
             <div class="col-6 ml-auto">
-          <input type="search" name="id_tutor" list="tutors" id="validationCustom01" class="form-control" required>
+          <input type="search" name="id_tutor" list="tutors" id="validationCustom01" class="form-control" value="<?php echo $alumno->id_tutor?>" disabled>
          
           <datalist   id="tutors" >
           <?php foreach($tutores as $tutor){ ?>
@@ -121,24 +127,24 @@ $("#exampleModal1").modal('show');
         </div>
         <div class="form-row"> 
           <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom01" name="calle" required>
+            <input type="text" class="form-control inputForm" id="validationCustom01" name="calle" value="<?php echo $alumno->calle?>" disabled>
             <label for="validationCustom01">Calle</label>
           </div>
 
           <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom02" name="numero" required>
+            <input type="text" class="form-control inputForm" id="validationCustom02" name="numero" value="<?php echo $alumno->numero?>" disabled>
             <label for="validationCustom02">Numero</label>
           </div>
         </div>
 
         <div class="form-row"> 
           <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom03" name="colonia" required>
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="colonia" value="<?php echo $alumno->colonia?>" disabled>
             <label for="validationCustom03">Colonia</label>
           </div>
           
           <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom03" name="cp" required>
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="cp" value="<?php echo $alumno->cp?>" disabled>
             <label for="validationCustom03">Codigo Postal</label>
           </div>
         </div>
@@ -152,59 +158,77 @@ $("#exampleModal1").modal('show');
         </div>
         <div class="form-row"> 
           <div class="col styled-select black rounded ">
-                <select name="alberca" class="form-control" >
+                <select name="alberca" class="form-control" value="<?php echo $alumno->alberca?>" disabled>
                     <option value="Sta Tere" >Sta Tere</option>
                     <option value="Zapopan" >Zapopan</option>
-                    <option value=" " selected hidden> </option>
                 </select>
             <label for="validationCustom01" class=" col borde_inferior" >Alberca</label>
           </div>
-          <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom03" name="nivel" >
-            <label for="validationCustom03">Nivel</label>
+
+          <div class="col styled-select black rounded ">
+                <select name="tipo_clase" class="form-control" value="<?php echo $alumno->tipo_clase?>" disabled>
+                    <option value="Particular" >Particular </option>
+                    <option value="Grupal" >Grupal</option>
+                    <option value="Mixto" >Mixto</option>
+                </select>
+              <label for="validationCustom02" class=" col borde_inferior">Tipo de clase</label>
           </div>
-          
         </div>
 
         <div class="form-row"> 
-          
-          
-          <div class="col-8">
-            <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios">
-            <label for="validationCustom03">Comentarios</label>
+          <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="nivel" value="<?php echo $alumno->nivel?>" disabled>
+            <label for="validationCustom03">Nivel</label>
           </div>
-
-          <div class="col-3 styled-select mx-auto black rounded ">
-                <select name="status" class="form-control" >
-                    <option value="Activo" >Activo </option>
-                    <option value="Pausa" >Pausa</option>
-                    <option value="Baja" >Baja</option>
-                    <option value=" " selected hidden> </option>
-                </select>
-              <label for="validationCustom02" class=" col borde_inferior">Estatus</label>
+          
+          <div class="col">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios" value="<?php echo $alumno->comentarios?>">
+            <label for="validationCustom03">Comentarios</label>
           </div>
         </div>
 
-       
+        <div class="form-row">
+        <div class="col-6 styled-select mx-auto black rounded ">
+                <select name="status" class="form-control" value="<?php echo $alumno->status?>" >
+                    <option value="Activo" >Activo </option>
+                    <option value="Pausa" >Pausa</option>
+                    <option value="Baja" Selected >Baja</option>
+                </select>
+              <label for="validationCustom02" class=" col borde_inferior">Estatus</label>
+          </div>
+
+        <br>
+        </div>
 
       <br>
 
             <!-----------------------------------Modal footer------------------------------------------>
 
         <div class="modal-footer">
-          <input type="submit" class=" col-8 btn btn_tutor mx-auto" value="Registrar Alumno">
+          <input type="submit" class=" col-8 btn btn-warning mx-auto" value="Dar de Baja ">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
         </div>
 
       </form>
+
+
     </div>
   </div>
 </div>
 
-  <script>
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (function() {
+
+
+
+
+
+
+
+
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
   'use strict';
   window.addEventListener('load', function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -220,9 +244,11 @@ $("#exampleModal1").modal('show');
       }, false);
     });
   }, false);
-  })();
-  </script>
+})();
+</script>
 
+  <?php
 
-</body>
-</html>
+  }
+
+  ?>

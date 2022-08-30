@@ -70,3 +70,27 @@ h4{
   color: #4478a3;
   text-shadow:1px  black;
 }
+
+.cabecera_baja{
+  background-color:hsla(0,100%,99%,1);
+background-image:
+radial-gradient(at 48% 62%, hsla(185,0%,100%,1) 0px, transparent 50%),
+radial-gradient(at 47% 100%, hsla(59,100%,60%,1) 0px, transparent 50%),
+radial-gradient(at 48% 59%, hsla(340,17%,97%,1) 0px, transparent 50%);
+}
+
+.cabecera_eliminar{
+  background-color:hsla(0,100%,99%,1);
+  background-image:
+  radial-gradient(at 48% 62%, hsla(185,0%,100%,1) 0px, transparent 50%),
+  radial-gradient(at 47% 100%, hsla(0,100%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 48% 59%, hsla(340,17%,97%,1) 0px, transparent 50%);
+}
+
+.cabecera_actualizar{
+  background-color:hsla(0,100%,99%,1);
+  background-image:
+  radial-gradient(at 48% 62%, hsla(185,0%,100%,1) 0px, transparent 50%),
+  radial-gradient(at 47% 100%, hsla(101,100%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 48% 59%, hsla(340,17%,97%,1) 0px, transparent 50%);
+}

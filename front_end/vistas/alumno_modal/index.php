@@ -60,22 +60,20 @@
 
 
 
-<div class="col-11 ml-3 mb-3" >
-      
 
-      <?php  
-      include_once('formulario_crear.php');
-      
-      
-      ?>  
- 
-    </div>
      
   <div class="table col-xs-10 mx-auto">
     <?php include_once 'data.php';
     
+    include_once('formulario_baja.php');
     include_once('formulario_actualizar.php');
-    include_once('formulario_borrar.php');  ?>  
+    include_once('formulario_borrar.php');  ?> 
+    
+    <?php
+
+
+
+ ?>
   </div>
       
 

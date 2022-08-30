@@ -22,7 +22,6 @@ if(isset($_REQUEST['opcion'])){
             $alumno->sexo=$_REQUEST['sexo'];
             $alumno->fecha_ing=$_REQUEST['fecha_ing'];
             $alumno->id_tutor=$_REQUEST['id_tutor'];
-            $alumno->tipo_clase=$_REQUEST['tipo_clase'];
             $alumno->nivel=$_REQUEST['nivel'];
             $alumno->comentarios=$_REQUEST['comentarios'];
             $alumno->alberca=$_REQUEST['alberca'];
@@ -49,7 +48,6 @@ if(isset($_REQUEST['opcion'])){
             $alumno->sexo=$_REQUEST['sexo'];
             $alumno->fecha_ing=$_REQUEST['fecha_ing'];
             $alumno->id_tutor=$_REQUEST['id_tutor'];
-            $alumno->tipo_clase=$_REQUEST['tipo_clase'];
             $alumno->nivel=$_REQUEST['nivel'];
             $alumno->comentarios=$_REQUEST['comentarios'];
             $alumno->alberca=$_REQUEST['alberca'];
