@@ -6,7 +6,13 @@ INSERT INTO `tutor` (`id_tutor`, `nombre`, `correo`, `telefono`) VALUES ('1', 'A
 
 Insertar 6 profesores
 
-INSERT INTO `profesor` (`id_profesor`, `nombres`, `apellidos`, `telefono`, `sueldo`) VALUES ('1', 'Daniel ', 'Jimenez', '11111', '1450'), ('2', 'Rolando', 'Mota', '2222', '12312'), ('3', 'Marlenne', 'Mora', '3333', '3214'), ('4', 'Bernardo', 'Abu', '4444', '4232'), ('5', 'Raul', 'Conde', '5555', '423'), ('6', 'Zoe', 'Calvillo', '6666', '3455');
+INSERT INTO `profesor` (`id_profesor`, `nombres`, `apellidos`, `telefono`, `fecha_nac`, `fecha_ing`, `alberca`, `sueldo`, `status`, `comentarios`) VALUES
+(1, 'Daniel', 'Camacho', '54252', '2022-08-03', '2022-08-31', 'Zapopan', '1800', 'Baja', 'Necesita comer'),
+(2, 'Rolando', 'Mota', '2222', '2015-08-11', '2022-08-31', 'Zapopan', '12312', 'Baja', 'No agregar horas hoy'),
+(3, 'Marlenne', 'Mora', '3333', '2013-08-09', '2022-08-05', 'Sta Tere', '3214', 'Activo', 'Muy bien'),
+(4, 'Bernardo', 'Abu', '4444', '2016-08-08', '2022-08-13', 'Sta Tere', '4232', 'Activo', 'Necesita aprender '),
+(5, 'Raul', 'Conde', '5555', '2012-08-13', '2022-08-15', 'Sta Tere', '423', 'Activo', 'Le gusta andar en bici'),
+(7, 'Zoe', 'Calvillo', '3434223', '2011-06-06', '2022-08-31', 'Sta Tere', '1800', 'Activo', 'Modificar horario hoy');
 
 
 

@@ -36,9 +36,17 @@ th{
   }
   tr:hover {background-color: rgb(121, 172, 210, 0.4);}
 
+  .tableIcon{
+  width:40%;
+}
+
+.tableIcon1{
+  width:70%;
+}
+
     </style>
     
-<table class="table table-active">
+<table class="table table-active mx-auto">
   <thead>
     <tr>
       <th scope="col">id_Profesor</th>
@@ -52,6 +60,7 @@ th{
       <th scope="col">Estatus</th>
       <th scope="col">Comentarios</th>
       <th scope="col">Editar</th>
+      <th scope="col">Baja</th>
       <th scope="col">Borrar</th>
     </tr>
   </thead>
@@ -71,13 +80,9 @@ th{
       <td><?php echo $profesor->sueldo ?></td>
       <td><?php echo $profesor->status ?></td>
       <td><?php echo $profesor->comentarios ?></td>
-
-      
-
-      <td> <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&editar">Editar </a></td >
-      
-
-      <td><a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&borrar">Borrar</a></td>
+      <td> <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&editar"><img src="../../PNGs/editar.png" class="tableIcon">  </a></td>
+      <td> <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&baja"><img src="../../PNGs/human-error.png" class="tableIcon1">  </a></td>
+      <td> <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&borrar"><img src="../../PNGs/delete.png" class="tableIcon">  </a></td>
   </tr>
   
   <?php 

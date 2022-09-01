@@ -126,6 +126,39 @@ class Tutor implements CRUD
             $conn = null;
             }  
     }
+
+
+
+
+    function baja()
+    {
+        try{
+                $c=new Conexion();
+                $conn=$c->getConection();
+
+                $stmt = $conn->prepare("
+                UPDATE tutor SET nombre=:nombre, correo=:correo, telefono=:telefono  
+                WHERE id_tutor=:id_tutor");
+
+                $stmt->bindParam(':nombre', $this->nombre);
+                $stmt->bindParam(':correo', $this->correo);
+                $stmt->bindParam(':telefono', $this->telefono);
+              
+              $stmt->bindParam(':id_tutor',$this->id_tutor);
+                $stmt->execute();
+
+                $cambios=$stmt->rowCount();
+            } 
+            catch(PDOException $e) 
+            {
+                echo "Error: " . $e->getMessage();
+            } 
+            finally
+            {
+                $conn = null;
+            }
+    }
+
 }
 
 ?>

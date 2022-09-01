@@ -1,7 +1,7 @@
 <?php //echo $_GET['resultado']; ?>
 
 <!--------------------- Button trigger modal ------------------>
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal4">
+<button type="button" class="btn  btn_tutor" data-toggle="modal" data-target="#exampleModal4">
 Registrar Profesor
 </button>
 

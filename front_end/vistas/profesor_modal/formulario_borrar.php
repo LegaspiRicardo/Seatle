@@ -31,8 +31,8 @@ $(document).ready(function(){
   <div class="modal-dialog">
     <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title mx-auto" id="exampleModalLabel">Eliminar Profesor</h5>
+      <div class="modal-header  cabecera_eliminar">
+        <h3 class="modal-title mx-auto" id="exampleModalLabel">Eliminar Profesor</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -110,6 +110,7 @@ $(document).ready(function(){
             <select name="alberca" class="form-control" value="<?php echo $profesor->alberca?>" disabled>
                 <option value="Sta Tere" >Sta Tere</option>
                 <option value="Zapopan" >Zapopan</option>
+                <option value="<?php echo $profesor->alberca?>"selected><?php echo $profesor->alberca?></option>
             </select>
               <label for="validationCustom01" class=" col borde_inferior labels" > Alberca </label>
           </div>
@@ -119,6 +120,7 @@ $(document).ready(function(){
             <select name="status" class="form-control" value="<?php echo $profesor->status?>" disabled>
                 <option value="Activo" >Activo </option>
                 <option value="Baja" >Baja</option>
+                <option value="<?php echo $profesor->status?>"selected><?php echo $profesor->status?></option>
             </select>
               <label for="validationCustom02" class=" col borde_inferior labels"> Estatus </label>
           </div>

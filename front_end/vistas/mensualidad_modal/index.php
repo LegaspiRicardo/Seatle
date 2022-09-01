@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Mensualidad modal</title>
+    <title>Mensualidad </title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
@@ -57,16 +57,21 @@
 
 
 
-<div class="table col-md-10 mx-auto">
+<div class=" col-md-10 mx-auto mb-5">
       <br>
 
       <?php  
       include_once('formulario_crear.php');
       include_once('formulario_actualizar.php');
-      include_once ('data.php');      
-      ?>  
+    ?>  
  
     </div>
+     
+    <div class="table col-xs-10 mx-auto">
+      <?php include_once 'data.php';  ?>  
+    </div>
+      
+
      
   
       

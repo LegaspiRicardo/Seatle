@@ -63,6 +63,7 @@ $(document).ready(function(){
           <div class="col-4  mt-3">  
             <img src="../../PNGs/usuario_masculino.png" alt="" id="img_modal">
             <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" value="<?php echo $alumno->fecha_nac?>" disabled> 
+            <label for="validationCustom02">Fecha Nac.</label>
           </div>
         
           <div class="col-8 ml-auto pt-3">
@@ -97,6 +98,7 @@ $(document).ready(function(){
         <div class="form-row">
           <div class="col-6">
             <input type="date" name="fecha_ing"  value="<?php echo $alumno->fecha_ing?>" id="validationCustom01" class="form-control" disabled>
+            <label for="validationCustom02">Fecha Ingreso</label>
           </div>
 
 

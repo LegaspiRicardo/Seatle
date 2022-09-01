@@ -29,7 +29,7 @@ $(document).ready(function(){
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title mx-auto" id="exampleModalLabel">Eliminar Tutor</h5>
+        <h3 class="modal-title mx-auto" id="exampleModalLabel">Eliminar Tutor</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -43,25 +43,26 @@ $(document).ready(function(){
 
 
   <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
-    <div class="form-row"> 
-      <div class="col">
-        <label for="validationCustom01">Nombre</label>
-        <input type="text" class="form-control" id="validationCustom01" name="nombre" value="<?php echo $tutor->nombre?>" disabled>
-      </div>
+  <div class="form-row"> 
+            <div class="col-8">
+              <label for="validationCustom01">Nombre(s)</label>
+              <input type="text" class="form-control" id="validationCustom01" name="nombre" value="<?php echo $tutor->nombre?>" disabled>
+            </div>
 
-      <div class="col">
-        <label for="validationCustom02">Correo</label>
-        <input type="text" class="form-control" id="validationCustom02" name="correo" value="<?php echo $tutor->correo?>" disabled>
-      </div>
+            <div class="col-4">
+              <label for="validationCustom03">Telefono</label>
+              <input type="text" class="form-control" id="validationCustom02" name="telefono" value="<?php echo $tutor->telefono?>" disabled>
+            </div>   
+          </div>
 
-      <div class="col">
-        <label for="validationCustom03">Telefono</label>
-        <input type="text" class="form-control" id="validationCustom02" name="telefono" value="<?php echo $tutor->telefono?>" disabled>
-      </div>
-    </div>
+          <div class="form-row pt-3">
+            <div class="col-8 mx-auto">
+              <label for="validationCustom02">Correo</label>
+              <input type="text" class="form-control" id="validationCustom02" name="correo" value="<?php echo $tutor->correo?>" disabled>
+            </div>
+          </div>
+          </div>
 
-        
-      </div>
       <div class="modal-footer">
       <input type="submit" class=" col-8 btn btn-danger mx-auto" value="Eliminar Tutor">
 

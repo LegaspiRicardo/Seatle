@@ -32,7 +32,7 @@ $(document).ready(function(){
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title mx-auto" id="exampleModalLabel">Eliminar Horario</h5>
+        <h3 class="modal-title mx-auto" id="exampleModalLabel">Eliminar Horario</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -49,17 +49,7 @@ $(document).ready(function(){
 
   <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
          
-  <div class="form-row "> 
 
-<div class="col mx-auto" >
-
-      <select id="validationCustom01" class="form-control" name="id_profesor"  hidden>
-      <option  value="<?php echo $horario_profe->id_profesor ?>"> <?php echo $horario_profe->id_profesor?> </option> 
-
-      </select> 
-  </div>
-  
-</div>
 
 
 
@@ -68,7 +58,7 @@ $(document).ready(function(){
   <div class="col mx-auto">
 
       <label for="validationCustom07" >Profesor</label>
-      <select id="validationCustom01"  class="form-control"  name="id_profesor"  disabled>
+      <select id="validationCustom01"  class="form-control"  name="id_profesor" value="<?php echo $horario_profesores->id_profesor?>" disabled>
 
           <?php
 
@@ -81,6 +71,8 @@ $(document).ready(function(){
           <?php
               }
           ?>
+
+<option value="<?php echo $horario_profesores->id_profesor ?>" selected>  <?php echo $horario_profesores->id_profesor ?> </option>
 
           </select> 
     </div>
@@ -107,7 +99,7 @@ $(document).ready(function(){
       <div class="modal-footer">
       <input type="submit" class="col-8 btn btn-danger mx-auto" value="Eliminar Horario">
 
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
        
       </div>
 

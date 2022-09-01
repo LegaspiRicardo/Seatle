@@ -4,19 +4,13 @@
 if(isset($_GET['resultado'])){
   echo $_GET['resultado'];
   }
-  
-  
+
   $alumno=new Alumno();
   if(isset($_GET['id_alumno']) && isset($_GET['editar'])){
     $alumno->id_alumno=$_GET['id_alumno'];
-    $alumno=$alumno->leer_id();
-
-    
-    
+    $alumno=$alumno->leer_id(); 
   
 ?>
-
-
 <!-- Button trigger modal -->
   <!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal2">
   Actualizar producto
@@ -101,7 +95,7 @@ $(document).ready(function(){
 
 
             <div class="col-6 ml-auto">
-          <input type="search" name="id_tutor" list="tutors" id="validationCustom01" class="form-control" value="<?php echo $alumno->id_tutor?>" required>
+          <input type="search" name="id_tutor" list="tutors" id="validationCustom01" class="form-control" value="<?php echo $alumno->id_tutor?>" >
          
           <datalist   id="tutors" >
           <?php foreach($tutores as $tutor){ ?>

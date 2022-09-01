@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Profesor Modal</title>
+    <title>Profesores</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
@@ -61,6 +61,7 @@
 
     <?php  
       include_once('formulario_crear.php');
+      include_once('formulario_baja.php');
       include_once('formulario_actualizar.php');
       include_once('formulario_borrar.php');    
     ?>  

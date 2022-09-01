@@ -32,7 +32,7 @@ $(document).ready(function(){
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title mx-auto" id="exampleModalLabel">Actualizar Horario</h5>
+        <h3 class="modal-title mx-auto" id="exampleModalLabel">Actualizar Horario</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -54,7 +54,7 @@ $(document).ready(function(){
 <div class="col mx-auto" >
 
       <select id="validationCustom01" class="form-control" name="id_profesor"  hidden>
-      <option  value="<?php echo $horario_profe->id_profesor ?>"> <?php echo $horario_profe->id_profesor?> </option> 
+      <option  value="<?php echo $horario_profe->id_profesor ?>"> <?php echo $horario_profesores->id_profesor?> </option> 
 
       </select> 
   </div>
@@ -68,19 +68,22 @@ $(document).ready(function(){
   <div class="col mx-auto">
 
       <label for="validationCustom07" >Profesor</label>
-      <select id="validationCustom01"  class="form-control"  name="id_profesor"  required>
+      <select id="validationCustom01"  class="form-control"  name="id_profesor" value="<?php echo $horario_profesores->id_profesor?>">
+
+
 
           <?php
 
             foreach($profesores as $horario_profe){
           ?>
 
-
-<option value="<?php echo $horario_profe->id_profesor?>" <?php  echo ($profesor->id_profesor==$horario_profesores->id_profesor) ? "selected" : ""  ?> > <?php echo $horario_profe->nombres . " ". $horario_profe->apellidos ?></option>
+<option value="<?php echo $horario_profe->id_profesor?>" <?php  echo ($horario_profe->id_profesor==$profesor->id_profesor) ? "selected" : ""  ?>> <?php echo $horario_profe->id_profesor . " ". $horario_profe->nombres . " ". $horario_profe->apellidos ?></option>
 
           <?php
               }
           ?>
+
+          <option value="<?php echo $horario_profesores->id_profesor ?>" selected>  <?php echo $horario_profesores->id_profesor ?> </option>
 
           </select> 
     </div>
@@ -107,7 +110,7 @@ $(document).ready(function(){
       <div class="modal-footer">
       <input type="submit" class="col-8 btn btn-success mx-auto" value="Actualizar Horario">
 
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
        
       </div>
 

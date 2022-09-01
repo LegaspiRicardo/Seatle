@@ -41,9 +41,10 @@
 
   </head>
 
- 
-
 <body >
+
+
+
 <section class="col-8 mx-auto pb-2 pasos_ingreso">
   
 <h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
@@ -78,6 +79,12 @@
           </div>
           
   </div>
-</section>     
+
+  
+</section> 
+
+
+
+
 </body>
 </html>
