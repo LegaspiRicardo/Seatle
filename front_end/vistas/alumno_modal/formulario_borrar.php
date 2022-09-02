@@ -13,14 +13,9 @@ if(isset($_GET['resultado'])){
 ?>
 
 
-<!-- Button trigger modal -->
-<!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal3">
-  Eliminar Producto
-</button>  -->
-
 <script>
 $(document).ready(function(){
-  $("#exampleModal12").modal('show');
+  $("#exampleModal3").modal('show');
 });
 </script>
 
@@ -29,7 +24,7 @@ $(document).ready(function(){
 <link rel="stylesheet" href="../estilos.css">
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header cabecera_eliminar">

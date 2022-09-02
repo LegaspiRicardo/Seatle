@@ -6,10 +6,10 @@ if(isset($_GET['resultado'])){
   }
   
 
-  $tutor=new Tutor();
-  if(isset($_GET['id_tutor']) && isset($_GET['editar'])){
-    $tutor->id_tutor=$_GET['id_tutor'];
-    $tutor=$tutor->leer_id();
+  $alumno_paga_mensualidad=new Alumno_paga_mensualidad();
+  if(isset($_GET['id__alumno_mensualidad']) && isset($_GET['editar'])){
+    $alumno_paga_mensualidad->id_mensualidad=$_GET['id_alumno_mensualidad'];
+    $alumno_paga_mensualidad=$alumno_paga_mensualidad->leer_id();
     
   
 ?>
@@ -22,17 +22,17 @@ if(isset($_GET['resultado'])){
 
 <script>
 $(document).ready(function(){
-  $("#exampleModal18").modal('show');
+  $("#exampleModal5").modal('show');
 });
 </script>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal18" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h3 class="modal-title mx-auto" id="exampleModalLabel">Actualizar Tutor</h3>
+        <h3 class="modal-title mx-auto" id="exampleModalLabel">Modificar Fecha Pago</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -41,31 +41,31 @@ $(document).ready(function(){
       <div class="modal-body">
 
 
-        <form class="needs-validation" novalidate action="../../../back_end/controladores/tutor_controlador.php" method="GET" enctype="multipart/form-data">
+        <form class="needs-validation" novalidate action="../../../back_end/controladores/alumno_paga_mensualidad_controlador.php" method="GET" enctype="multipart/form-data">
 
           <input type="hidden" name="opcion" value="2">
-          <input type="hidden" name="id_tutor" value="<?php echo $tutor->id_tutor?>">
+          <input type="hidden" name="id_mensualidad" value="<?php echo $alumno_paga_mensualidad->id_mensualidad?>">
 
 
   <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
-          <div class="form-row"> 
-            <div class="col-8">
-              <label for="validationCustom01">Nombre(s)</label>
-              <input type="text" class="form-control" id="validationCustom01" name="nombre" value="<?php echo $tutor->nombre?>" required>
-            </div>
-
-            <div class="col-4">
-              <label for="validationCustom03">Telefono</label>
-              <input type="text" class="form-control" id="validationCustom02" name="telefono" value="<?php echo $tutor->telefono?>" required>
-            </div>   
+        <div class="form-row"> 
+          <div class="col-8">
+            <input type="text" class="form-control inputForm" id="validationCustom01" name="id_mensualidad" required>
+            <label for="validationCustom01">Mensualidad</label>
           </div>
 
-          <div class="form-row pt-3">
-            <div class="col-8 mx-auto">
-              <label for="validationCustom02">Correo</label>
-              <input type="text" class="form-control" id="validationCustom02" name="correo" value="<?php echo $tutor->correo?>" required>
-            </div>
+          <div class="col-4">
+            <input type="text" class="form-control inputForm" id="validationCustom03" name="id_alumno" required>
+            <label for="validationCustom03">Alumno</label>
           </div>
+        </div>
+
+        <div class="form-row">
+        <div class="col-8 mx-auto">
+            <input type="text" class="form-control inputForm" id="validationCustom02" name="fecha_pago" required>          
+            <label for="validationCustom02">Fecha Pago</label>
+          </div>
+        </div>
 
         
   <!---- <button class="btn btn-primary" type="submit">Submit form</button>------->

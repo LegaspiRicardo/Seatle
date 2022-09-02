@@ -12,7 +12,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn_tutor" data-toggle="modal" data-target="#exampleModal1">
+<button type="button" class="btn btn-info btn_tutor" data-toggle="modal" data-target="#exampleModal20">
 Registrar tutor
 </button>
 
@@ -26,7 +26,7 @@ $("#exampleModal1").modal('show');
 <link rel="stylesheet" href="../estilos.css">
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal20" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 

@@ -9,7 +9,6 @@
  $alumnos=$alumno->leer_todo();
  
 
-
 ?>
 
 

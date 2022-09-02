@@ -12,19 +12,12 @@ if(isset($_GET['resultado'])){
     $alumno=$alumno->leer_id();
 
     
-    
-  
 ?>
 
 
-<!-- Button trigger modal -->
-  <!-- <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal2">
-  Actualizar producto
-</button>    -->
-
 <script>
 $(document).ready(function(){
-  $("#exampleModal13").modal('show');
+  $("#exampleModal2").modal('show');
 });
 </script>
 
@@ -34,7 +27,7 @@ $(document).ready(function(){
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -54,7 +47,7 @@ $(document).ready(function(){
           <input type="hidden" name="id_alumno" value="<?php echo $alumno->id_alumno?>">
 
 
-   <!------------------------------------Img, Nombres, Sexo------------------------------------------>
+   <!------------------------------------Información Personal------------------------------------------>
    <div class="Subtitulo">
         <h4>Información personal</h4>
         </div>

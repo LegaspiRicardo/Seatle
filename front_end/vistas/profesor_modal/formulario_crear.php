@@ -1,7 +1,7 @@
 <?php //echo $_GET['resultado']; ?>
 
 <!--------------------- Button trigger modal ------------------>
-<button type="button" class="btn  btn_tutor" data-toggle="modal" data-target="#exampleModal4">
+<button type="button" class="btn  btn_tutor" data-toggle="modal" data-target="#exampleModal17">
 Registrar Profesor
 </button>
 
@@ -21,7 +21,7 @@ $("#exampleModal1").modal('show');
 </style>
 
 <!------------------------------- Modal --------------------------------->
-<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal17" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
  <div class="modal-dialog">
    <div class="modal-content">
      <div class="modal-header">

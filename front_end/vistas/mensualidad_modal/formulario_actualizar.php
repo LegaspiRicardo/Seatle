@@ -22,12 +22,12 @@ if(isset($_GET['resultado'])){
 
 <script>
 $(document).ready(function(){
-  $("#exampleModal14").modal('show');
+  $("#exampleModal11").modal('show');
 });
 </script>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 

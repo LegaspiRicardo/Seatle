@@ -14,7 +14,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn_alumno" data-toggle="modal" data-target="#exampleModal10">
+<button type="button" class="btn btn-info btn_alumno" data-toggle="modal" data-target="#exampleModal4">
 Registrar Alumno
 </button>
 
@@ -32,7 +32,7 @@ $("#exampleModal1").modal('show');
 
 
 <!------------------------------ Modal ------------------------------>
-<div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

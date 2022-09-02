@@ -13,7 +13,7 @@ $profesores=$profesor->leer_todo();
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal7">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal10">
 Asignar Horario
 </button>
 
@@ -26,7 +26,7 @@ $("#exampleModal1").modal('show');
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
  <div class="modal-dialog">
    <div class="modal-content">
 

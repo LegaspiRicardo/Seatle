@@ -27,19 +27,24 @@ class Mensualidad implements CRUD
                 $stmt->bindParam(':total', $this->total);
                 $stmt->execute();
 
+                if($stmt=true)
+                {
 
-                $stmt = $conn->prepare("
-                INSERT INTO alumno_paga_mensualidad (id_alumno, id_mensualidad, fecha_pago)
-                VALUES (:id_alumno, :id_mensualidad, :fecha_pago)");
-            
+                    $c=new Conexion();
+                    $conn=$c->getConection();
+                    $stmt = $conn->prepare("
+                    INSERT INTO alumno_paga_mensualidad (id_alumno, id_mensualidad, fecha_pago)
+                    VALUES (:id_alumno, :id_mensualidad, :fecha_pago)");
+                
 
-                $stmt->bindParam(':id_alumno', $this->id_alumno);
-                $stmt->bindParam(':id_mensualidad', $this->id_mensualidad);
-                $stmt->bindParam(':fecha_pago', $this->fecha_pago);
-                $stmt->execute();
-
+                    $stmt->bindParam(':id_alumno', $this->id_alumno);
+                    $stmt->bindParam(':id_mensualidad', $this->id_mensualidad);
+                    $stmt->bindParam(':fecha_pago', $this->fecha_pago);
+                    $stmt->execute();
+                
                 
                 return $stmt->rowCount();
+                }
             }
             catch(PDOException $e)
             {

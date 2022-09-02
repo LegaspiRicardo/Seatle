@@ -1,7 +1,6 @@
 <?php
-
-  include_once '../../../back_end/modelos/alumno.php';
-  include_once '../../../back_end/modelos/mensualidad.php';
+include_once '../../../back_end/modelos/mensualidad.php';
+  
   include_once '../../../back_end/modelos/alumno_paga_mensualidad.php';
   
 
@@ -15,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Mensualidad </title>
+    <title>Fechas de Pago</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <style>
@@ -37,12 +36,14 @@
 
     
     <!-- Custom styles for this template -->
+    <link href="../estilos.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    
 
   </head>
 
@@ -57,14 +58,12 @@
 <div class="container-fluid" >
 
 
-
 <div class=" col-md-10 mx-auto mb-5">
       <br>
 
-      <?php  
+    <?php  
       include_once('formulario_crear.php');
-      include_once('formulario_actualizar.php');
-      include_once('formulario_borrar.php');
+      include_once('formulario_actualizar.php'); 
     ?>  
  
     </div>
@@ -74,13 +73,11 @@
     </div>
       
 
-     
-  
-      
-
 
 </div>
 
+
+</div>
 
 
       
