@@ -47,6 +47,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
  
 <link rel="stylesheet" href="../estilos.css">
+<link rel="stylesheet" href="../dashboard/dashboard.css">
 
   </head>
 
@@ -55,16 +56,18 @@
 <body>
    
 
+<?php 
+              include_once ("../dashboard/aside.php");
+            ?>
 
 
 
-<div class="container-fluid p-2" >
-
+<section class="col-9 " >
 
 
 
      
-  <div class="table col-xs-10 mx-auto">
+  <div class="table col-xs-10 mx-auto mt-5">
     <?php include_once 'data.php';
     
     include_once('formulario_baja.php');
@@ -80,9 +83,9 @@
       
 
 
-</div>
+    </section>
 
-
+    
       
   </body>
 </html>

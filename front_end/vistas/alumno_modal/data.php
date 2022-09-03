@@ -14,7 +14,7 @@
 
 .table{
         width:90%;
-        max-height:500px;
+        max-height:550px;
         overflow: scroll;
         border-collapse:collapse;
         border:1px solid #ddd;
@@ -27,7 +27,9 @@ th{
   font-size:1em;
   color:white;
   text-shadow:1px 1px black;
-  background-color:rgb(121, 172, 210, 0.8);
+  background-color:rgb(121, 172, 210);
+  position:sticky;
+  top:0;
   
 }
 
@@ -50,6 +52,7 @@ th{
     
 
 
+<h3>Alumnos Registrados</h3>
 <table class="tabla table-active mx-auto">
   <thead>
     <tr>

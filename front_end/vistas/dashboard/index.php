@@ -45,7 +45,12 @@
 
 
 
-<section class="col-8 mx-auto pb-2 pasos_ingreso">
+<?php 
+              include_once ("aside.php");
+            ?>
+
+
+<section class="col  pb-2 pasos_ingreso">
   
 <h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
   <div class="row ">
