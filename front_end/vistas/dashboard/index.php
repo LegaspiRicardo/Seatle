@@ -46,7 +46,7 @@
 
 
 <?php 
-              include_once ("aside.php");
+              include_once ("../componentes/aside.php");
             ?>
 
 

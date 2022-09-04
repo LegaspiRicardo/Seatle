@@ -57,7 +57,7 @@
    
 
 <?php 
-              include_once ("../dashboard/aside.php");
+              include_once ("../componentes/aside.php");
             ?>
 
 
@@ -66,8 +66,9 @@
 
 
 
+<h3>Alumnos Registrados</h3>
      
-  <div class="table col-xs-10 mx-auto mt-5">
+  <div class="table col-xs mt-5">
     <?php include_once 'data.php';
     
     include_once('formulario_baja.php');

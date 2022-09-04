@@ -51,7 +51,7 @@
    
 
 <?php 
-              include_once ("../dashboard/aside.php");
+              include_once ("../componentes/aside.php");
             ?>
 
 
