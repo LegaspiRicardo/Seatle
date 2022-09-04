@@ -13,7 +13,7 @@
 
 .table{
         width:90%;
-        max-height:500px;
+        max-height:550px;
         overflow: scroll;
         border-collapse:collapse;
         border:1px solid #ddd;
@@ -27,6 +27,8 @@ th{
   color:white;
   text-shadow:1px 1px black;
   background-color:rgb(121, 172, 210, 0.8);
+  position:sticky;
+  top:0;
   
 }
 

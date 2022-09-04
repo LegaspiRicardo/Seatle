@@ -55,25 +55,23 @@
             ?>
 
 
-<div class="container-fluid" >
 
 
-
-<div class=" col-md-10 mx-auto mb-5">
+<div class=" col-9 mb-5">
       <br>
 
     <?php  
       include_once('formulario_crear.php');
       include_once('formulario_baja.php');
       include_once('formulario_actualizar.php');
-      include_once('formulario_borrar.php');    
+      include_once('formulario_borrar.php');  
     ?>  
- 
-    </div>
-     
-    <div class="table col-xs-10 mx-auto">
+  <div class="table col-xs-8 mt-5">
       <?php include_once 'data.php';  ?>  
     </div>
+    </div>
+     
+   
       
 
 

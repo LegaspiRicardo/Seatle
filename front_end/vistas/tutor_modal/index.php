@@ -42,6 +42,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <link rel="stylesheet" href="../estilos.css">
+<link rel="stylesheet" href="../dashboard/dashboard.css">
     
 
   </head>
@@ -51,33 +54,29 @@
 <body>
    
 
+<?php 
+              include_once ("../componentes/aside.php");
+            ?>
 
 
+<section class="col-9" >
 
-<div class="container-fluid" >
+<div class="mt-3">
+<?php   
 
-
-<div class=" col-md-10 mx-auto mb-5">
-      <br>
-
-    <?php  
-      include_once('formulario_crear.php');
-      include_once('formulario_actualizar.php');
-      include_once('formulario_borrar.php');    
-    ?>  
- 
-    </div>
+include_once('formulario_crear.php');
+?> 
+</div>
      
-    <div class="table col-xs-10 mx-auto">
-      <?php include_once 'data.php';  ?>  
+    <div class="table col-xs mt-5">
+      
+      <?php include_once 'data.php'; 
+      include_once('formulario_actualizar.php');
+      include_once('formulario_borrar.php');   ?>  
     </div>
       
 
-
-</div>
-
-
-</div>
+</section>
 
 
       

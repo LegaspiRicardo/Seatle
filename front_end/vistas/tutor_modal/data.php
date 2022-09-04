@@ -27,6 +27,8 @@ th{
   color:white;
   text-shadow:1px 1px black;
   background-color:rgb(121, 172, 210, 0.8);
+  position:sticky;
+  top:0;
   
 }
 
@@ -51,7 +53,7 @@ th{
 
     </style>
     
-<table class="table table-active mx-auto">
+<table class="table table-active ">
   <thead>
     <tr>
       <th scope="col">Id_Tutor</th>
