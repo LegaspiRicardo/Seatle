@@ -3,15 +3,20 @@ body{
 }
 
 
-.pasos_ingreso{
+.central{
   background-color: rgb(231, 227, 227);
-  max-height: 250px;
+  border-radius: 5%;
+}
+
+.calendario{
+  background-color: rgb(255, 255, 255);
   border-radius: 5%;
 }
 
 .paso_tutor{
   background-color: rgb(250, 245, 245);
   border-radius: 5%;
+  max-height:200px;
 }
 
 .paso_alumno{
@@ -91,6 +96,7 @@ h2{
 .sidebar{
   position: sticky;
   top: 0;
+  max-height: 500px;
 }
 
 .nav-items{

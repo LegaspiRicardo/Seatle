@@ -37,7 +37,11 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
    
-<link rel="stylesheet" href="dashboard.css">
+
+    <link href='../../Calendario/main.css' rel='stylesheet' />
+    <script src='../../Calendario/main.js'></script>
+
+    <link rel="stylesheet" href="dashboard.css">
 
   </head>
 
@@ -50,13 +54,13 @@
             ?>
 
 
-<section class="col  pb-2 pasos_ingreso">
+<section class="col-8  central">
   
 <h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
   <div class="row ">
       <div class="col-3 mx-auto paso_tutor">
-            <h5 class="subtitulo_pasos mt-2">Primer paso</h5>
             
+          <h5 class="subtitulo_pasos mt-2">Primer paso</h5>
             <h2 class="numero_pasos ">1</h2>
             <?php 
               include_once ("../tutor_modal/index_dash.php");
@@ -82,10 +86,31 @@
             
           ?>
           </div>
+
+          <div class="col-3 mx-auto paso_alumno">
+            <h5 class="subtitulo_pasos_blanco mt-2">Cuarto paso</h5>
+            
+            <h2 class="numero_pasos_blanco ">4</h2>
+            <?php 
+              include_once ("../alumno_modal/index_dash.php");
+            ?>
+      </div>
           
   </div>
+  <section class="col pb-5 mt-5 calendario">
+        <?php
+          include_once ("../../Calendario/index.html");
+        ?>
+  </section>
 
-  
+
+
+
+
+
+
+
+
 
 
 </body>
