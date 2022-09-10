@@ -103,14 +103,14 @@
         ?>
   </section>
 
+  </section>
 
 
 
 
-
-
-
-
+  <?php 
+              include_once ("../componentes/lateral_derecho.php");
+            ?>
 
 
 </body>

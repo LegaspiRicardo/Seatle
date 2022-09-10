@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar ml-2 collapse">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar  collapse">
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item ">
@@ -27,10 +27,16 @@
           <li class="col-12 pl-5 mb-3"><a class="nav-items" href="../alumno_modal/index.php"> Dar de Baja </a></li>
 
           <li class="nav-item">
-          <h5><a class="nav-link" href="../tutor_modal/index.php"><img src="../../PNGs/tutor.png" alt="" class="icon-sideBar mr-3"> Tutores</a></h5>
+            <h5><a class="nav-link" href="../tutor_modal/index.php"><img src="../../PNGs/tutor.png" alt="" class="icon-sideBar mr-3"> Tutores</a></h5>
           </li>
           <li class=" col-12 pl-5 "><a class="nav-items " href="../alumno_modal/index.php"> Registrar Nuevo </a></li>
-          <li class="col-12 pl-5 "><a class="nav-items" href="../alumno_modal/index.php"> Actualizar Tutor </a></li>
+          <li class="col-12 pl-5 mb-3 "><a class="nav-items" href="../alumno_modal/index.php"> Actualizar Tutor </a></li>
+
+          <li class="nav-item">
+            <h5><a class="nav-link" href="../mensualidad_modal/index.php"><img src="../../PNGs/monedas.png" alt="" class="icon-sideBar mr-3"> Pagos</a></h5>
+          </li>
+
+
 
         </ul>
 

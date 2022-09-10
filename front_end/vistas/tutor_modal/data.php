@@ -12,7 +12,7 @@
 <style>
 
 .table{
-        width:90%;
+        width:100%;
         max-height:500px;
         overflow: scroll;
         border-collapse:collapse;

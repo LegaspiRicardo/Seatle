@@ -1,10 +1,9 @@
 body{
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(230, 230, 230);
 }
 
 
 .central{
-  background-color: rgb(231, 227, 227);
   border-radius: 5%;
 }
 
@@ -15,18 +14,17 @@ body{
 
 .paso_tutor{
   background-color: rgb(250, 245, 245);
-  border-radius: 5%;
-  max-height:200px;
+  border-radius: 20%;
 }
 
 .paso_alumno{
   background-color: #4e93cc;
-  border-radius: 5%;
+  border-radius: 20%;
 }
 
 .paso_mensualidad{
   background-color: rgb(250, 245, 245);
-  border-radius: 5%;
+  border-radius: 20%;
 }
 
 .btn_alumno{
