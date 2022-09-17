@@ -39,7 +39,7 @@ if(isset($_REQUEST['opcion'])){
             default: echo"opcion invalida";
     }
 
-    header('Location: ../../front_end/vistas/clase_part_modal/index.php?resultado='.$resultado);
+    header('Location: ../../front_end/vistas/dashboard/index.php?resultado='.$resultado);
     exit(); 
 
 }

@@ -2,7 +2,7 @@
 
 
 
-  <div class="col ml-2">
+  <div class="col-3 ml-2 d-md-block collapse">
     <section id="sidebarMenu" class="col d-md-block sidebar collapse">
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
