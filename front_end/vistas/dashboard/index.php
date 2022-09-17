@@ -21,10 +21,12 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 345px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+
+        
       }
     </style>
 
@@ -54,13 +56,13 @@
             ?>
 
 
-<section class="col-8  central">
+<section class=" col container-fluid central">
   
 <h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
   <div class="row ">
       <div class="col-3 mx-auto paso_tutor">
             
-          <h5 class="subtitulo_pasos mt-2">Primer paso</h5>
+          <h5 class="subtitulo_pasos mt-2 d-none d-sm-block">Primer paso</h5>
             <h2 class="numero_pasos ">1</h2>
             <?php 
               include_once ("../tutor_modal/index_dash.php");
@@ -68,7 +70,7 @@
       </div>
 
       <div class="col-3 mx-auto paso_alumno">
-            <h5 class="subtitulo_pasos_blanco mt-2">Segundo paso</h5>
+            <h5 class="subtitulo_pasos_blanco mt-2 d-none d-sm-block">Segundo paso</h5>
             
             <h2 class="numero_pasos_blanco ">2</h2>
             <?php 
@@ -77,7 +79,7 @@
       </div>
       </div>
           <div class="col-3 mx-auto paso_mensualidad">
-          <h5 class="subtitulo_pasos mt-2">Tercer paso</h5>
+          <h5 class="subtitulo_pasos mt-2 d-none d-sm-block">Tercer paso</h5>
             
             <h2 class="numero_pasos ">3</h2>
           <?php 
@@ -88,7 +90,7 @@
           </div>
 
           <div class="col-3 mx-auto paso_alumno">
-            <h5 class="subtitulo_pasos_blanco mt-2">Cuarto paso</h5>
+            <h5 class="subtitulo_pasos_blanco mt-2 d-none d-sm-block">Cuarto paso</h5>
             
             <h2 class="numero_pasos_blanco ">4</h2>
             <?php 

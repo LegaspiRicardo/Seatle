@@ -113,3 +113,40 @@ h5{
 
 
 
+
+
+@media only screen and (max-width: 400px) {
+  /* For mobile phones: */
+ 
+
+  .central{
+    background-color:purple;
+  }
+
+  .titulo_pasos_blanco{
+    width: 100%;
+    font-size: 150%;
+    text-align: center;
+  }
+
+  .row{
+    max-height: 100px;
+    margin-bottom: 40%;
+  }
+
+  .paso_tutor {
+    max-height: 110px;
+    align-items: center;
+  }
+  
+  
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .central {
+    width: 90%;
+  }
+  
+}
