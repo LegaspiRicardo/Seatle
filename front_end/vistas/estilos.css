@@ -104,7 +104,7 @@ radial-gradient(at 48% 59%, hsla(340,17%,97%,1) 0px, transparent 50%);
   background-color:hsla(0,100%,99%,1);
   background-image:
   radial-gradient(at 48% 62%, hsla(185,0%,100%,1) 0px, transparent 50%),
-  radial-gradient(at 47% 100%, hsla(101,100%,60%,1) 0px, transparent 50%),
+  radial-gradient(at 47% 100%, rgb(85, 179, 41) 0px, transparent 50%),
   radial-gradient(at 48% 59%, hsla(340,17%,97%,1) 0px, transparent 50%);
 }
 

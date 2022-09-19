@@ -114,14 +114,9 @@ h5{
 
 
 
-
+/*------------For mobile phones:------------------ */
 @media only screen and (max-width: 400px) {
-  /* For mobile phones: */
- 
-
-  .central{
-    background-color:purple;
-  }
+  
 
   .titulo_pasos_blanco{
     width: 100%;
@@ -130,23 +125,28 @@ h5{
   }
 
   .row{
-    max-height: 100px;
+    max-height: 140px;
     margin-bottom: 40%;
   }
 
-  .paso_tutor {
+  .paso_tutor{
     max-height: 110px;
     align-items: center;
   }
   
+  .paso_alumno{
+    max-height: 110px;
+    align-items: center;
+  }
   
 
 }
 
+
+
+/*------------For tablets:------------------ */
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .central {
-    width: 90%;
-  }
+ 
   
 }

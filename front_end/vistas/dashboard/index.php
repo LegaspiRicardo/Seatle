@@ -25,13 +25,11 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-
-        
       }
     </style>
 
     
-    <!-- Custom styles for this template -->
+    <!----------------------- Custom styles for this template ------------------------------>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
@@ -47,65 +45,74 @@
 
   </head>
 
-<body >
+<body>
+
+  <?php 
+       include_once ("../componentes/aside.php");
+    ?>
 
 
-
-<?php 
-              include_once ("../componentes/aside.php");
-            ?>
-
-
-<section class=" col container-fluid central">
+  <section class=" col container-fluid central">
   
-<h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
-  <div class="row ">
-      <div class="col-3 mx-auto paso_tutor">
-            
-          <h5 class="subtitulo_pasos mt-2 d-none d-sm-block">Primer paso</h5>
+    <h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
+
+<!--------- Hide on smaller screens ------------------------------------->
+    <div class="row ">
+      <div class=" col mx-auto paso_tutor"> 
+          <h5 class="subtitulo_pasos mt-2 d-none ">Primer paso</h5>
             <h2 class="numero_pasos ">1</h2>
             <?php 
               include_once ("../tutor_modal/index_dash.php");
             ?>
       </div>
 
-      <div class="col-3 mx-auto paso_alumno">
-            <h5 class="subtitulo_pasos_blanco mt-2 d-none d-sm-block">Segundo paso</h5>
+      <div class="col mx-auto paso_alumno">
+            <h5 class="subtitulo_pasos_blanco mt-2 d-none ">Segundo paso</h5>
             
             <h2 class="numero_pasos_blanco ">2</h2>
             <?php 
               include_once ("../alumno_modal/index_dash.php");
             ?>
       </div>
-      </div>
-          <div class="col-3 mx-auto paso_mensualidad">
-          <h5 class="subtitulo_pasos mt-2 d-none d-sm-block">Tercer paso</h5>
-            
+
+    </div>
+    <!-------- Force next columns to break to new line at md breakpoint and up ------------>
+    <div class="w-100  d-sm-none"></div>
+
+      <div class="col mx-auto paso_mensualidad">
+          <h5 class="subtitulo_pasos mt-2 d-none ">Tercer paso</h5>
             <h2 class="numero_pasos ">3</h2>
-          <?php 
+              <?php 
+                include_once ("../mensualidad_modal/index_dash.php");  
+              ?>
+      </div>
 
-            include_once ("../mensualidad_modal/index_dash.php");
-            
-          ?>
-          </div>
-
-          <div class="col-3 mx-auto paso_alumno">
-            <h5 class="subtitulo_pasos_blanco mt-2 d-none d-sm-block">Cuarto paso</h5>
-            
+      <div class="col mx-auto paso_alumno">
+          <h5 class="subtitulo_pasos_blanco mt-2 d-none d-sm-block">Cuarto paso</h5>
             <h2 class="numero_pasos_blanco ">4</h2>
             <?php 
               include_once ("../alumno_modal/index_dash.php");
             ?>
-      </div>
-          
-  </div>
-  <section class="col pb-5 mt-5 calendario">
-        <?php
-          include_once ("../../Calendario/index.html");
-        ?>
-  </section>
+      </div>      
+    </div>
 
-  </section>
+
+
+    <section class=" col d-inline-block ">
+      
+      <div class="col pb-5 mt-2 calendario">
+            <?php
+              include_once ("../../Calendario/index.html");
+            ?>
+      </div>
+
+    </section>
+
+
+
+    </section>
+
+   
 
 
 
