@@ -44,7 +44,6 @@ body{
 .numero_pasos_blanco{
   color: white;
   text-shadow:1px 1px black;
-
 }
 
 .titulo_pasos_blanco{
@@ -115,12 +114,12 @@ h5{
 
 
 /*------------For mobile phones:------------------ */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   
 
   .titulo_pasos_blanco{
     width: 100%;
-    font-size: 150%;
+    font-size: large;
     text-align: center;
   }
 
@@ -130,16 +129,30 @@ h5{
   }
 
   .paso_tutor{
-    max-height: 110px;
+    max-height: 50px;
     align-items: center;
+    padding-bottom: 40%;
   }
   
   .paso_alumno{
-    max-height: 110px;
+    max-height: 50px;
     align-items: center;
+    padding-bottom: 40%;
   }
   
+  .btn_tutor{
+    width: 110%;
+    font-size: x-small;
+  }
 
+  .btn_alumno{
+    width: 110%;
+    font-size: x-small;
+  }
+
+  .central{
+    max-width: 80%;
+  }
 }
 
 

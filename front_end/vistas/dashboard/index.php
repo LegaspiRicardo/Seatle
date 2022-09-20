@@ -52,14 +52,16 @@
     ?>
 
 
+
+
   <section class=" col container-fluid central">
   
     <h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
 
 <!--------- Hide on smaller screens ------------------------------------->
     <div class="row ">
-      <div class=" col mx-auto paso_tutor"> 
-          <h5 class="subtitulo_pasos mt-2 d-none ">Primer paso</h5>
+      <div class=" col mx-auto paso_tutor "> 
+          <h5 class="subtitulo_pasos mt-2 d-none d-sm-block">Primer paso</h5>
             <h2 class="numero_pasos ">1</h2>
             <?php 
               include_once ("../tutor_modal/index_dash.php");
@@ -67,7 +69,7 @@
       </div>
 
       <div class="col mx-auto paso_alumno">
-            <h5 class="subtitulo_pasos_blanco mt-2 d-none ">Segundo paso</h5>
+            <h5 class="subtitulo_pasos_blanco mt-2 d-none d-sm-block">Segundo paso</h5>
             
             <h2 class="numero_pasos_blanco ">2</h2>
             <?php 
@@ -80,7 +82,7 @@
     <div class="w-100  d-sm-none"></div>
 
       <div class="col mx-auto paso_mensualidad">
-          <h5 class="subtitulo_pasos mt-2 d-none ">Tercer paso</h5>
+          <h5 class="subtitulo_pasos mt-2 d-none d-sm-block">Tercer paso</h5>
             <h2 class="numero_pasos ">3</h2>
               <?php 
                 include_once ("../mensualidad_modal/index_dash.php");  
@@ -98,24 +100,22 @@
 
 
 
-    <section class=" col d-inline-block ">
-      
-      <div class="col pb-5 mt-2 calendario">
+ 
+
+
+    
+
+   
+    <section class=" row d-inline central mx-auto">
+    <div class="col pb-5 mt-2  calendario">
             <?php
               include_once ("../../Calendario/index.html");
             ?>
       </div>
+  
 
-    </section>
-
-
-
-    </section>
-
-   
-
-
-
+      </section>
+      </section>
 
   <?php 
               include_once ("../componentes/lateral_derecho.php");
