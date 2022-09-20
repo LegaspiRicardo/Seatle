@@ -12,7 +12,7 @@
 
 
 
-<div class="container-fluid p-2 ml-3" >
+<div class="container-fluid mx-auto" >
 
 
 
