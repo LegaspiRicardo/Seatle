@@ -9,13 +9,18 @@ body{
 }
 
 header{
- background-color: transparent;
+  margin: 0;
+  background-color: rgb(19, 105, 204);
   max-width:100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
 }
 
 .icono{
-  max-width: 20px;
-  max-height: 20px;
+  max-width: 30px;
+  max-height: 30px;
   cursor: pointer;
   align-self: center;
   display: none;
@@ -31,17 +36,24 @@ h1{
   font-size: 28px;
   display: inline;
   text-align: center;
+  margin: 0 0 0 2%;
 }
 
+
+.navbar{
+ padding: 0;
+}
+
+
 .nav-top{
-  margin:0;
+  margin:1% 0 0 0;
   width: 100%; 
 }
 
 .navbar-na{
   width: 60%;
   display: inline-block;
-  margin: 0 0 0 20%;
+  float:right;
   
 }
 
@@ -74,8 +86,7 @@ li{
 }
 
 .imagen-header{
-  background-color: #0b657c;
-  z-index: 1;
+  background-color: #0a4b5c;
 }
 
 
@@ -95,15 +106,21 @@ li{
   }
   
   header{
-    position: sticky;
+    max-height: 80px;
   }
   
   
   h1{
-    max-height: 50px;
     font-size: 30px;
+    min-width: 150px;
   }
   
+
+.nav-top{
+  max-height: 60px;
+  margin: 0;
+}
+
   .img_header{
     width: 100%;
     min-height: 580px;
@@ -113,24 +130,27 @@ li{
   
 }
 
-@media only screen and (max-width:614px){
+@media only screen and (max-width:615px){
 
- 
+  .navbar{
+    margin: 0;
+    max-height: 65px;
+    padding: 0;
+  }
 
-.navbar{
-  margin: 0;
-}
+  .titulo{
+    display: inline-block;
+    width: 80%;
+    margin: 0 0 0 5%;
+  }
 
-
-.titulo{
-  display: inline-block;
-  width: 90%;
-}
-
+  h1{
+    min-width: 200px;
+    padding: 5% 0 0 0;
+  }
 
   .icono{
-    display: block;
-    float:right;
+     display: inline-block;
   }
 
   li{
@@ -138,23 +158,50 @@ li{
   }
 }
 
+
+
+@media only screen and (max-width: 635px){
+
+ 
+  .navbar-na{
+    max-width: 40%;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width:729px){
+
+  .navbar{
+    min-height: 50px;
+  }
+
   h1{
     font-size: large;
   }
 
   .navbar-na{
-    width: 60%;
-    display: inline-block;
+    max-width: 40%;
+    max-height: 20px;
   }
 
   li{
     font-size: small;
+    max-width: 25%;
   }
 
   .nav-link{
     text-align: center;
-    width: 10%;
+    max-height: 20px;
+    display: inline;
   }
 
 
@@ -164,17 +211,19 @@ li{
 
 @media only screen and (max-width:1099px){
   
+  
 
   h1{
-    width: 30%;
     display: inline-block;
     text-align: center;
+    min-width: 40%;
   }
 
   
 
   .navbar-na{
-    margin: 0 0 0 5%;
+    max-width: 55%;
+    margin: 0 2% 0 0 ;
   }
 
 }
