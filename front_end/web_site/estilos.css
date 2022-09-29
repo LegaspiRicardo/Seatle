@@ -37,6 +37,7 @@ h1{
   display: inline;
   text-align: center;
   margin: 0 0 0 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
 }
 
 
@@ -94,7 +95,31 @@ li{
 
 
 /*-------------------Responsive Design---------------------*/
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 400px){
+
+
+.titulo{
+  max-width: 75%;
+  padding-top: 1%;text-align: center;
+}
+
+h1{
+padding-left: 50px;
+max-height: 50px;
+min-width: 162px;
+
+}
+
+.icono{
+  margin: 0 0 100% 35%;
+
+}
+
+  
+}
+
+
+@media only screen and (max-width: 500px){
   body{
     background-color: gray;
   }
@@ -108,11 +133,11 @@ li{
   header{
     max-height: 80px;
   }
-  
+ 
   
   h1{
+    width: 50%;
     font-size: 30px;
-    min-width: 150px;
   }
   
 
@@ -146,7 +171,7 @@ li{
 
   h1{
     min-width: 200px;
-    padding: 5% 0 0 0;
+    padding: 2% 0 0 0;
   }
 
   .icono{
@@ -159,7 +184,6 @@ li{
 }
 
 
-
 @media only screen and (max-width: 635px){
 
  
@@ -168,14 +192,6 @@ li{
   }
   
 }
-
-
-
-
-
-
-
-
 
 
 @media only screen and (max-width:729px){
