@@ -101,22 +101,19 @@ li{
 
 
 
+.titulo{
+  padding:0 55px 0 5px;
+}
+
 .navbar-na{
- display: block;
- position: fixed;
- top: 90px;
- min-width:100%;
+ min-width:10%;
  max-width: 319px;
- align-items: center;
- background-color: yellow;
+ min-height: 60px;
 }
 
   .nav-link{
-   background-color: purple;
-    padding-right: 150px;
-    
-    padding-left:0px;
-    
+    background-color: green;
+    margin-right: 150px;
   }
 }
 
@@ -139,6 +136,7 @@ width: 5%;
 }
 
 .nav-link{
+  padding-right: 300px;
   }
   
 }
@@ -164,7 +162,6 @@ width: 5%;
 
   li{
     max-width: 300px;
-    background-color: gainsboro;
     min-width: 400px;
   }
 
@@ -203,7 +200,7 @@ width: 5%;
 .navbar-na{
   display: block;
   position: fixed;
-  top: 60px;
+  top: 55px;
     min-height: 330px;
     min-width:100%;
     max-width: 615px;
@@ -218,7 +215,7 @@ width: 5%;
     margin-top: 2%;
     margin-right: auto;
     margin-left: auto;
-    background-color: red;
+    min-width: 550px;
   }
 
   .nav-link{
