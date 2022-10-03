@@ -88,7 +88,6 @@ li{
   width: 100%;
   position: relative;
   max-height: 600px;
-  opacity: 0.7;
 }
 
 .texto-header-centrado{
@@ -99,10 +98,12 @@ li{
 }
 
 .link-informes{
-  color: #0cb8df;
+  color: white;
 }
 
 h3{
+  background-color: #078dab;
+  color: white;
   text-align: center;
 }
 
@@ -173,8 +174,10 @@ h3{
   .texto-header-centrado{
     min-width: 100px;
   }
-  h3{
-    padding-left: 10%;
+  
+
+  .p-header{
+    text-align: justify;
   }
 
 }
@@ -216,22 +219,21 @@ h3{
     display: none;
   }
 
+
+
   .vertical{
     display: block;
+    filter: brightness(100%);
   }
 
   .texto-header-centrado{
-    margin: 5% 5% 0 0 ;
-    padding: 0 25% 0 5%;
-    background-color: rgba(121, 118, 118, 0.61);
+    max-width: 250px;
   }
-h3{
-  padding:0 85% 0 25%;
-}
+
 
   .p-header{
-    width: 180%;
     text-align: center;
+    background-color: rgba(121, 118, 118, 0.61);
   }
 }
 
@@ -295,7 +297,7 @@ h3{
   }
 
   .texto-header-centrado{
-    top: 15%;
+    top: 5%;
     left: 20%;
   }
 
@@ -338,7 +340,8 @@ h3{
   }
 
   .texto-header-centrado{
-    top: 35%;
+    position: absolute;
+    top: 30%;
     left: 20%;
   }
  
@@ -355,16 +358,11 @@ h3{
     min-width: 40%;
   }
 
-  
-
   .navbar-na{
     max-width: 55%;
     margin: 0 2% 0 0 ;
   }
 
 
-  .texto-header-centrado{
-    top: 40%;
-    left: 32%;
-  }
+  
 }
