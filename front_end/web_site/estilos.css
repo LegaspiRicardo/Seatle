@@ -80,7 +80,7 @@ li{
 
 
 .imagen-header{
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(16, 43, 59);
   z-index: 1;
 }
 
@@ -88,13 +88,14 @@ li{
   width: 100%;
   position: relative;
   max-height: 600px;
+  opacity: 0.7;
 }
 
 .texto-header-centrado{
   display: inline-block;
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 25%;
 }
 
 .link-informes{
@@ -102,14 +103,27 @@ li{
 }
 
 h3{
-  background-color: #078dab;
+  background-color: #078dabc0;
   color: white;
+  text-align: center;
+  max-width: 200px;
+  border-radius: 10%;
+  margin-left: 40%;
+}
+
+h4{
+  color: white;
+  font-size: 40px;
+  margin-bottom: 2%;
+  font-family: Tahoma;
   text-align: center;
 }
 
 .p-header{
-  
   color: white;
+  border-radius: 5%;
+  border-top: solid;
+  text-align: center;
 }
 
 .vertical{
@@ -137,7 +151,6 @@ h3{
 .texto-header-centrado{
   background-color: purple;
   min-width: 100px;
-  display: none;
 }
 
 .link-informes{
@@ -145,6 +158,14 @@ h3{
   
 }
 
+h4{
+  font-size: 20px;
+}
+
+.p-header{
+  font-size: 10px;
+  text-align: center;
+}
 
 }
 
@@ -177,7 +198,7 @@ h3{
   
 
   .p-header{
-    text-align: justify;
+    text-align: center;
   }
 
 }
@@ -235,9 +256,13 @@ h3{
     text-align: center;
     background-color: rgba(121, 118, 118, 0.61);
   }
+
+  h4{
+    font-size: 25px;
+  }
 }
 
-@media only screen and (max-width:615px){
+@media only screen and (max-width:600px){
 
   .navbar{
     margin: 0;
@@ -297,22 +322,24 @@ h3{
   }
 
   .texto-header-centrado{
-    top: 5%;
-    left: 20%;
   }
 
 }
 
-@media only screen and (max-width: 635px){
+@media only screen and (max-width: 650px){
 
  
   .navbar-na{
     max-width: 40%;
   }
   
+  .p-header{
+    background-color: rgba(121, 118, 118, 0.61);
+  }
+
 }
 
-@media only screen and (max-width:729px){
+@media only screen and (max-width:800px){
 
   .navbar{
     min-height: 50px;
@@ -339,13 +366,36 @@ h3{
     display: inline;
   }
 
+
+  h3{
+    margin-left: 25%;
+  }
+
+  .p-header{
+    background-color: rgba(121, 118, 118, 0.61);
+  }
+
   .texto-header-centrado{
-    position: absolute;
-    top: 30%;
-    left: 20%;
+    top: 25%;
+    margin-right: 30%;
+  }
+  
+  h4{
+    font-size: 30px;
   }
  
- 
+}
+
+@media only screen and (max-width:900px){
+  .texto-header-centrado{
+    left: 15%;
+  }
+
+  
+
+  h3{
+    margin-left: 35%;
+  }
 }
 
 @media only screen and (max-width:1099px){
@@ -363,6 +413,11 @@ h3{
     margin: 0 2% 0 0 ;
   }
 
+.p-header{
+  
+  text-align: center;
+}
 
   
+
 }
