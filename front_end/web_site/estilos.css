@@ -95,11 +95,12 @@ li{
   display: inline-block;
   position: absolute;
   top: 40%;
-  left: 25%;
+  left: 30%;
 }
 
 .link-informes{
   color: white;
+  
 }
 
 h3{
@@ -108,7 +109,7 @@ h3{
   text-align: center;
   max-width: 200px;
   border-radius: 10%;
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 h4{
@@ -149,21 +150,16 @@ h4{
 }
 
 .texto-header-centrado{
-  background-color: purple;
   min-width: 100px;
 }
 
-.link-informes{
-  background-color: red;
-  
-}
+
 
 h4{
   font-size: 20px;
 }
 
 .p-header{
-  font-size: 10px;
   text-align: center;
 }
 
@@ -255,11 +251,9 @@ h4{
   .p-header{
     text-align: center;
     background-color: rgba(121, 118, 118, 0.61);
+    font-size: 12px;
   }
 
-  h4{
-    font-size: 25px;
-  }
 }
 
 @media only screen and (max-width:600px){
@@ -321,12 +315,15 @@ h4{
     left: 0%;
   }
 
-  .texto-header-centrado{
-  }
+.texto-header-centrado{
+  margin-top: -20%;
+  top: 0%;
+}
+
 
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 700px){
 
  
   .navbar-na{
@@ -335,6 +332,10 @@ h4{
   
   .p-header{
     background-color: rgba(121, 118, 118, 0.61);
+  }
+
+  .texto-header-centrado{
+    margin-right: 15%;
   }
 
 }
@@ -366,18 +367,13 @@ h4{
     display: inline;
   }
 
-
-  h3{
-    margin-left: 25%;
-  }
-
   .p-header{
     background-color: rgba(121, 118, 118, 0.61);
   }
 
   .texto-header-centrado{
-    top: 25%;
-    margin-right: 30%;
+    top: 35%;
+    margin-left: 0%;
   }
   
   h4{
@@ -387,18 +383,12 @@ h4{
 }
 
 @media only screen and (max-width:900px){
-  .texto-header-centrado{
-    left: 15%;
-  }
+ 
 
-  
 
-  h3{
-    margin-left: 35%;
-  }
 }
 
-@media only screen and (max-width:1099px){
+@media only screen and (max-width:1024px){
   
   
 
@@ -413,11 +403,12 @@ h4{
     margin: 0 2% 0 0 ;
   }
 
-.p-header{
-  
-  text-align: center;
-}
+  .p-header{
+    text-align: center;
+  }
 
-  
+  .texto-header-centrado{
+    left: 20%;
+  }
 
 }
