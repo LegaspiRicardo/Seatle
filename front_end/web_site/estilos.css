@@ -7,14 +7,14 @@
 body{
   background-color: #f1f1f1;
 }
-
+/*---------------------------------------------------HEADER-------------------------------------------------*/
 header{
   margin: 0;
   background-color: #078dab;
   max-width:100%;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 .navbar{
@@ -48,14 +48,11 @@ h1{
   display: none;
  }
 
-
 .navbar-na{
   width: 60%;
   display: inline-block;
   float:right;
-  
 }
-
 
 li{
   display: inline-block;
@@ -76,8 +73,6 @@ li{
   border-radius: 8%;
   color: white;
 }
-
-
 
 .imagen-header{
   background-color: rgb(16, 43, 59);
@@ -100,7 +95,6 @@ li{
 
 .link-informes{
   color: white;
-  
 }
 
 h3{
@@ -130,77 +124,123 @@ h4{
 .vertical{
   display: none;
 }
+/*-------------------------------------------------------------------------------------------------------*/
 
-
-
-
-/*-------------------Responsive Design---------------------*/
-@media only screen and (max-width:320px){
-
-
-
-.titulo{
-  padding:0 55px 0 5px;
+.segunda-seccion{
+  padding-top: 5%;
+  background-color: white;
 }
 
-.navbar-na{
- min-width:10%;
- max-width: 319px;
- min-height: 60px;
-}
-
-.texto-header-centrado{
-  min-width: 100px;
-}
-
-
-
-h4{
-  font-size: 20px;
-}
-
-.p-header{
+h2{
   text-align: center;
+  color:#078dab;
+  margin-bottom: 2%;
 }
+
+.tipos-clases{
+  display: inline-block;
+  width: 100%;
+}
+
+.particular{
+  display: inline-block ;
+  min-width: 50%;
+
+}
+
+h5{
+  margin-left: 25%;
+}
+
+.list-clases{
+  display: block;
+  margin-left: 20%;
+  text-align: justify;
+  width: 100%;
+}
+
+/*-------------------------------------------Responsive Design----------------------------------*/
+
+@media only screen and (max-width:320px){
+/* -------------------------------------------------HEADER------------------------------ */
+    .titulo{
+      padding:0 55px 0 5px;
+    }
+
+    .navbar-na{
+    min-width:10%;
+    max-width: 319px;
+    min-height: 60px;
+    }
+
+    .texto-header-centrado{
+      min-width: 100px;
+    }
+
+    h4{
+      font-size: 20px;
+    }
+
+    .p-header{
+      text-align: center;
+    }
+    /* -------------------------------------------------HEADER------------------------------ */
 
 }
 
 @media only screen and (max-width: 400px){
+  /* -------------------------------------------------HEADER------------------------------ */
+    .titulo{
+      max-width: 75%;
+      text-align: center;
+    }
 
-  .titulo{
-    max-width: 75%;
-    text-align: center;
-  }
+    h1{
+    width: 5%;
+    }
 
-  h1{
-  width: 5%;
-  }
+    .icono{
+      margin: 0 0 100% 35%;
+    }
 
-  .icono{
-    margin: 0 0 100% 35%;
-  }
+    li{
+      padding-right: 250px;
+    }
 
-  li{
-    padding-right: 250px;
-  }
+    .nav-link{
+    padding-left: 5px;  
+    }
+    
+    .texto-header-centrado{
+      min-width: 100px;
+    }
+    
 
-  .nav-link{
-  padding-left: 5px;  
-  }
-  
-  .texto-header-centrado{
-    min-width: 100px;
-  }
-  
-
-  .p-header{
-    text-align: center;
-  }
-
+    .p-header{
+      text-align: center;
+    }
+    /* -------------------------------------------------HEADER------------------------------ */
+    
+    .particular{
+      background-color: blue;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .list-clases{
+      display: block;
+      margin-left: 25%;
+      text-align: justify;
+      padding: 0;
+      background-color: red;
+    }
+    h5{
+      margin: 0;
+    }
 }
 
 @media only screen and (max-width: 500px){
-
+/* -------------------------------------------------HEADER------------------------------ */
   header{
     max-height: 80px;
   }
@@ -210,7 +250,6 @@ h4{
     font-size: 30px;
     padding-top: 5%;
   }
-
 
   .nav-top{
     min-height: 50px;
@@ -236,8 +275,6 @@ h4{
     display: none;
   }
 
-
-
   .vertical{
     display: block;
     filter: brightness(100%);
@@ -247,48 +284,48 @@ h4{
     max-width: 250px;
   }
 
-
   .p-header{
     text-align: center;
     background-color: rgba(121, 118, 118, 0.61);
     font-size: 12px;
   }
+  /* -------------------------------------------------HEADER------------------------------ */
+
 
 }
 
 @media only screen and (max-width:600px){
+/* -------------------------------------------------HEADER------------------------------ */
+.navbar{
+  margin: 0;
+  max-height: 65px;
+  padding: 0;
+}
 
-  .navbar{
-    margin: 0;
-    max-height: 65px;
-    padding: 0;
-  }
+.titulo{
+  display: inline-block;
+  width: 80%;
+  margin: 0 0 0 5%;
+}
 
-  .titulo{
-    display: inline-block;
-    width: 80%;
-    margin: 0 0 0 5%;
-  }
-
-  h1{
-    min-width: 200px;
-    
+ h1{
+   min-width: 200px; 
   }
 
   .icono{
-     display: inline-block;
+    display: inline-block;
   }
 
 .navbar-na{
   display: block;
   position: fixed;
   top: 55px;
-    min-height: 330px;
-    min-width:100%;
-    max-width: 615px;
-    background-color:#086788 ;
-   left: 100%;
-   transition: all .5s;
+  min-height: 330px;
+  min-width:100%;
+  max-width: 615px;
+  background-color:#086788 ;
+  left: 100%;
+  transition: all .5s;
   }
 
   li{
@@ -303,7 +340,6 @@ h4{
   .nav-link{
     font-size: medium; 
     padding: 2% 40% 2% 40%;
-   
   }
 
   .nav-link:hover{
@@ -319,13 +355,12 @@ h4{
   margin-top: -20%;
   top: 0%;
 }
-
+/* -------------------------------------------------HEADER------------------------------ */
 
 }
 
 @media only screen and (max-width: 700px){
-
- 
+/* -------------------------------------------------HEADER------------------------------ */
   .navbar-na{
     max-width: 40%;
   }
@@ -337,11 +372,11 @@ h4{
   .texto-header-centrado{
     margin-right: 15%;
   }
-
+/* -------------------------------------------------HEADER------------------------------ */
 }
 
 @media only screen and (max-width:800px){
-
+/* -------------------------------------------------HEADER------------------------------ */
   .navbar{
     min-height: 50px;
   }
@@ -379,7 +414,7 @@ h4{
   h4{
     font-size: 30px;
   }
- 
+ /* -------------------------------------------------HEADER------------------------------ */
 }
 
 @media only screen and (max-width:900px){
@@ -389,9 +424,7 @@ h4{
 }
 
 @media only screen and (max-width:1024px){
-  
-  
-
+/* -------------------------------------------------HEADER------------------------------ */
   h1{
     display: inline-block;
     text-align: center;
@@ -410,5 +443,5 @@ h4{
   .texto-header-centrado{
     left: 20%;
   }
-
+/* -------------------------------------------------HEADER------------------------------ */
 }
