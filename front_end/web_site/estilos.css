@@ -124,7 +124,8 @@ h4{
 .vertical{
   display: none;
 }
-/*-------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*----------------------------Segunda Seccion-------------------------------------------------*/
 
 .segunda-seccion{
   padding:2% 0 2% 0;
@@ -133,7 +134,7 @@ h4{
 
 h2{
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   font-size: 25px;
 }
 
@@ -146,21 +147,24 @@ h2{
   display: inline-block ;
   border-radius: 10%;
   background-color: white;
+  width: 40%;
+  margin: 0 2% 0 8%;
+
 }
 
 .grupal{
   display: inline-block ;
   border-radius: 10%;
   background-color: white;
+  width: 40%;
+  margin: 0 7% 0 2%;
 }
 
 h5{
   width: 100%;
   text-align: center;
-  
   color:#078dab;
 }
-
 
 
 .list-clases{
@@ -169,6 +173,45 @@ h5{
   width: 100%;
   margin-bottom: 5%;
 }
+
+/*--------------------------------------------------------------------------------------------*/
+/*----------------------------Tercera Seccion-------------------------------------------------*/
+
+.tercera-seccion{
+  width: 80%;
+  margin: 2% 10% 0 10%;
+  padding-bottom: 3%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.img-carrusel{
+  width: auto;
+  max-height: 850px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  background-color: transparent;
+  margin-top: 25%;
+  max-height: 100px;
+  max-width: 100px; 
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon{
+  background-color: #078dab;
+}
+
+
+.carousel-item{
+  max-height: 650px;
+}
+
+
+
+
+
+
+
 
 
 /*-------------------------------------------Responsive Design----------------------------------*/
@@ -281,8 +324,8 @@ h5{
     background-color: rgba(121, 118, 118, 0.61);
     font-size: 12px;
   }
-  /* -------------------------------------------------HEADER------------------------------ */
-
+  /* ------------------------------------------------------------------------------- */
+  /* --------------------------Segunda Seccion----------------------------------- */
   .particular{
     display: block;
     text-align: center;
@@ -311,6 +354,9 @@ h5{
   h5{
     margin: 0;
   }
+  /* ------------------------------------------------------------------------------- */
+  /* -----------------------------Tercera seccion------------------------------------- */
+
 }
 
 @media only screen and (max-width:600px){
@@ -371,7 +417,8 @@ h5{
   }
 
 
-/* -------------------------------------------------HEADER------------------------------ */
+/* -------------------------------------------------Tercera seccion------------------------------ */
+
 
 }
 
@@ -467,4 +514,7 @@ display: block;
     left: 22%;
   }
 /* -------------------------------------------------HEADER------------------------------ */
+
+
+
 }
