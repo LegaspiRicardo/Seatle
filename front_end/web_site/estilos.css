@@ -29,7 +29,7 @@ header{
 h1{
   color: white;
   width: 30%;
-  font-size: 28px;
+  font-size: 30px;
   display: inline;
   text-align: center;
   margin: 0 0 0 2%;
@@ -103,7 +103,7 @@ h3{
   text-align: center;
   max-width: 200px;
   border-radius: 10%;
-  margin-left: 35%;
+  margin-left: 35%; 
 }
 
 h4{
@@ -127,14 +127,14 @@ h4{
 /*-------------------------------------------------------------------------------------------------------*/
 
 .segunda-seccion{
-  padding-top: 5%;
-  background-color: white;
+  padding:2% 0 2% 0;
+  background-color: #f1f1f1;
 }
 
 h2{
   text-align: center;
-  color:#078dab;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
+  font-size: 25px;
 }
 
 .tipos-clases{
@@ -142,35 +142,46 @@ h2{
   width: 100%;
 }
 
-.particular{
+.particular {
   display: inline-block ;
-  min-width: 50%;
+  border-radius: 10%;
+  background-color: white;
+}
 
+.grupal{
+  display: inline-block ;
+  border-radius: 10%;
+  background-color: white;
 }
 
 h5{
-  margin-left: 25%;
+  width: 100%;
+  text-align: center;
+  
+  color:#078dab;
 }
+
+
 
 .list-clases{
   display: block;
-  margin-left: 20%;
-  text-align: justify;
+  text-align: center;
   width: 100%;
+  margin-bottom: 5%;
 }
+
 
 /*-------------------------------------------Responsive Design----------------------------------*/
 
 @media only screen and (max-width:320px){
 /* -------------------------------------------------HEADER------------------------------ */
-    .titulo{
-      padding:0 55px 0 5px;
-    }
+
 
     .navbar-na{
     min-width:10%;
     max-width: 319px;
     min-height: 60px;
+    z-index: -1;
     }
 
     .texto-header-centrado{
@@ -184,59 +195,48 @@ h5{
     .p-header{
       text-align: center;
     }
-    /* -------------------------------------------------HEADER------------------------------ */
 
+    .nav-link{
+      margin-right: 40%;
+      padding: 2% 25% 2% 25%;
+    }
+    /* -------------------------------------------------HEADER------------------------------ */
+    .particular{
+      width: 80%;
+      margin: 0;
+    }
 }
 
 @media only screen and (max-width: 400px){
   /* -------------------------------------------------HEADER------------------------------ */
     .titulo{
       max-width: 75%;
-      text-align: center;
-    }
-
-    h1{
-    width: 5%;
+      text-align: left;
     }
 
     .icono{
       margin: 0 0 100% 35%;
     }
 
-    li{
-      padding-right: 250px;
-    }
-
     .nav-link{
-    padding-left: 5px;  
+      margin-right: 45%;
     }
     
     .texto-header-centrado{
       min-width: 100px;
     }
     
+    .navbar-na{
+      top: 10%;
+      padding-top: 2%;
+    }
 
     .p-header{
       text-align: center;
     }
     /* -------------------------------------------------HEADER------------------------------ */
     
-    .particular{
-      background-color: blue;
-      width: 100%;
-      text-align: center;
-    }
-    
-    .list-clases{
-      display: block;
-      margin-left: 25%;
-      text-align: justify;
-      padding: 0;
-      background-color: red;
-    }
-    h5{
-      margin: 0;
-    }
+
 }
 
 @media only screen and (max-width: 500px){
@@ -246,15 +246,15 @@ h5{
   }
    
   h1{
-    width: 60%;
     font-size: 30px;
-    padding-top: 5%;
+    max-height: 30px;
   }
 
   .nav-top{
     min-height: 50px;
     max-height: 60px;
-    margin: 0;
+    margin-top: 3%;
+    margin-bottom: -2%;
   }
 
   li{
@@ -262,14 +262,6 @@ h5{
     min-width: 400px;
   }
 
-  .nav-link{
-    padding-right:200px;
-    padding-left: 200px;
-  }
-
-  .navbar-na{
-    padding-top: 5%;
-  }
 
   .img_header{
     display: none;
@@ -291,7 +283,34 @@ h5{
   }
   /* -------------------------------------------------HEADER------------------------------ */
 
+  .particular{
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .grupal{
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .list-c{
+    width: 70%;
+    margin-left: 15%;
+  }
+  
+  .list-clases{
+    display: block;
+    text-align: center;
+  }
+  h5{
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width:600px){
@@ -309,7 +328,8 @@ h5{
 }
 
  h1{
-   min-width: 200px; 
+  text-align: justify;
+  width: 50%;
   }
 
   .icono{
@@ -319,13 +339,13 @@ h5{
 .navbar-na{
   display: block;
   position: fixed;
-  top: 55px;
   min-height: 330px;
   min-width:100%;
   max-width: 615px;
   background-color:#086788 ;
   left: 100%;
   transition: all .5s;
+  top: 10%;
   }
 
   li{
@@ -339,7 +359,6 @@ h5{
 
   .nav-link{
     font-size: medium; 
-    padding: 2% 40% 2% 40%;
   }
 
   .nav-link:hover{
@@ -347,14 +366,11 @@ h5{
     
   }
 
-  #nav-checkbox:checked ~ ul{
+  #nav-checkbox:checked ~ .navbar-na{
     left: 0%;
   }
 
-.texto-header-centrado{
-  margin-top: -20%;
-  top: 0%;
-}
+
 /* -------------------------------------------------HEADER------------------------------ */
 
 }
@@ -408,13 +424,20 @@ h5{
 
   .texto-header-centrado{
     top: 35%;
-    margin-left: 0%;
   }
   
+  h3{
+  font-size: 20px;
+  }
+
   h4{
     font-size: 30px;
   }
  /* -------------------------------------------------HEADER------------------------------ */
+.list-c{
+display: block;
+}
+
 }
 
 @media only screen and (max-width:900px){
@@ -441,7 +464,7 @@ h5{
   }
 
   .texto-header-centrado{
-    left: 20%;
+    left: 22%;
   }
 /* -------------------------------------------------HEADER------------------------------ */
 }
