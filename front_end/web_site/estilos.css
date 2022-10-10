@@ -39,7 +39,7 @@ h1{
 .icono{
   max-width: 30px;
   max-height: 30px;
-  cursor: pointer;
+  cursor: none;
   align-self: center;
   display: none;
  }
@@ -171,9 +171,10 @@ h5{
 
 .list-clases{
   display: block;
-  text-align: center;
-  width: 100%;
+  text-align: justify;
+  width: 70%;
   margin-bottom: 5%;
+  margin-left: 10%;
 }
 
 
@@ -237,11 +238,17 @@ h6{
 }
 
 
-.palomita{
+.icono-list{
   max-width: 20px;
   max-height: 20px;
   margin-right: 2%;
-  cursor: pointer;
+  align-self: center;
+ }
+
+ .palomita{
+  max-width: 15px;
+  max-height: 15px;
+  margin-right: 2%;
   align-self: center;
  }
 
@@ -253,14 +260,18 @@ h6{
   text-align: right;
  }
 
-.imagen-adultos{
-  display: inline-block;
-  width: 40%;
+.grupal-adulto{
+  display: inline-flex;
+  border-radius: 10%;
+  background-color: white;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
  .img-adultos{
   max-width: 100%;
-  padding-bottom: 50%;
  }
 
 /*-------------------------------------------Responsive Design----------------------------------*/
@@ -357,7 +368,7 @@ h6{
   .nav-top{
     min-height: 50px;
     max-height: 60px;
-    margin-top: 3%;
+    margin-top: 5%;
     margin-bottom: -2%;
   }
 
@@ -395,7 +406,7 @@ h6{
     margin-right: auto;
   }
 
-  .grupal{
+  .grupal, .grupal-adulto{
     display: block;
     text-align: center;
     width: 80%;
@@ -412,7 +423,12 @@ h6{
     display: block;
     text-align: left;
     font-size: 13px;
+    width: 100%;
+    margin-left: 0;
   }
+
+
+
   h5{
     margin: 0;
   }
@@ -510,7 +526,7 @@ h6{
   }
 /* -------------------------------------------------HEADER------------------------------ */
 
-.palomita{
+.icono-list{
   max-width: 10px;
   max-height:10px;
      }
@@ -561,6 +577,7 @@ h6{
 display: block;
 }
 
+
 }
 
 @media only screen and (max-width:900px){
@@ -584,6 +601,9 @@ display: block;
     float: none;
   }
 
+  .grupal-adulto{
+    max-width: 300px;
+  }
 }
 
 @media only screen and (max-width:1024px){
