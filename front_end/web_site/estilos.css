@@ -141,6 +141,8 @@ h2{
 .tipos-clases{
   display: inline-block;
   width: 100%;
+  max-height: 450px;
+  overflow: hidden;
 }
 
 .particular {
@@ -174,6 +176,7 @@ h5{
   margin-bottom: 5%;
 }
 
+
 /*--------------------------------------------------------------------------------------------*/
 /*----------------------------Tercera Seccion-------------------------------------------------*/
 
@@ -185,9 +188,24 @@ h5{
   overflow: hidden;
 }
 
+h6{
+  display: block;
+  text-align: center;
+  width: 50%;
+  color: white;
+  background-color:#078dab;
+  border-radius: 5%;
+  margin: 0 25% 0 25%;
+}
+
+
+.carousel-item{
+  max-height: 650px;
+  margin-left: 14%;
+}
+
 .img-carrusel{
-  width: auto;
-  max-height: 850px;
+  max-height: 650px;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -202,17 +220,48 @@ h5{
 }
 
 
-.carousel-item{
-  max-height: 650px;
+.list-instalaciones{
+  width: 90%;
+  max-height: 180px;
+  background-color: white; 
+  margin-bottom: 2%; 
+}
+
+.list-instalaciones-item{
+  text-align: left;
+  padding: 0; 
+  margin: 0;
+  display:block;
+  width: 70%;
+  float: right;
 }
 
 
+.palomita{
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 2%;
+  cursor: pointer;
+  align-self: center;
+ }
 
 
+ .horario-pequeño{
+  font-size: 13px;
+  display: block;
+  width: 80%;
+  text-align: right;
+ }
 
+.imagen-adultos{
+  display: inline-block;
+  width: 40%;
+}
 
-
-
+ .img-adultos{
+  max-width: 100%;
+  padding-bottom: 50%;
+ }
 
 /*-------------------------------------------Responsive Design----------------------------------*/
 
@@ -231,10 +280,6 @@ h5{
       min-width: 100px;
     }
 
-    h4{
-      font-size: 20px;
-    }
-
     .p-header{
       text-align: center;
     }
@@ -248,6 +293,11 @@ h5{
       width: 80%;
       margin: 0;
     }
+
+    .list-instalaciones-item{
+      width: 50%;
+    }
+
 }
 
 @media only screen and (max-width: 400px){
@@ -279,7 +329,18 @@ h5{
     }
     /* -------------------------------------------------HEADER------------------------------ */
     
+    h4{
+      font-size: 20px;
+      background-color: rgba(118, 120, 121, 0.716);
+    }
+    
+    h6{
+      display: none;
+    }
 
+    .list-instalaciones-item{
+      text-align: justify;
+      }
 }
 
 @media only screen and (max-width: 500px){
@@ -349,14 +410,19 @@ h5{
   
   .list-clases{
     display: block;
-    text-align: center;
+    text-align: left;
+    font-size: 13px;
   }
   h5{
     margin: 0;
   }
   /* ------------------------------------------------------------------------------- */
   /* -----------------------------Tercera seccion------------------------------------- */
-
+.imagen-adultos{
+  display: block;
+  width: 80%;
+  margin-left: 2%;
+}
 }
 
 @media only screen and (max-width:600px){
@@ -419,6 +485,13 @@ h5{
 
 /* -------------------------------------------------Tercera seccion------------------------------ */
 
+.list-instalaciones{
+  width: 90%;
+  max-height: 200px;  
+}
+
+
+
 
 }
 
@@ -436,6 +509,11 @@ h5{
     margin-right: 15%;
   }
 /* -------------------------------------------------HEADER------------------------------ */
+
+.palomita{
+  max-width: 10px;
+  max-height:10px;
+     }
 }
 
 @media only screen and (max-width:800px){
@@ -470,16 +548,14 @@ h5{
   }
 
   .texto-header-centrado{
-    top: 35%;
+    top: 14%;
   }
   
   h3{
   font-size: 20px;
   }
 
-  h4{
-    font-size: 30px;
-  }
+  
  /* -------------------------------------------------HEADER------------------------------ */
 .list-c{
 display: block;
@@ -490,6 +566,23 @@ display: block;
 @media only screen and (max-width:900px){
  
 
+  .img-carrusel{
+    max-width: 100%;
+  }
+
+  .list-instalaciones{
+    padding-bottom: 2%;
+  }
+
+  .list-instalaciones-item{
+    text-align: left;
+    padding: 0; 
+    margin: 0;
+    display:block;
+    margin-left: 10%;
+    max-height: 30px;
+    float: none;
+  }
 
 }
 
@@ -515,6 +608,13 @@ display: block;
   }
 /* -------------------------------------------------HEADER------------------------------ */
 
+.img-carrusel{
+  max-height: 650px;
+}
+
+.carousel-item{
+  margin-left: 0;
+}
 
 
 }
