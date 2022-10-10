@@ -39,7 +39,7 @@ h1{
 .icono{
   max-width: 30px;
   max-height: 30px;
-  cursor: none;
+  cursor: pointer;
   align-self: center;
   display: none;
  }
@@ -261,18 +261,29 @@ h6{
  }
 
 .grupal-adulto{
-  display: inline-flex;
+  display: inline-block;
   border-radius: 10%;
   background-color: white;
-  max-width: 450px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 40%;
+  margin-left: 30%;
 
 }
+
+
 
  .img-adultos{
   max-width: 100%;
  }
+
+
+
+
+.mapita{
+  float: left;
+  height: 400px;
+  width: 40%;
+  margin-left: 10%;
+}
 
 /*-------------------------------------------Responsive Design----------------------------------*/
 
