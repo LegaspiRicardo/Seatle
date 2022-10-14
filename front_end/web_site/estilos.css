@@ -350,14 +350,22 @@ footer{
 .yop{
   color:white;
 }
+
 .hora-atencion{
   background-color: white;
   border-radius: 5%;
+  margin: 5% 0 10% 0;
 }
 
 .hora-servicio{
   text-align: center;
   font-size: 16px;
+}
+
+.hora-atencion-contacto{
+  background-color: white;
+  border-radius: 5%;
+  margin: 5% 0 0 0;
 }
 
 .facebook{
