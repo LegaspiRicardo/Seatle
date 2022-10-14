@@ -318,6 +318,7 @@ h6{
 
 footer{
   background-color:#078dab;
+
 }
 
 .logo{
@@ -330,12 +331,44 @@ footer{
   color: white;
   font-size: 10px;
 }
+
+.servicios{
+  max-width: 80%;
+  margin-left: 8%;
+}
+
+.card-img-top{
+  border-radius: 5%;
+  max-width: 400px;
+  min-height: 300px;
+}
+
+.card{
+  border-radius: 10%;
+}
+
+.yop{
+  color:white;
+}
+.hora-atencion{
+  background-color: white;
+  border-radius: 5%;
+}
+
+.hora-servicio{
+  text-align: center;
+  font-size: 16px;
+}
+
+.facebook{
+  max-width: 25px;
+  max-height: 25px;
+}
+
 /*-------------------------------------------Responsive Design----------------------------------*/
 
 @media only screen and (max-width:320px){
 /* -------------------------------------------------HEADER------------------------------ */
-
-
     .navbar-na{
     min-width:10%;
     max-width: 319px;
@@ -407,6 +440,11 @@ footer{
 
     .list-instalaciones-item{
       text-align: justify;
+      }
+
+      .card-img-top{
+        max-width: 300px;
+        min-height: 200px;
       }
 }
 
@@ -500,6 +538,10 @@ footer{
   text-align: right;
 }
 
+.hora-servicio{
+  text-align: center;
+  font-size: 13px;
+}
 }
 
 @media only screen and (max-width:600px){
