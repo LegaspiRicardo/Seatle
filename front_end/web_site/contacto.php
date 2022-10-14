@@ -17,8 +17,8 @@
     <?php include_once ("component/header.php")?>
 
 
-    <div>
-        <img src="../Imagenes/azulejos.jpg" class="img_header" alt="">
+    <div class=" col-8 mx-auto">
+        <img src="../Imagenes/azulejos.jpg" class=" img-contacto col-12 mt-3" alt="">
     </div>
 
       <!--------------------------Contacto------------------------------------------------->
