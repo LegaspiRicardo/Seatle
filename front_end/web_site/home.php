@@ -21,7 +21,7 @@
   <?php include_once ("component/header.php"); ?>
 <!-------------------------------Main------------------------------------------------>
   <main>
-      <!-------------------  -----Imagen-Header y C2A-------------------------------------------->
+      <!-------------------  -----Imagen-Inicio y C2A-------------------------------------------->
       <div class="imagen-header">
         <img src="../Imagenes/Alberca-2.jpg" class="img_header" alt="">
         <img src="../Imagenes/AlbercaV1.jpg" class="img_header vertical">
@@ -33,40 +33,40 @@
         </div>
       </div>
       <!--------------------------Clases para niños--------------------------------------------->
-      <div class="segunda-seccion">
+      <div class="clases">
         <h2 class="pb-2">Clases para niñas y niños</h2>
         <div class="tipos-clases">
           <div class="particular">
             <a href="clases-ninos.php"><h5 class="pb-1">Particulares</h5></a>
-            <ul class="list-c">
-              <p class="list-clases"><img src="../PNGs/palomita.png" class="palomita" alt="">Clase personalizadas</p>
-              <p class="list-clases"><img src="../PNGs/kid-swimmer.png" class="icono-list" alt="">Natación básica</p>
-              <p class="list-clases"><img src="../PNGs/clock-25.png" class="icono-list" alt="">Duración de 25min</p>
-              <p class="list-clases"><img src="../PNGs/baby.png" class="icono-list" alt="">Bebés a partir de 8 meses</p>
+            <ul class="lista-clases">
+              <p class="list-clases-item"><img src="../PNGs/palomita.png" class="palomita" alt="">Clase personalizadas</p>
+              <p class="list-clases-item"><img src="../PNGs/kid-swimmer.png" class="icono-list" alt="">Natación básica</p>
+              <p class="list-clases-item"><img src="../PNGs/clock-25.png" class="icono-list" alt="">Duración de 25min</p>
+              <p class="list-clases-item"><img src="../PNGs/baby.png" class="icono-list" alt="">Bebés a partir de 8 meses</p>
             </ul>
           </div>
           <div class="grupal">
             <a href="clases-ninos.php"><h5 class="pb-1">Grupales</h5></a>
-            <ul class="list-c">
-              <p class="list-clases"><img src="../PNGs/palomita.png" class="palomita" alt="">Grupos reducidos</p>
-              <p class="list-clases"><img src="../PNGs/swimming.png" class="icono-list" alt="">Natación básica / avanzada</p>
-              <p class="list-clases"><img src="../PNGs/clock-45.png" class="icono-list" alt="">Duración de 45min</p>
-              <p class="list-clases"><img src="../PNGs/nadador (1).png" class="icono-list" alt="">Niños mayores de 4 años</p>
+            <ul class="lista-clases">
+              <p class="list-clases-item"><img src="../PNGs/palomita.png" class="palomita" alt="">Grupos reducidos</p>
+              <p class="list-clases-item"><img src="../PNGs/swimming.png" class="icono-list" alt="">Natación básica / avanzada</p>
+              <p class="list-clases-item"><img src="../PNGs/clock-45.png" class="icono-list" alt="">Duración de 45min</p>
+              <p class="list-clases-item"><img src="../PNGs/nadador (1).png" class="icono-list" alt="">Niños mayores de 4 años</p>
             </ul>
           </div>
         </div>
       </div>
       <!--------------------------Clases para adultos--------------------------------------------->
-      <div class="segunda-seccion">
+      <div class="clases">
             <h2 class="pb-2">Clases para adultos</h2>
             <div class="tipos-clases">
               <div class="grupal-adulto">
                 <a href="clases-adulto.php"><h5 class="pb-1">Grupales</h5></a>
-                <ul class="list-c">
-                  <p class="list-clases"><img src="../PNGs/swimming.png" class="icono-list mr-3" alt="">Natación básica/ avanzada</p>
-                  <p class="list-clases"><img src="../PNGs/usuarios.png" class="icono-list mr-3" alt="">Para mayores de 15 años</p>
-                  <p class="list-clases"><img src="../PNGs/pool.png" class="icono-list mr-3" alt="">Grupos reducidos</p>
-                  <p class="list-clases"><img src="../PNGs/clock-45.png" class="icono-list mr-3" alt="">Horario:</p>
+                <ul class="lista-clases">
+                  <p class="list-clases-item"><img src="../PNGs/swimming.png" class="icono-list mr-3" alt="">Natación básica/ avanzada</p>
+                  <p class="list-clases-item"><img src="../PNGs/usuarios.png" class="icono-list mr-3" alt="">Para mayores de 15 años</p>
+                  <p class="list-clases-item"><img src="../PNGs/pool.png" class="icono-list mr-3" alt="">Grupos reducidos</p>
+                  <p class="list-clases-item"><img src="../PNGs/clock-45.png" class="icono-list mr-3" alt="">Horario:</p>
                   <p class="horario-pequeño">07:00 am - 12:00pm</p>
                   <p class="horario-pequeño">19:30 pm - 20:30pm</p>
                 </ul>

@@ -132,9 +132,9 @@ h4{
   display: none;
 }
 /*--------------------------------------------------------------------------------------------*/
-/*----------------------------Segunda Seccion-------------------------------------------------*/
+/*----------------------------Clases-------------------------------------------------*/
 
-.segunda-seccion{
+.clases{
   padding:2% 0 2% 0;
 }
 
@@ -148,8 +148,7 @@ h2{
 .tipos-clases{
   display: inline-block;
   width: 100%;
-  max-height: 450px;
-  overflow: hidden;
+  max-height: 750px;
 }
 
 .particular {
@@ -176,7 +175,7 @@ h5{
 }
 
 
-.list-clases{
+.list-clases-item{
   display: block;
   text-align: justify;
   width: 80%;
@@ -380,6 +379,11 @@ footer{
   max-height: 25px;
 }
 
+.img-clases{
+  border-radius: 5%;
+}
+
+
 /*-------------------------------------------Responsive Design----------------------------------*/
 
 @media only screen and (max-width:320px){
@@ -523,12 +527,12 @@ footer{
     margin-right: auto;
   }
 
-  .list-c{
+  .lista-clases{
     width: 70%;
     margin-left: 15%;
   }
   
-  .list-clases{
+  .list-clases-item{
     display: block;
     text-align: left;
     font-size: 13px;
@@ -709,7 +713,7 @@ footer{
 
   
  /* -------------------------------------------------HEADER------------------------------ */
-.list-c{
+.lista-clases{
 display: block;
 }
 
