@@ -37,7 +37,7 @@
         <h2 class="pb-2">Clases para niñas y niños</h2>
         <div class="tipos-clases">
           <div class="particular">
-            <h5 class="pb-1">Particulares</h5>
+            <a href="clases-ninos.php"><h5 class="pb-1">Particulares</h5></a>
             <ul class="list-c">
               <p class="list-clases"><img src="../PNGs/palomita.png" class="palomita" alt="">Clase personalizadas</p>
               <p class="list-clases"><img src="../PNGs/kid-swimmer.png" class="icono-list" alt="">Natación básica</p>
@@ -46,7 +46,7 @@
             </ul>
           </div>
           <div class="grupal">
-            <h5 class="pb-1">Grupales</h5>
+            <a href="clases-ninos.php"><h5 class="pb-1">Grupales</h5></a>
             <ul class="list-c">
               <p class="list-clases"><img src="../PNGs/palomita.png" class="palomita" alt="">Grupos reducidos</p>
               <p class="list-clases"><img src="../PNGs/swimming.png" class="icono-list" alt="">Natación básica / avanzada</p>
@@ -61,7 +61,7 @@
             <h2 class="pb-2">Clases para adultos</h2>
             <div class="tipos-clases">
               <div class="grupal-adulto">
-                <h5 class="pb-1">Grupales</h5>
+                <a href="clases-adulto.php"><h5 class="pb-1">Grupales</h5></a>
                 <ul class="list-c">
                   <p class="list-clases"><img src="../PNGs/swimming.png" class="icono-list mr-3" alt="">Natación básica/ avanzada</p>
                   <p class="list-clases"><img src="../PNGs/usuarios.png" class="icono-list mr-3" alt="">Para mayores de 15 años</p>
@@ -103,7 +103,7 @@
               <img src="../Imagenes/Juegos 2.jpeg" class="img-carrusel" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="../Imagenes/Espera.jpg" class="img-carrusel" alt="...">
+              <img src="../Imagenes/Esperas.jpg" class="img-carrusel" alt="...">
             </div>
             <div class="carousel-item">
               <img src="../Imagenes/Alberca-3.jpg" class="img-carrusel  " alt="...">

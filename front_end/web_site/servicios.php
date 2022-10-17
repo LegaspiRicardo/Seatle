@@ -27,8 +27,7 @@
     <div class="card">
       <img src="../Imagenes/clase.jpg" class="card-img-top mx-auto mt-3" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Clases para niñas y niños</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       <a href="clases-ninos.php"> <h5 class="card-title"> Clases para niñas y niños</h5></a>
       </div>
     </div>
   </div>
@@ -36,17 +35,15 @@
     <div class="card">
       <img src="../Imagenes/clase-adultos.jpg" class="card-img-top mx-auto mt-3" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Clases para adultos</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       <a href="clases-adulto.php"> <h5 class="card-title">Clases para adultos</h5></a>
       </div>
     </div>
   </div>
   <div class="col mb-4">
     <div class="card">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="../Imagenes/rehab.jpg" class="card-img-top mx-auto mt-3" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Terapia Medica</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+       <a href="terapia.php"> <h5 class="card-title">Terapia y rehabilitación medica</h5></a>
       </div>
     </div>
   </div>
@@ -54,8 +51,7 @@
     <div class="card">
       <img src="../Imagenes/confeti.jpg" class="card-img-top mx-auto mt-3" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Eventos</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       <a href="eventos.php"> <h5 class="card-title">Eventos</h5></a>
       </div>
     </div>
   </div>
