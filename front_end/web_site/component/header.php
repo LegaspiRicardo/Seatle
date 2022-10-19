@@ -2,7 +2,7 @@
 <header >
     <nav class="navbar ">
       <div class="nav-top">
-        <a href="home.php" class="titulo"><h1>Escuela de Natación</h1> </a>
+        <a href="home.php" class="titulo"><h1><img src="../Imagenes/logo.jpg" class="logo-header  d-none d-sm-inline" alt=""> Escuela de natación Seattle Santa Tere</h1> </a>
         
         <input type="checkbox" class="nav-checkbox" id="nav-checkbox">
         <label for="nav-checkbox" class="nav-toogle">

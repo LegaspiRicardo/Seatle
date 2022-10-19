@@ -26,10 +26,15 @@ header{
   width: 100%; 
 }
 
+.logo-header{
+  max-width: 35px;
+  border-radius: 5%;
+}
+
 h1{
   color: white;
   width: 30%;
-  font-size: 30px;
+  font-size: 20px;
   display: inline;
   text-align: center;
   margin: 0 0 0 2%;
@@ -49,7 +54,7 @@ h1{
  }
 
 .navbar-na{
-  width: 60%;
+  width: 50%;
   display: inline-block;
   float:right;
 }
@@ -66,6 +71,8 @@ li{
 
 .nav-link{
   color: white;
+  font-size: 16px; 
+  
 }
 
 .nav-link:hover{
@@ -96,8 +103,8 @@ li{
 .texto-header-centrado{
   display: inline-block;
   position: absolute;
-  top: 40%;
-  left: 30%;
+  top: 30%;
+  left: 35%;
 }
 
 .link-informes{
@@ -421,7 +428,11 @@ footer{
 
 @media only screen and (max-width: 400px){
   /* -------------------------------------------------HEADER------------------------------ */
-    .titulo{
+  h1{
+    font-size: 14px;
+  }  
+  
+  .titulo{
       max-width: 75%;
       text-align: left;
     }
@@ -436,6 +447,7 @@ footer{
     
     .texto-header-centrado{
       min-width: 100px;
+      top: 15%;
     }
     
     .navbar-na{
@@ -474,8 +486,8 @@ footer{
   }
    
   h1{
-    font-size: 30px;
-    max-height: 30px;
+    font-size: 20px;
+    width: 90%;
   }
 
   .nav-top{
@@ -579,7 +591,7 @@ footer{
 
  h1{
   text-align: justify;
-  width: 50%;
+  width: 70%;
   }
 
   .icono{
@@ -607,9 +619,7 @@ footer{
     min-width: 550px;
   }
 
-  .nav-link{
-    font-size: medium; 
-  }
+ 
 
   .nav-link:hover{
     background-color: #0a4b5c;
@@ -679,7 +689,6 @@ footer{
   }
 
   h1{
-    font-size: large;
     margin:0 2% 0 0;
   }
 
@@ -704,11 +713,11 @@ footer{
   }
 
   .texto-header-centrado{
-    top: 14%;
   }
   
   h3{
-  font-size: 20px;
+  font-size: 16px;
+  padding: 2% 0 4% 0;
   }
 
   
@@ -752,6 +761,7 @@ display: block;
     display: inline-block;
     text-align: center;
     min-width: 40%;
+    font-size: 15px;
   }
 
   .navbar-na{
