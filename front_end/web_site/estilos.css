@@ -81,16 +81,27 @@ li{
   color: white;
 }
 
+.contenedor-imagen-texto{
+  position: relative;
+}
+
+.texto-imagen-texto{
+  position: absolute;
+  top: 25%;
+  left: 32%;
+}
+
 .imagen-header{
-  background-color: rgb(16, 43, 59);
-  z-index: 1;
+  background-color: rgba(18, 38, 59, 0.46);
+
 }
 
 .img_header{
   width: 100%;
   position: relative;
-  max-height: 600px;
-  opacity: 0.7;
+  max-height: 700px;
+  opacity: 0.9;
+  z-index: -1;
 }
 
 .img-contacto{
@@ -100,15 +111,15 @@ li{
   border-radius: 5%;
 }
 
-.texto-header-centrado{
-  display: inline-block;
-  position: absolute;
-  top: 30%;
-  left: 35%;
-}
 
 .link-informes{
   color: white;
+}
+
+.link-informes:hover{
+ color: white;
+ text-decoration: none;
+
 }
 
 h3{
@@ -122,7 +133,7 @@ h3{
 
 h4{
   color: white;
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 2%;
   font-family: Tahoma;
   text-align: center;
@@ -133,6 +144,7 @@ h4{
   border-radius: 5%;
   border-top: solid;
   text-align: center;
+  font-size: 25px;
 }
 
 .vertical{
@@ -149,7 +161,7 @@ h2{
   color: rgb(0, 0, 0);
   text-align: center;
   margin-bottom: 2%;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .tipos-clases{
@@ -179,6 +191,7 @@ h5{
   width: 100%;
   text-align: center;
   color:#078dab;
+  font-size: 28px;
 }
 
 
@@ -186,8 +199,9 @@ h5{
   display: block;
   text-align: justify;
   width: 80%;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   margin-left: 5%;
+  font-size: 25px;
 }
 
 
@@ -236,8 +250,7 @@ h6{
 
 .list-instalaciones{
   width: 90%;
-  max-height: 180px;
-  background-color: white; 
+  max-height: 180px; 
 }
 
 .list-instalaciones-item{
@@ -247,6 +260,7 @@ h6{
   display:block;
   width: 70%;
   float: right;
+  font-size: 20px;
 }
 
 
@@ -402,10 +416,6 @@ footer{
     z-index: -1;
     }
 
-    .texto-header-centrado{
-      min-width: 100px;
-    }
-
     .p-header{
       text-align: center;
     }
@@ -445,11 +455,6 @@ footer{
       margin-right: 45%;
     }
     
-    .texto-header-centrado{
-      min-width: 100px;
-      top: 15%;
-    }
-    
     .navbar-na{
       top: 10%;
       padding-top: 2%;
@@ -477,6 +482,10 @@ footer{
         max-width: 300px;
         min-height: 200px;
       }
+
+      .clases{
+        padding-top:3%;
+      }
 }
 
 @media only screen and (max-width: 500px){
@@ -484,7 +493,7 @@ footer{
   header{
     max-height: 80px;
   }
-   
+
   h1{
     font-size: 20px;
     width: 90%;
@@ -509,11 +518,6 @@ footer{
 
   .vertical{
     display: block;
-    filter: brightness(100%);
-  }
-
-  .texto-header-centrado{
-    max-width: 250px;
   }
 
   .p-header{
@@ -547,7 +551,6 @@ footer{
   .list-clases-item{
     display: block;
     text-align: left;
-    font-size: 13px;
     width: 100%;
     margin-left: 0;
   }
@@ -589,7 +592,7 @@ footer{
   margin: 0 0 0 5%;
 }
 
- h1{
+h1{
   text-align: justify;
   width: 70%;
   }
@@ -619,7 +622,7 @@ footer{
     min-width: 550px;
   }
 
- 
+
 
   .nav-link:hover{
     background-color: #0a4b5c;
@@ -645,6 +648,7 @@ footer{
 }
 
 
+
 }
 
 @media only screen and (max-width: 700px){
@@ -657,17 +661,14 @@ footer{
     background-color: rgba(121, 118, 118, 0.61);
   }
 
-  .texto-header-centrado{
-    margin-right: 15%;
-  }
 /* -------------------------------------------------HEADER------------------------------ */
 
 .icono-list{
   max-width: 15px;
   max-height:15px;
-     }
+    }
 
-     .contacto{
+    .contacto{
       max-width: 100%;
       margin-left: 0%;
     }
@@ -680,6 +681,9 @@ footer{
       padding: 0;
     }
 
+   .list-instalaciones-item, .list-clases-item{
+      font-size: 18px;
+    }
 }
 
 @media only screen and (max-width:800px){
@@ -712,9 +716,6 @@ footer{
     background-color: rgba(121, 118, 118, 0.61);
   }
 
-  .texto-header-centrado{
-  }
-  
   h3{
   font-size: 16px;
   padding: 2% 0 4% 0;
@@ -726,6 +727,10 @@ footer{
 display: block;
 }
 
+.texto-imagen-texto{
+  top: 15%;
+  left: 5%;
+}
 
 }
 
@@ -773,9 +778,10 @@ display: block;
     text-align: center;
   }
 
-  .texto-header-centrado{
-    left: 22%;
+  .texto-imagen-texto{
+    left: 7%;
   }
+
 /* -------------------------------------------------HEADER------------------------------ */
 
 .img-carrusel{

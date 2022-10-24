@@ -20,19 +20,24 @@
 <!-------------------------------Main------------------------------------------------>
   <main>
       <!-------------------  -----Imagen-Inicio y C2A-------------------------------------------->
-      <div class="imagen-header">
-        <img src="../Imagenes/Alberca-2.jpg" class="img_header" alt="">
-        <img src="../Imagenes/AlbercaV1.jpg" class="img_header vertical">
+
           <!-----------------------Texto-Header------------------------>
-        <div class="texto-header-centrado">
-          <h4> ¡Aprende a nadar con nosotros!</h4>
-          <p class="p-header">Clases de natación grupales y personalizadas </p>
-          <h3><a href="" class="link-informes">Solicitar Informes  </a> </h3>
-        </div>
+        <div class="col-12 mx-auto p-0 contenedor-imagen-texto">
+
+          <div class="imagen-header col-12 m-0 p-0">
+            <img src="../Imagenes/Alberca-2.jpg" class="img_header" alt="">
+            <img src="../Imagenes/AlbercaV1.jpg" class="img_header vertical">
+          </div>
+
+          <div class="texto-imagen-texto">
+            <h4 class="col-10 mx-auto"> ¡Aprende a nadar con nosotros!</h4>
+            <p class="p-header">Clases de natación grupales y personalizadas </p>
+            <h3 class="col-3 pl-2 mx-auto"><a href="" class="link-informes">Solicitar Informes  </a> </h3>
+          </div>
       </div>
       <!--------------------------Clases para niños--------------------------------------------->
       <div class="clases">
-        <h2 class="pb-2">Clases para niñas y niños</h2>
+        <h2 class="pb-2">Clases para niños</h2>
         <div class="tipos-clases">
           <div class="particular">
             <a href="clases-ninos.php"><h5 class="pb-1">Particulares</h5></a>
@@ -116,16 +121,33 @@
             <span class="sr-only">Next</span>
           </button>
         </div>
-        <div>
+        <!--------------------------Hide on smaller screens------------------------------------------>
+        <div class="d-none d-sm-block">
+          <ul class="row pt-2 pb-3 mx-auto ">
+            <div class="col-6">
+              <li class="col"><img src="../PNGs/guion.png" class="palomita" alt="">Regaderas.</li>
+              <li class="col "><img src="../PNGs/guion.png" class="palomita" alt="">Vestidores.</li>
+              <li class="col"><img src="../PNGs/guion.png" class="palomita" alt="">Area común.</li>
+              </div>
+              <div class="col-6">
+              <li class="col"><img src="../PNGs/guion.png" class="palomita" alt="">Zona de juegos.</li>
+              <li class="col"><img src="../PNGs/guion.png" class="palomita" alt=""> Alberca desinfectada con bromo.</li>
+              <li class="col"><img src="../PNGs/guion.png" class="palomita" alt="">Climatizada a 32°</li>  
+            </div>
+          </ul>
+        </div>
+
+        <div class=" d-sm-none  ">
           <ul class="list-instalaciones pt-2 pb-3 mx-auto ">
-            <li class="list-instalaciones-item"><img src="../PNGs/guion.png" class="palomita" alt=""> Alberca desinfectada con bromo.</li>
             <li class="list-instalaciones-item"><img src="../PNGs/guion.png" class="palomita" alt="">Climatizada a 32°</li>
+            <li class="list-instalaciones-item"><img src="../PNGs/guion.png" class="palomita" alt="">Desinfectada con bromo.</li>
             <li class="list-instalaciones-item"><img src="../PNGs/guion.png" class="palomita" alt="">Area común.</li>
             <li class="list-instalaciones-item"><img src="../PNGs/guion.png" class="palomita" alt="">Zona de juegos.</li>
             <li class="list-instalaciones-item"><img src="../PNGs/guion.png" class="palomita" alt="">Regaderas.</li>
             <li class="list-instalaciones-item "><img src="../PNGs/guion.png" class="palomita" alt="">Vestidores.</li>
           </ul>
         </div>
+
       </div>
       <!--------------------------Ubicacion------------------------------------------------->
       <div class="cuarta_seccion pt-3">
@@ -162,7 +184,7 @@
       <!--------------------------Contacto------------------------------------------------->
       <div class="contacto pb-5">
         <h2 class=" pt-5 ">Contactanos  </h2>
-        <div class="col pt-2 ">
+        <div class="col ">
           <form method="POST" class="formulario mx-auto">
             <label for="correo" class="col-12 mb-0 mt-2">Correo:</label>
             <input type="mail" name="correo" class="col-12">

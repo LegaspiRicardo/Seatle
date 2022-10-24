@@ -23,33 +23,33 @@
     <div class="row row-cols-1 row-cols-md-2 servicios ">
   <div class=" mb-4">
     <div class="card">
-      <img src="../Imagenes/clase.jpg" class="card-img-top mx-auto mt-3" alt="...">
+    <a href="clases-ninos.php" class="mx-auto"> <img src="../Imagenes/clase.jpg" class="card-img-top  mt-3" alt="..."></a>
       <div class="card-body">
-       <a href="clases-ninos.php"> <h5 class="card-title"> Clases para niñas y niños</h5></a>
+      <a href="clases-ninos.php"> <h5 class="card-title"> Clases para niñas y niños</h5></a>
       </div>
     </div>
   </div>
   <div class="col mb-4">
     <div class="card">
-      <img src="../Imagenes/clase-adultos.jpg" class="card-img-top mx-auto mt-3" alt="...">
+    <a href="clases-adulto.php" class="mx-auto"> <img src="../Imagenes/clase-adultos.jpg" class="card-img-top mx-auto mt-3" alt="..."></a>
       <div class="card-body">
-       <a href="clases-adulto.php"> <h5 class="card-title">Clases para adultos</h5></a>
+      <a href="clases-adulto.php"> <h5 class="card-title">Clases para adultos</h5></a>
       </div>
     </div>
   </div>
   <div class="col mb-4">
     <div class="card">
-      <img src="../Imagenes/rehab.jpg" class="card-img-top mx-auto mt-3" alt="...">
+      <a href="terapia.php" class="mx-auto"> <img src="../Imagenes/rehab.jpg" class="card-img-top mx-auto mt-3" alt="..."></a>
       <div class="card-body">
-       <a href="terapia.php"> <h5 class="card-title">Terapia y rehabilitación medica</h5></a>
+      <a href="terapia.php"> <h5 class="card-title">Terapia y rehabilitación medica</h5></a>
       </div>
     </div>
   </div>
   <div class="col mb-4">
     <div class="card">
-      <img src="../Imagenes/confeti.jpg" class="card-img-top mx-auto mt-3" alt="...">
+      <a href="eventos.php" class="mx-auto"> <img src="../Imagenes/confeti.jpg" class="card-img-top mx-auto mt-3" alt="..."></a>
       <div class="card-body">
-       <a href="eventos.php"> <h5 class="card-title">Eventos</h5></a>
+      <a href="eventos.php"> <h5 class="card-title">Eventos</h5></a>
       </div>
     </div>
   </div>
