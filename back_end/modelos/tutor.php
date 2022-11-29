@@ -20,7 +20,7 @@ class Tutor implements CRUD
                 
             $stmt->bindParam(':nombre', $this->nombre);
             $stmt->bindParam(':correo', $this->correo);
-           $stmt->bindParam(':telefono', $this->telefono);
+            $stmt->bindParam(':telefono', $this->telefono);
                 $stmt->execute();
                 return $stmt->rowCount();
             }
@@ -48,8 +48,8 @@ class Tutor implements CRUD
                 $stmt->bindParam(':nombre', $this->nombre);
                 $stmt->bindParam(':correo', $this->correo);
                 $stmt->bindParam(':telefono', $this->telefono);
-              
-              $stmt->bindParam(':id_tutor',$this->id_tutor);
+
+                $stmt->bindParam(':id_tutor',$this->id_tutor);
                 $stmt->execute();
 
                 $cambios=$stmt->rowCount();
@@ -143,8 +143,8 @@ class Tutor implements CRUD
                 $stmt->bindParam(':nombre', $this->nombre);
                 $stmt->bindParam(':correo', $this->correo);
                 $stmt->bindParam(':telefono', $this->telefono);
-              
-              $stmt->bindParam(':id_tutor',$this->id_tutor);
+            
+                $stmt->bindParam(':id_tutor',$this->id_tutor);
                 $stmt->execute();
 
                 $cambios=$stmt->rowCount();

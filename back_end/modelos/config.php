@@ -9,18 +9,18 @@ public function __CONSTRUCT(){
 
 	try {
 		
-	  $this->con=new PDO("mysql:host=localhost; dbname=seatle1", 'root','');
-	  $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$this->con=new PDO("mysql:host=localhost; dbname=prueba", 'root','');
+	$this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	 
+
 	
-	 }catch(PDOException $e) {
-	  echo "Error: " . $e->getMessage();
-	 }
+	}catch(PDOException $e) {
+	echo "Error: " . $e->getMessage();
+	}
 }
 
 public function getConection(){
-	 	return $this->con;
+	return $this->con;
 	}
 
 
@@ -33,4 +33,4 @@ public function getConection(){
 
 
 //$con=new Conexion();
- ?>
+?>
