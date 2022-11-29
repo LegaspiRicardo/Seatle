@@ -28,11 +28,6 @@ if(isset($_REQUEST['opcion'])){
             $alumno->status=$_REQUEST['status'];
             $resultado='';
             echo $alumno->crear();
-
-
-        
-          //  header('Location:../../');
-
             break;
 
             case '2': 
