@@ -18,7 +18,7 @@
   
 
       <?php  
-      include_once('formulario_crear.php');
+      include_once('formulario_crear_dash.php');
       
       
       ?>  
