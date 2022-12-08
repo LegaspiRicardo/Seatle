@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['nombres'])){
+  header('Location: ../sesion/sign-in.php');
+}
+include_once '../../../../back_end/modelos/profesor.php';
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -52,64 +60,60 @@
 
 
 
-  <section class=" col container-fluid central">
+  <section class=" col-8 container-fluid central">
   
     <h3 class=" col-8 mx-auto p-2 titulo_pasos_blanco">Pasos para registrar alumnos</h3>
 
 <!--------- Hide on smaller screens ------------------------------------->
     <div class="row ">
-      <div class=" col mx-auto paso_tutor "> 
+      <div class=" col-3 mx-auto paso_tutor "> 
           <h5 class="subtitulo_pasos mt-2 d-none d-sm-block">Primer paso</h5>
             <h2 class="numero_pasos ">1</h2>
             <?php 
-              include_once ("../tutor/index_dash.php");
+              include ("../tutor/formulario_crear_dash.php");
             ?>
       </div>
 
-      <div class="col mx-auto paso_alumno">
+      <div class="col-3 mx-auto paso_alumno">
             <h5 class="subtitulo_pasos_blanco mt-2 d-none d-sm-block">Segundo paso</h5>
             
             <h2 class="numero_pasos_blanco ">2</h2>
             <?php 
-              include_once ("../alumno/index_dash.php");
+              include ("../alumno/index_dash.php");
             ?>
       </div>
 
     </div>
     <!-------- Force next columns to break to new line at md breakpoint and up ------------>
-    <div class="w-100  d-sm-none"></div>
+    <div class="w-100 row d-sm-none"></div>
 
-      <div class="col mx-auto paso_mensualidad">
+      <div class="col-3 mx-auto paso_mensualidad">
           <h5 class="subtitulo_pasos mt-2 d-none d-sm-block">Tercer paso</h5>
             <h2 class="numero_pasos ">3</h2>
               <?php 
-                include_once ("../mensualidad/index_dash.php");  
+                
               ?>
       </div>
 
-      <div class="col mx-auto paso_alumno">
+      <div class="col-3 mx-auto paso_alumno">
           <h5 class="subtitulo_pasos_blanco mt-2 d-none d-sm-block">Cuarto paso</h5>
             <h2 class="numero_pasos_blanco ">4</h2>
             <?php 
-              include_once ("../alumno/index_dash.php");
+
             ?>
       </div>      
     </div>
 
 
     <section class=" row d-inline central mx-auto">
-    <div class="col pb-5 mt-2  calendario">
-            <?php
-            
-            ?>
-      </div>
+
   
 
       </section>
       </section>
 
   <?php 
-              include_once ("../componentes/lateral_derecho.php");
+        
             ?>
 
 

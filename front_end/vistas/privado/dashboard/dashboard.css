@@ -6,6 +6,7 @@ body{
 
 .central{
   border-radius: 5%;
+  width: 70%;
 }
 
 .calendario{
@@ -36,6 +37,15 @@ body{
 .btn_tutor{
   background-color: #4e93cc;
   margin: 0;
+}
+
+
+.btn-crear-dash{
+  background-color: white;
+  color:  #4e93cc;
+  padding:0% 1%;
+  font-size: 16px;
+  border-radius: 20%;
 }
 
 .numero_pasos{
@@ -92,9 +102,11 @@ h2{
 }
 
 .sidebar{
-  position: sticky;
+  position: fixed;
   top: 0;
   max-height: 500px;
+  background-color:rgb(230, 230, 230);
+  padding-bottom: 50%;
 }
 
 .nav-items{
@@ -111,7 +123,10 @@ h5{
 }
 
 
-
+.main{
+  position: relative;
+  left: 12%;
+}
 
 
 /*------------For mobile phones:------------------ */
@@ -161,6 +176,10 @@ h5{
 /*------------For tablets:------------------ */
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
- 
+.main{
+  left: 2%;
+}
   
 }
+
+
