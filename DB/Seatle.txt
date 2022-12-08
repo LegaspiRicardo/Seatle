@@ -39,7 +39,10 @@ fecha_nac DATE NOT NULL,
 fecha_ing DATE NOT NULL,
 alberca  VARCHAR(60) NOT NULL,
 sueldo  VARCHAR(20),
+contrasena VARCHAR(60),
+contrasena1 VARCHAR(60),
 status VARCHAR(20),
+puesto VARCHAR(60),
 comentarios  VARCHAR(250));
 
 CREATE TABLE horario_profe (
@@ -53,12 +56,14 @@ nivel  VARCHAR(60) NOT NULL);
 
 CREATE TABLE clase_part (
 id_clase INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-id_alumno INT NOT NULL);
+id_alumno INT NOT NULL,
+id_profesor INT NOT NULL);
 
 CREATE TABLE grupo_mixto (
 id_alumno INT NOT NULL,
 id_grupo_mixto INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-nivel VARCHAR(60) NOT NULL);
+nivel VARCHAR(60) NOT NULL,
+id_profesor INT NOT NULL);
 
 CREATE TABLE tutor_tutela_alumno (
 id_alumno INT NOT NULL,
@@ -103,10 +108,6 @@ dia DATE NOT NULL,
 hora_inicio TIME NOT NULL,
 hora_fin TIME NOT NULL);
 
-CREATE TABLE profesor_clase_part (
-id_profesor INT NOT NULL,
-id_clase INT NOT NULL);
-
 CREATE TABLE id_clase_horario_profe (
 id_horario_profe INT NOT NULL,
 id_clase INT NOT NULL);
@@ -122,29 +123,9 @@ dia DATE NOT NULL,
 hora_inicio TIME NOT NULL,
 hora_fin TIME NOT NULL);
 
-CREATE TABLE profesor_grupo_mixto (
-id_profesor INT NOT NULL,
-id_grupo_mixto INT NOT NULL);
-
 CREATE TABLE id_grupo_mixto_horario_profe (
 id_horario_profe INT NOT NULL,
 id_grupo_mixto INT NOT NULL);
-
-
-CREATE TABLE profesor_clases_grupo (id_clases_grupo INT NOT NULL, 
-id_horario_profe INT NOT NULL,
-id_profesor INT NOT NULL);
-
-
-CREATE TABLE profesor_clases_part_sesion (id_clases_part_sesion INT NOT NULL, 
-id_horario_profe INT NOT NULL,
-id_profesor INT NOT NULL);
-
-
-CREATE TABLE profesor_clases_grupo_mixto(id_clases_grupo_mixto INT NOT NULL, 
-id_horario_profe INT NOT NULL,
-id_profesor INT NOT NULL);
-
 
 
 
@@ -157,8 +138,10 @@ ALTER TABLE mensualidad  ADD CONSTRAINT mensualidad_id_alumno FOREIGN KEY (id_al
 ALTER TABLE horario_profe ADD CONSTRAINT horario_profe_id_profesor FOREIGN KEY (id_profesor) REFERENCES profesor (id_profesor);
 
 ALTER TABLE clase_part ADD CONSTRAINT clase_id_alumno FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno);
+ALTER TABLE clase_part ADD CONSTRAINT clase_id_profesor FOREIGN KEY (id_profesor) REFERENCES profesor(id_profesor);
 
 ALTER TABLE grupo_mixto ADD CONSTRAINT grupo_mixto_id_alumno FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno);
+ALTER TABLE grupo_mixto ADD CONSTRAINT grupo_mixto_id_profesor FOREIGN KEY (id_profesor) REFERENCES profesor(id_profesor);
 
 ALTER TABLE tutor_tutela_alumno ADD CONSTRAINT tutor_tutela_alumno_id_alumno FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno);
 ALTER TABLE tutor_tutela_alumno ADD CONSTRAINT tutor_tutela_alumno_id_tutor FOREIGN KEY (id_tutor) REFERENCES tutor(id_tutor);
@@ -185,9 +168,6 @@ ALTER TABLE alumno_toma_clase ADD CONSTRAINT alumno_toma_clase_id_clase FOREIGN 
 
 ALTER TABLE clases_part_sesion ADD CONSTRAINT clases_sesion_id_clase FOREIGN KEY (id_clase) REFERENCES clase_part(id_clase);
 
-ALTER TABLE profesor_clase_part ADD CONSTRAINT profesor_clase_id_profesor FOREIGN KEY (id_profesor) REFERENCES profesor (id_profesor);
-ALTER TABLE profesor_clase_part ADD CONSTRAINT profesor_clase_id_clase FOREIGN KEY (id_clase) REFERENCES clase_part(id_clase);
-
 ALTER TABLE id_clase_horario_profe ADD CONSTRAINT id_clase_horario_profe_id_horario_profe FOREIGN KEY (id_horario_profe) REFERENCES horario_profe(id_horario_profe);
 ALTER TABLE id_clase_horario_profe ADD CONSTRAINT id_clase_horario_profe_id_clase FOREIGN KEY (id_clase) REFERENCES clase_part(id_clase);
 
@@ -196,35 +176,7 @@ ALTER TABLE alumno_selecciona_grupo_mixto ADD CONSTRAINT alumno_selecciona_grupo
 
 ALTER TABLE clases_grupo_mixto ADD CONSTRAINT clases_grupo_mixto_id_grupo_mixto FOREIGN KEY (id_grupo_mixto) REFERENCES grupo_mixto(id_grupo_mixto);
 
-ALTER TABLE profesor_grupo_mixto ADD CONSTRAINT profesor_grupo_mixto_id_profesor FOREIGN KEY (id_profesor) REFERENCES profesor (id_profesor);
-ALTER TABLE profesor_grupo_mixto ADD CONSTRAINT profesor_grupo_mixto_id_grupo_mixto FOREIGN KEY (id_grupo_mixto) REFERENCES grupo_mixto(id_grupo_mixto);
-
 ALTER TABLE id_grupo_mixto_horario_profe ADD CONSTRAINT id_grupo_mixto_horario_profe_id_horario_profe FOREIGN KEY (id_horario_profe) REFERENCES horario_profe(id_horario_profe);
-
 ALTER TABLE id_grupo_mixto_horario_profe ADD CONSTRAINT id_grupo_mixto_horario_profe_id_grupo_mixto FOREIGN KEY (id_grupo_mixto) REFERENCES grupo_mixto(id_grupo_mixto);
 
 
-
-ALTER TABLE profesor_clases_grupo ADD CONSTRAINT profesor_clases_grupo_id_clases_grupo FOREIGN KEY (id_clases_grupo) REFERENCES clases_grupo(id_clase_grupo);
-
-ALTER TABLE profesor_clases_grupo ADD CONSTRAINT profesor_clases_grupo_id_horario_profe FOREIGN KEY (id_horario_profe) REFERENCES horario_profe(id_horario_profe);
-
-ALTER TABLE profesor_clases_grupo ADD CONSTRAINT profesor_clases_grupo_id_profesor FOREIGN KEY (id_profesor) REFERENCES profesor(id_profesor);
-
-
-
-ALTER TABLE profesor_clases_part_sesion ADD CONSTRAINT profesor_clases_part_id_clases_part FOREIGN KEY (id_clases_part_sesion) REFERENCES clases_part_sesion(id_clase_part_sesion);
-
-ALTER TABLE profesor_clases_part_sesion ADD CONSTRAINT profesor_clases_part_id_horario_profe FOREIGN KEY (id_horario_profe) REFERENCES horario_profe(id_horario_profe);
-
-ALTER TABLE profesor_clases_part_sesion ADD CONSTRAINT profesor_clases_part_id_profesor FOREIGN KEY (id_profesor) REFERENCES profesor(id_profesor);
-
-
-
-
-
-ALTER TABLE profesor_clases_grupo_mixto ADD CONSTRAINT profesor_clases_grupo_mixto_id_clases_grupo_mixto FOREIGN KEY (id_clases_grupo_mixto) REFERENCES clases_grupo_mixto(id_clase_grupo_mixto);
-
-ALTER TABLE profesor_clases_grupo_mixto ADD CONSTRAINT profesor_clases_grupo_mixto_id_horario_profe FOREIGN KEY (id_horario_profe) REFERENCES horario_profe(id_horario_profe);
-
-ALTER TABLE profesor_clases_grupo_mixto ADD CONSTRAINT profesor_clases_grupo_mixto_id_profesor FOREIGN KEY (id_profesor) REFERENCES profesor(id_profesor);
