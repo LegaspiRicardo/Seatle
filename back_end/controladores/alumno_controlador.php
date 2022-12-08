@@ -1,15 +1,10 @@
 <?php
-
 include_once '../modelos/alumno.php';
-/*if(isset($_REQUEST)){
-    print_r($_REQUEST);
-}
-*/
 
 if(isset($_REQUEST['opcion'])){
     $opcion=$_REQUEST['opcion'];
     switch($opcion){
-        case '1':      //crear
+        case '1':                                           //Crear alumno
             $alumno=new Alumno();
             $alumno->nombres=$_REQUEST['nombres'];
             $alumno->apellido_pat=$_REQUEST['apellido_pat'];
@@ -26,11 +21,14 @@ if(isset($_REQUEST['opcion'])){
             $alumno->comentarios=$_REQUEST['comentarios'];
             $alumno->alberca=$_REQUEST['alberca'];
             $alumno->status=$_REQUEST['status'];
+
             $resultado='';
             echo $alumno->crear();
+            header('Location: ../../front_end/vistas/privado/alumno/index.php?resultado='.$resultado);
             break;
 
-            case '2': 
+
+        case '2':                                           //Actualizar alumno
             $alumno=new Alumno();
             $alumno->nombres=$_REQUEST['nombres'];
             $alumno->apellido_pat=$_REQUEST['apellido_pat'];
@@ -47,25 +45,50 @@ if(isset($_REQUEST['opcion'])){
             $alumno->comentarios=$_REQUEST['comentarios'];
             $alumno->alberca=$_REQUEST['alberca'];
             $alumno->status=$_REQUEST['status'];
+
             $alumno->id_alumno=$_REQUEST['id_alumno'];
             $resultado='';
             echo $alumno->actualizar();
-
-                break;  //Actualizar
+            header('Location: ../../front_end/vistas/privado/alumno/index.php?resultado='.$resultado);
+            break;  
             
 
-            case '3':
+        case '3':                                               //Eliminar alumno
             $alumno=new Alumno();
             $alumno->id_alumno=$_REQUEST['id_alumno'];
             $resultado='';
             echo $alumno->borrar();
-                
-                break;
+            header('Location: ../../front_end/vistas/privado/alumno/index.php?resultado='.$resultado);
+            break;
             default: echo"opcion invalida";
+
+            case '4':                                           //Actualizar alumno
+                $alumno=new Alumno();
+                $alumno->nombres=$_REQUEST['nombres'];
+                $alumno->apellido_pat=$_REQUEST['apellido_pat'];
+                $alumno->apellido_mat=$_REQUEST['apellido_mat'];
+                $alumno->calle=$_REQUEST['calle'];
+                $alumno->numero=$_REQUEST['numero'];
+                $alumno->colonia=$_REQUEST['colonia'];
+                $alumno->cp=$_REQUEST['cp'];
+                $alumno->fecha_nac=$_REQUEST['fecha_nac'];
+                $alumno->sexo=$_REQUEST['sexo'];
+                $alumno->fecha_ing=$_REQUEST['fecha_ing'];
+                $alumno->id_tutor=$_REQUEST['id_tutor'];
+                $alumno->nivel=$_REQUEST['nivel'];
+                $alumno->comentarios=$_REQUEST['comentarios'];
+                $alumno->alberca=$_REQUEST['alberca'];
+                $alumno->status=$_REQUEST['status'];
+    
+                $alumno->id_alumno=$_REQUEST['id_alumno'];
+                $resultado='';
+                echo $alumno->baja();
+                header('Location: ../../front_end/vistas/privado/alumno/index.php?resultado='.$resultado);
+                break; 
     }
 
-    header('Location: ../../front_end/vistas/dashboard/index.php?resultado='.$resultado);
-    exit(); 
+
+
 
 }
 
