@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+if(!isset($_SESSION['nombres'])){
+  header('Location: ../sesion/sign-in.php');
+}
+
+  include_once '../../../../back_end/modelos/profesor.php';
   include_once '../../../../back_end/modelos/tutor.php';
   
 
@@ -58,24 +64,24 @@
   ?>
 
 
-<section class="col-9" >
+<div class="main col-12 mb-5" >
+<h1 class="col-6 ml-5">Tutores registrados:</h1>
+    
 
-<div class="mt-3">
-<?php   
+  <div class="mt-3 mb-3 col-7 ml-auto">
+    <?php   
+    include('formulario_crear.php');
+    ?> 
+  </div>
 
-include('formulario_crear.php');
-?> 
-</div>
-
-    <div class="table col-xs mt-5">
-      
-      <?php include_once 'data.php'; 
+  <div class="table col-5 ml-5 ">
+    <?php include_once 'data.php'; 
       include_once('formulario_actualizar.php');
-      include_once('formulario_borrar.php');   ?>  
-    </div>
-      
+      include_once('formulario_borrar.php');   
+    ?>  
+  </div>
 
-</section>
+    </div>
 
 
       

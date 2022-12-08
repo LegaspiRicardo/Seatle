@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['nombres'])){
+  header('Location: ../sesion/sign-in.php');
+}
 
   include_once '../../../../back_end/modelos/profesor.php';
   
@@ -51,22 +55,29 @@
    
 
 <?php 
-              include_once ("../componentes/aside.php");
-            ?>
+  include_once ("../componentes/aside.php");
+?>
 
 
 
 
-<div class=" col-9 mb-5">
+<div class="main col-12 mb-5">
+<h1 class="col-6 ml-5">Profesores Seattle</h1>
+    
+<div class="col-8 text-right">
+    <?php
+      include_once('formulario_crear.php');  
+    ?>
+    </div>
+
       <br>
 
     <?php  
-      include_once('formulario_crear.php');
       include_once('formulario_baja.php');
       include_once('formulario_actualizar.php');
       include_once('formulario_borrar.php');  
     ?>  
-  <div class="table col-xs-8 mt-5">
+  <div class="table col-10  mt-2">
       <?php include_once 'data.php';  ?>  
     </div>
     </div>

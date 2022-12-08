@@ -1,92 +1,111 @@
+<?php
+if (isset($_GET['resultado'])) {
+  echo $_GET['resultado'];
+}
+$profesor = new Profesor();
+$profesores = $profesor->leer_todo();
+?>
 
-    <?php
-    if(isset($_GET['resultado']))
-    {
-        echo $_GET['resultado'];
-    }
-    $profesor=new Profesor();
-    $profesores=$profesor->leer_todo();
-    ?>
+<link rel="stylesheet" href="estilos.css">
 
 <style>
-
-.table{
-        width:60%;
-        max-height:550px;
-        overflow: scroll;
-        border-collapse:collapse;
-        border:1px solid #ddd;
-        border-radius:3%;
-        background-color:white;
-      }
-
-
-th{
-  text-align:left;
-  font-size:1em;
-  color:white;
-  text-shadow:1px 1px black;
-  background-color:rgb(121, 172, 210);
-  position:sticky;
-  top:0;
-  
-}
-
-  td{
-    text-align:center;
-    border-bottom: 1px solid #dddd;
-    font-size:13px;
+  .cardIcon {
+    max-width: 20px;
+    display: inline;
+    padding-bottom: 1%;
   }
-  tr:hover {background-color: rgb(121, 172, 210, 0.4);}
+</style>
 
-  .tableIcon{
-  width:35%;
-}
 
-.tableIcon1{
-  width:40%;
-}
+<div class="scroller">
+  <div class="row">
+    <?php
+    foreach ($profesores as $profesor) {
+    ?>
 
-    </style>
-    
-<table class="table-active">
-  <thead>
-    <tr>
-      <th scope="col">Profesor</th>
-      <th scope="col">Telefono</th>
-      <th scope="col">Alberca</th>
-      <th scope="col">Sueldo</th>
-      <th scope="col">Estatus</th>
-      <th scope="col">Comentarios</th>
-      <th scope="col">Editar</th>
-      <th scope="col">Baja</th>
-      <th scope="col">Borrar</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-      <?php
-      foreach($profesores as $profesor){
-      ?>
-  <tr>
-      <td class="col-3">
-          <span><?php echo $profesor->nombres . " " . $profesor->apellidos ?> </span>
-          <br>
-          <span><?php echo $profesor->fecha_nac ?></span>
-          <br>
-      </td>
-      <td><?php echo $profesor->telefono ?></td>
-      <td><?php echo $profesor->alberca ?></td>
-      <td><?php echo $profesor->sueldo ?></td>
-      <td><?php echo $profesor->status ?></td>
-      <td><?php echo $profesor->comentarios ?></td>
-      <td> <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&editar"><img src="../../../PNGs/editar.png" class="tableIcon">  </a></td>
-      <td> <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&baja"><img src="../../../PNGs/human-error.png" class="tableIcon1">  </a></td>
-      <td> <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&borrar"><img src="../../../PNGs/delete.png" class="tableIcon">  </a></td>
-  </tr>
-  
-  <?php 
-  }
-  ?>
-  </tbody>
-</table>
+      <div class="card col-6 mt-3">
+        <div class="card-body ">
+          <div class="col-8 mx-auto">
+            <img src="../../../PNGs/usuario_masculino.png" alt="" class="imagen p-0 ">
+          </div>
+
+          <!---------------- Smaller view------------------->
+          <div class="row d-block mt-2">
+            <h5 class="card-title mb-3 pb-0 col-12 text-center"><?php echo $profesor->nombres . " " . $profesor->apellidos ?> </h5>
+          </div>
+
+          <div class="row ">
+            <div class="col-6 ml-5 mt-2  mx-auto">
+              <h6 class="d-inline">Telefono: </h6>
+              <p class="d-inline telefono"><?php echo $profesor->telefono ?></p>
+            </div>
+
+            <div class="col-2 pt-2 p-0">
+            <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&editar"><img src="../../../PNGs/editar.png" class="cardIcon text-right ml-3"> </a>
+
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="card-footer bg-transparent p-1 mt-2 mb-1">
+
+
+          <div class="row mr-1 mb-2 mx-auto">
+
+          <div class="col p-0">
+            <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&borrar"><img src="../../../PNGs/delete.png" class="cardIcon  d-inline ml-3"> </a>
+            <a href="index.php?id_profesor=<?php echo $profesor->id_profesor ?>&baja"><img src="../../../PNGs/human-error.png" class="cardIcon  d-inline ml-4"> </a>
+            </div>
+
+            <div class="col">
+              <a class="btn-collapse p-0 text-center" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Notas</a>
+            </div>
+
+            <div class="col">
+              <a class="btn-collapse p-0 text-center" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Ver más</a>
+            </div>
+
+
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body p-2">
+                  <h6 class="mb-0">Comentarios:</h6>
+                  <?php echo $profesor->comentarios ?>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body p-2  text-center">
+                  <h6 class="mb-0">Cumpleaños:</h6>
+                  <?php echo $profesor->fecha_nac ?>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+
+    <?php
+    }
+    ?>
+
+  </div>
+
+</div>

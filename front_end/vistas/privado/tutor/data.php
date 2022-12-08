@@ -12,13 +12,10 @@
 <style>
 
 .table{
-        width:40%;
-        max-height:500px;
+        max-height:350px;
         overflow: scroll;
-        border-collapse:collapse;
         border:1px solid #ddd;
         border-radius:3%;
-        background-color:white;
       }
 
 
@@ -37,12 +34,13 @@ th{
     text-align:center;
     border-bottom: 1px solid #dddd;
     font-size:13px;
+    background-color: white;
   }
   tr:hover {background-color: rgb(121, 172, 210, 0.4);}
 
 
 .tableIcon{
-  width:25%;
+  width:30%;
 }
 
 .tableIcon1{

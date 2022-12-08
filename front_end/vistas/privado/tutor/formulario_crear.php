@@ -12,8 +12,8 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn_tutor" data-toggle="modal" data-target="#exampleModal20">
-Registrar tutor
+<button type="button" class="btn btn_tutor_mas" data-toggle="modal" data-target="#exampleModal20">
++
 </button>
 
 
