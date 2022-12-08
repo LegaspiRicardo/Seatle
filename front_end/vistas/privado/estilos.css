@@ -2,6 +2,7 @@
   .inputForm{
   border: none;
   border-bottom: 1px solid #ddd;
+  background-color: #b3ddff23;
   }
   
   .inputFormDisabled{
@@ -20,7 +21,8 @@
 }
 
 label{
-  opacity: 0.6;
+  opacity: 0.8;
+  text-align: left;
 }
 
 .img_subtitulo{
@@ -46,13 +48,14 @@ h4{
 }
 
 
+
 .styled-select select {
-   background: transparent;
+  background-color: #b3ddff23;
    border: none;  
 }
 
 .styled-select-disabled select {
-  background-color: rgba(73, 82, 62, 0.2);
+  background-color: rgba(105, 109, 102, 0.2);
   border: none;  
   pointer-events:none;
 }
@@ -77,37 +80,42 @@ h4{
 .btn_tutor:hover{
   background-color: #4e93cc;
   color: white;
-  text-shadow:1px 1px black;
+}
+
+.btn_tutor_mas{
+  background-color:white;
+  font-size: 40px;
+  color: #4e93ccc7;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 20%;
+}
+
+.btn_tutor_mas:hover{
+  transform: scale(1.05);
+  color: #4e93ccc7;
 }
 
 .btn_alumno:hover{
   background-color: #e8ecee;
   color: #4478a3;
-  text-shadow:1px  black;
 }
 
-.cabecera_baja{
-  background-color:hsla(0,100%,99%,1);
-background-image:
-radial-gradient(at 48% 62%, hsla(185,0%,100%,1) 0px, transparent 50%),
-radial-gradient(at 47% 100%, hsla(59,100%,60%,1) 0px, transparent 50%),
-radial-gradient(at 48% 59%, hsla(340,17%,97%,1) 0px, transparent 50%);
+
+.btn-crear{
+  background-color: white;
+  color:  #4e93cc;
+  padding:0% 1%;
+  font-size: 40px;
+  border-radius: 20%;
 }
 
-.cabecera_eliminar{
-  background-color:hsla(0,100%,99%,1);
-  background-image:
-  radial-gradient(at 48% 62%, hsla(185,0%,100%,1) 0px, transparent 50%),
-  radial-gradient(at 47% 100%, hsla(0,100%,60%,1) 0px, transparent 50%),
-  radial-gradient(at 48% 59%, hsla(340,17%,97%,1) 0px, transparent 50%);
+.btn-crear:hover{
+  transform: scale(1.05);
+  color:  #4e93cc;
 }
 
-.cabecera_actualizar{
-  background-color:hsla(0,100%,99%,1);
-  background-image:
-  radial-gradient(at 48% 62%, hsla(185,0%,100%,1) 0px, transparent 50%),
-  radial-gradient(at 47% 100%, rgb(85, 179, 41) 0px, transparent 50%),
-  radial-gradient(at 48% 59%, hsla(340,17%,97%,1) 0px, transparent 50%);
+.form-control{
+  background-color: #b3ddff23;
 }
-
 
