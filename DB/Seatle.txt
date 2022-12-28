@@ -57,7 +57,10 @@ nivel  VARCHAR(60) NOT NULL);
 CREATE TABLE clase_part (
 id_clase INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 id_alumno INT NOT NULL,
-id_profesor INT NOT NULL);
+id_profesor INT NOT NULL,
+inicio DATETIME NOT NULL,
+fin DATETIME NOT NULL,
+color VARCHAR(255));
 
 CREATE TABLE grupo_mixto (
 id_alumno INT NOT NULL,
