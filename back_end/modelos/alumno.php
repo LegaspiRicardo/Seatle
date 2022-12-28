@@ -21,14 +21,18 @@ class Alumno implements CRUD
     public $alberca;
     public $status;
 
+
+
+
+
     function crear()
     {
         try{
-                $c=new Conexion();
-                $conn=$c->getConection();
-                $stmt = $conn->prepare("
-                    INSERT INTO alumno (nombres, apellido_pat, apellido_mat, calle, numero, colonia, cp, fecha_nac, sexo, fecha_ing, id_tutor, nivel, comentarios, alberca, status)
-                    VALUES (:nombres, :apellido_pat, :apellido_mat, :calle, :numero, :colonia, :cp, :fecha_nac, :sexo, :fecha_ing, :id_tutor, :nivel, :comentarios, :alberca, :status)");
+            $c=new Conexion();
+            $conn=$c->getConection();
+            $stmt = $conn->prepare("
+                INSERT INTO alumno (nombres, apellido_pat, apellido_mat, calle, numero, colonia, cp, fecha_nac, sexo, fecha_ing, id_tutor, nivel, comentarios, alberca, status)
+                VALUES (:nombres, :apellido_pat, :apellido_mat, :calle, :numero, :colonia, :cp, :fecha_nac, :sexo, :fecha_ing, :id_tutor, :nivel, :comentarios, :alberca, :status)");
                 
                 $stmt->bindParam(':nombres', $this->nombres);
                 $stmt->bindParam(':apellido_pat', $this->apellido_pat);
@@ -44,7 +48,7 @@ class Alumno implements CRUD
                 $stmt->bindParam(':nivel', $this->nivel);
                 $stmt->bindParam(':comentarios', $this->comentarios);
                 $stmt->bindParam(':alberca', $this->alberca);
-                $stmt->bindParam(':status',$this->status);
+                $stmt->bindParam(':status', $this->status);
                 $stmt->execute();
                 return $stmt->rowCount();
             }
@@ -66,7 +70,7 @@ class Alumno implements CRUD
                 $conn=$c->getConection();
 
                 $stmt = $conn->prepare("
-                UPDATE alumno SET nombres=:nombres, apellido_pat=:apellido_pat, apellido_mat=:apellido_mat, calle=:calle, numero=:numero, colonia=:colonia, cp=:cp, fecha_nac=:fecha_nac, sexo=:sexo, fecha_ing=:fecha_ing, id_tutor=:id_tutor, nivel=:nivel, comentarios=:comentarios, status=:status  
+                UPDATE alumno SET nombres=:nombres, apellido_pat=:apellido_pat, apellido_mat=:apellido_mat, calle=:calle, numero=:numero, colonia=:colonia, cp=:cp, fecha_nac=:fecha_nac, sexo=:sexo, fecha_ing=:fecha_ing, id_tutor=:id_tutor, nivel=:nivel, comentarios=:comentarios, alberca=:alberca, status=:status  
                 WHERE id_alumno=:id_alumno");
 
                 $stmt->bindParam(':nombres', $this->nombres);
@@ -83,7 +87,8 @@ class Alumno implements CRUD
                 $stmt->bindParam(':nivel', $this->nivel);
                 $stmt->bindParam(':comentarios', $this->comentarios);
                 $stmt->bindParam(':alberca', $this->alberca);
-                $stmt->bindParam(':status',$this->status);
+                $stmt->bindParam(':status', $this->status);
+
                 $stmt->bindParam(':id_alumno',$this->id_alumno);
                 $stmt->execute();
 
@@ -161,6 +166,91 @@ class Alumno implements CRUD
             $conn = null;
             }  
     }
+
+
+    function baja()
+    {
+        try{
+            $c=new Conexion();
+            $conn=$c->getConection();
+
+            $stmt = $conn->prepare("
+            UPDATE alumno SET nombres=:nombres, apellido_pat=:apellido_pat, apellido_mat=:apellido_mat, calle=:calle, numero=:numero, colonia=:colonia, cp=:cp, fecha_nac=:fecha_nac, sexo=:sexo, fecha_ing=:fecha_ing, id_tutor=:id_tutor, nivel=:nivel, comentarios=:comentarios, alberca=:alberca, status=:status  
+            WHERE id_alumno=:id_alumno");
+
+            $stmt->bindParam(':nombres', $this->nombres);
+            $stmt->bindParam(':apellido_pat', $this->apellido_pat);
+            $stmt->bindParam(':apellido_mat', $this->apellido_mat);
+            $stmt->bindParam(':calle', $this->calle);
+            $stmt->bindParam(':numero', $this->numero);
+            $stmt->bindParam(':colonia', $this->colonia);
+            $stmt->bindParam(':cp', $this->cp);
+            $stmt->bindParam(':fecha_nac', $this->fecha_nac);
+            $stmt->bindParam(':sexo', $this->sexo);
+            $stmt->bindParam(':fecha_ing', $this->fecha_ing);
+            $stmt->bindParam(':id_tutor', $this->id_tutor);
+            $stmt->bindParam(':nivel', $this->nivel);
+            $stmt->bindParam(':comentarios', $this->comentarios);
+            $stmt->bindParam(':alberca', $this->alberca);
+            $stmt->bindParam(':status', $this->status);
+
+            $stmt->bindParam(':id_alumno',$this->id_alumno);
+            $stmt->execute();
+
+            $cambios=$stmt->rowCount();
+            } 
+            catch(PDOException $e) 
+            {
+                echo "Error: " . $e->getMessage();
+            } 
+            finally
+            {
+                $conn = null;
+            }
+    }
+
+    function ver_bajas()
+    {
+        try{
+            $c=new Conexion();
+            $conn = $c->getConection();
+
+            $stmt = $conn->prepare("
+
+            SELECT * FROM `alumno` WHERE status = 'Baja'");
+            $result = $stmt->setFetchMode(PDO::FETCH_OBJ);
+            $stmt->execute();
+            $result = $stmt-> fetchAll();
+            return $result; 
+        } catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        } finally{
+            $conn = null;
+            }                 
+    }
+
+
+    function revisar_pago()
+    {
+        try{
+            $c=new Conexion();
+            $conn = $c->getConection();
+
+            $stmt = $conn->prepare("
+
+            SELECT * FROM `alumno` WHERE status = 'Activo'");
+            $result = $stmt->setFetchMode(PDO::FETCH_OBJ);
+            $stmt->execute();
+            $result = $stmt-> fetchAll();
+            return $result; 
+        } catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        } finally{
+            $conn = null;
+            }                 
+    }
+
+    
 }
 
 ?>
