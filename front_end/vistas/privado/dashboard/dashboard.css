@@ -6,27 +6,30 @@ body{
 
 .central{
   border-radius: 5%;
-  width: 70%;
 }
 
-.calendario{
+.CalendarioWeb{
   background-color: rgb(255, 255, 255);
   border-radius: 5%;
+  padding: 5%;
 }
 
 .paso_tutor{
-  background-color: rgb(250, 245, 245);
+  background-color: rgb(255, 255, 255);
   border-radius: 20%;
+  max-height: 150px;
 }
 
 .paso_alumno{
   background-color: #4e93cc;
   border-radius: 20%;
+  max-height: 150px;
 }
 
 .paso_mensualidad{
-  background-color: rgb(250, 245, 245);
+  background-color: rgb(255, 255, 255);
   border-radius: 20%;
+  max-height: 150px;
 }
 
 .btn_alumno{
@@ -50,16 +53,24 @@ body{
 
 .numero_pasos{
   color: #4e93cc;
+  font-size: 40px;
+}
+
+.btn-dashboard{
+  width: 60%;
+  margin-left: 10%;
 }
 
 .numero_pasos_blanco{
   color: white;
   text-shadow:1px 1px black;
+  
+  font-size: 40px;
 }
 
 .titulo_pasos_blanco{
   width: 100%;
-  font-size: 200%;
+  font-size: 28px;
   text-align: center;
   color: rgb(88, 88, 88);
    text-shadow:1px 1px white;
@@ -84,7 +95,7 @@ h2{
   width: 100%;
   display: inline-block;
   text-align: center;
-  font-size: 400%;
+  font-size: 28px;
 }
 
 .nav-link{
@@ -120,6 +131,7 @@ li{
 
 h5{
   margin-bottom: 0;
+  font-size: 16px;
 }
 
 
@@ -174,9 +186,9 @@ h5{
 
 
 /*------------For tablets:------------------ */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1100px) {
   /* For mobile phones: */
-.main{
+.central{
   left: 2%;
 }
   
