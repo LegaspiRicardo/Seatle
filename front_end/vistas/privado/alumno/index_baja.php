@@ -18,7 +18,7 @@ include '../../../../back_end/modelos/alumno.php';
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.88.1">
-  <title>Alumnos</title>
+  <title>Alumnos baja</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <style>
@@ -48,6 +48,7 @@ include '../../../../back_end/modelos/alumno.php';
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
   <link rel="stylesheet" href="../dashboard/dashboard.css">
+  <link rel="stylesheet" href="../estilos.css">
 </head>
 
 
@@ -62,24 +63,18 @@ include '../../../../back_end/modelos/alumno.php';
 
 
 
-  <div class="main col-12 mb-5 pl-0">
-    <h1 class="col-6 ml-5">Alumnos registrados:</h1>
+  <div class="main col-12 mb-5">
+    <h1 class="col-6 ml-5">Alumnos dados de baja:</h1>
     
 
-    
 
     <div class="table col-10 mr-auto ">
-    <div class="col-12 text-center ">
-    <?php
-      include_once('formulario_crear.php');  
-    ?>
-    </div>
 
 
       <?php
-        include_once 'data.php';
-        include('formulario_actualizar.php'); 
-        include('formulario_baja.php'); 
+        include_once 'data_baja.php';
+        include_once('formulario_actualizar_baja.php'); 
+        include_once('formulario_borrar.php'); 
       ?>
     </div>
 

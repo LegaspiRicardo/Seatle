@@ -45,6 +45,7 @@
 
 .card{
     border-radius: 5%;
+    max-width: 520px;
 }
 
 .card-title{
@@ -78,7 +79,17 @@ h6{
     font-size: 14px;
 }
 
+.baja{
+    background-color:#ece285;
+    padding:1% 2%;
+    border-radius:5%;
+    font-size: 14px;
+}
 
+.img_modals{
+    border-radius: solid black;
+    max-width: 10px;
+  }
 
 @media only screen and (max-width:1000px){
 

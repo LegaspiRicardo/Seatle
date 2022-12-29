@@ -3,7 +3,7 @@ if (isset($_GET['resultado'])) {
   echo $_GET['resultado'];
 }
 $alumno = new Alumno();
-$alumnos = $alumno->leer_todo();
+$alumnos = $alumno->revisar_pago();
 
 
 
@@ -13,17 +13,17 @@ $alumnos = $alumno->leer_todo();
 
 <style>
   .tableIcon {
-    width: 15%;
+    width: 17%;
   }
 </style>
 
 <div class="scroller">
-  <div class="row">
+  <div class="row ">
     <?php
     foreach ($alumnos as $alumno) {
     ?>
 
-      <div class="card col-6 mt-3">
+      <div class="card col-6 mt-3 mx-auto">
         <div class="card-body ">
 
           <div class="row ">
@@ -86,7 +86,7 @@ $alumnos = $alumno->leer_todo();
 
             <a href="#" class="nivel col-3 text-center pt-1 mb-0 ml-3"><?php echo $alumno->nivel ?></a>
 
-            <div class="col-6 ml-5 mt-2  mx-auto">
+            <div class="col-8 ml-5 mt-2  mx-auto">
               <h6 class="d-inline">Fecha de pago: </h6>
               <p class="d-inline pago"><?php echo $alumno->fecha_ing ?></p>
             </div>
@@ -109,7 +109,6 @@ $alumnos = $alumno->leer_todo();
             <div class="col-3 text-center">
               <a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&editar"><img src="../../../PNGs/editar.png" class="tableIcon text-right m-2"> </a>
               <a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&baja"><img src="../../../PNGs/human-error.png" class="tableIcon text-right m-2"> </a>
-              <a href="index.php?id_alumno=<?php echo $alumno->id_alumno ?>&borrar"><img src="../../../PNGs/delete.png" class="tableIcon text-right m-2"> </a>
             </div>
 
           </div>

@@ -12,8 +12,6 @@
 
 
 
-<div class="container-fluid  mx-auto" >
-
 
   
 
@@ -25,7 +23,6 @@
   
 
 
-</div>
 
 
       
