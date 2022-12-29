@@ -1,5 +1,10 @@
 <?php
-date_default_timezone_set('America/Mexico_city');
+session_start();
+if(!isset($_SESSION['nombres'])){
+  header('Location: ../../privado/sesion/sign-in.php');
+}
+include_once '../../../../back_end/modelos/profesor.php';
+
 ?>
 
 <!doctype html>
@@ -54,7 +59,7 @@ date_default_timezone_set('America/Mexico_city');
     <div class="row cuadrante mx-auto mb-5">
         
             <div class="col-4 text-center cuadro ">
-                <a href="" class="link-cuadrante">Alumnos</a>    
+                <a href="../alumnos/index.php" class="link-cuadrante">Alumnos</a>    
             </div>
 
             <div class="col-4 text-center cuadro ">
@@ -67,7 +72,7 @@ date_default_timezone_set('America/Mexico_city');
             </div>
 
             <div class="col-4 text-center cuadro ">
-                <a href="" class="link-cuadrante">Notas</a>
+                <a href="" class="link-cuadrante">Grupos</a>
             </div>
     </div>
 

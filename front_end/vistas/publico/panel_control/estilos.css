@@ -4,18 +4,19 @@ body{
 
 footer{
     background-color: rgb(96, 134, 161);
-    position: sticky;
+    position: fixed;
+    width: 100%;
     bottom: 0;
 }
 
 
 .cuadrante{
-    margin: 2% 0;
+    margin: 8% 0;
     width: 90%;
 }
 
 .cuadro{
-    background-color:rgb(88, 144, 185) ;
+    background-color:rgb(131, 172, 201) ;
     padding: 15% 8% 15% 8%;
     margin: 5% 8% 5% 8%;
     border-radius: 5%;
@@ -64,4 +65,12 @@ footer{
 .btn-logout:hover{
     background-color: rgb(241, 241, 241);
 
+}
+
+.icono-volver{
+    width: 30px;
+}
+
+.icono-volver:hover{
+    transform: scale(1.2);
 }
