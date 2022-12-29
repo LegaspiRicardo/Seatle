@@ -1,9 +1,12 @@
-
+<?php
+date_default_timezone_set('America/Mexico_city');
+?>
 
 <footer>
         <div class="row container mx-auto pt-2">
           <div class="col-4 mt-2">
-            <a href="" class="btn-logout ">Salir</a>
+          <a class="nav-link text-white" href="../../../../back_end/controladores/profesor_controlador.php?opcion=5" > 
+Salir</a>
           </div>
 
           <div class="col-7 text-right pl-0 pr-0 ">
