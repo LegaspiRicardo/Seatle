@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(249, 249, 249);
+}
+
+footer{
+    background-color: rgb(96, 134, 161);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.cuadrante{
+    margin: 8% 0;
+    width: 90%;
+}
+
+.cuadro{
+    background-color:rgb(131, 172, 201) ;
+    padding: 15% 8% 15% 8%;
+    margin: 5% 8% 5% 8%;
+    border-radius: 5%;
+}
+
+.link-cuadrante{
+    color: white;
+    padding: 35% 0 35% 0;
+    border-radius: 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 2%;
+    font-size: 18px;
+}
+
+.link-cuadrante:hover{
+    color: white;
+}
+
+.cuadro:hover{
+    transform: scale(1.1);
+    background-color:rgb(121, 163, 194) ;
+}
+
+.fecha-hora{
+    color: white;
+}
+
+.yop{
+    color: rgb(125, 182, 40);
+}
+
+.yop:hover{
+    color: greenyellow;
+}
+
+.btn-logout{
+    background-color: white;
+    color:rgb(88, 144, 185) ;
+    border-radius: 4%;
+    padding: 2% 4%;
+}
+
+.btn-logout:hover{
+    background-color: rgb(241, 241, 241);
+
+}
+
+.icono-volver{
+    width: 30px;
+}
+
+.icono-volver:hover{
+    transform: scale(1.2);
+}
