@@ -1,0 +1,200 @@
+.scroller {
+    width: 100%;
+    height: 700px;
+    margin-left: 4%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 5%;
+    box-shadow: 2px 3px #cccccc;
+}
+
+.imagen {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 1% 1% 3% 2%;
+}
+
+.nivel {
+    background-color: #6899d9;
+    color: white;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5%;
+}
+
+.btn-crear {
+    background-color: #4e93cc;
+    color: white;
+    padding: 0% 1%;
+    font-size: 16px;
+    border-radius: 20%;
+}
+
+
+.btn-actualizar {
+    border-radius: 5%;
+    background-color: #6899d9;
+    color: white;
+    border: none;
+}
+
+.btn-baja {
+    border-radius: 5%;
+    background-color: rgb(208, 208, 47);
+    border: none;
+}
+
+.btn-eliminar {
+    border-radius: 5%;
+    background-color: rgb(208, 47, 47);
+    border: none;
+    color: white;
+}
+
+.card {
+    border-radius: 5%;
+    max-width: 520px;
+}
+
+.card-body{
+    max-height: 350px;
+}
+
+.card-title {
+    font-size: 25px;
+    text-align: right;
+}
+
+li {
+    font-size: 14px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.profesor:hover {
+    color: #6899d9;
+}
+
+h6 {
+    font-size: 16px;
+    color: #212529;
+}
+
+.btn-collapse {
+    color: #598bb4;
+    text-align: center;
+    padding: 0;
+}
+
+.pago {
+    background-color: #b1f8c4;
+    padding: 1%;
+    border-radius: 5%;
+    font-size: 14px;
+}
+
+.baja {
+    background-color: #ece285;
+    padding: 1% 2%;
+    border-radius: 5%;
+    font-size: 14px;
+}
+
+.img_modal {
+    max-width: 120px;
+}
+
+.icono_modal {
+    border-radius: solid black;
+    max-width: 10px;
+}
+
+
+.icono_subtitulo {
+    max-width: 30px;
+}
+
+
+
+
+.table {
+    max-height: 350px;
+    overflow: scroll;
+    border: 1px solid #ddd;
+    border-radius: 3%;
+}
+
+
+th {
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    text-shadow: 1px 1px black;
+    background-color: rgb(121, 172, 210);
+    position: sticky;
+    top: 0;
+
+}
+
+td {
+    text-align: center;
+    border-bottom: 1px solid #dddd;
+    font-size: 13px;
+    background-color: white;
+}
+
+tr:hover {
+    background-color: rgb(121, 172, 210, 0.4);
+}
+
+
+.tableIcon {
+    width: 20%;
+}
+
+.tableIcon1 {
+    width: 35%;
+}
+
+.th_small {
+    width: 10%;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:768px) {
+
+    .scroller {
+        margin-left: 0%;
+    }
+
+}
+
+
+@media only screen and (max-width:1024px) {
+
+    .scroller {
+        height: 300px;
+    }
+
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .btn-collapse {
+
+        font-size: 13px;
+    }
+
+    .imagen{
+        max-width: 70px;
+        max-height:70px;
+    }
+}
