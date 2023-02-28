@@ -84,7 +84,7 @@ h6 {
 
 .btn-collapse {
     color: #598bb4;
-    text-align: center;
+    text-align: right;
     padding: 0;
 }
 
@@ -185,7 +185,7 @@ tr:hover {
 
 
     .card-title {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .btn-collapse {
