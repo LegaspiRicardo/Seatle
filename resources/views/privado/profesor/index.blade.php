@@ -4,12 +4,12 @@
 
 @section('main')
 
-  <div class="main col-12 mb-5 pl-0">
-    <h3 class="col-6 ml-5">Profesores registrados:</h3>
-    
+<h3 class="col-10 mx-auto">Profesores registrados:</h3>
+    <div class="col-10 mx-auto">
     @include ('privado.profesor.data')
     
-    @include ('privado.profesor.formulario_crear')
+    </div>
+
   </div>
 
 @endsection
