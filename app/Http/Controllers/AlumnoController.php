@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alumno;
-use App\Http\Requests\StoreAlumnoRequest;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateAlumnoRequest;
+
+use Illuminate\Http\Request;
 
 class AlumnoController extends Controller
 {
@@ -15,7 +17,8 @@ class AlumnoController extends Controller
      */
     public function index()
     {
-        //
+        $alumnos= Alumno::all();
+        return view('privado.alumno.index')->with('alumno',Alumno::all());
     }
 
     /**
@@ -25,7 +28,7 @@ class AlumnoController extends Controller
      */
     public function create()
     {
-        //
+        return view('privado.alumno.index');
     }
 
     /**
@@ -34,9 +37,29 @@ class AlumnoController extends Controller
      * @param  \App\Http\Requests\StoreAlumnoRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAlumnoRequest $request)
+    public function store(Request $request)
     {
-        //
+        $alumno = new Alumno;
+
+        $alumno->nombres = $request->nombres;
+        $alumno->apellido_pat = $request->apellido_pat;
+        $alumno->apellido_mat = $request->apellido_mat;
+        $alumno->sexo = $request->sexo;
+        $alumno->fecha_nac = $request->fecha_nac;
+        $alumno->tutor = $request->tutor;
+        $alumno->calle = $request->calle;
+        $alumno->numero = $request->numero;
+        $alumno->colonia = $request->colonia;
+        $alumno->cp = $request->cp;
+        $alumno->comentarios = $request->comentarios;
+        $alumno->fecha_ing = $request->fecha_ing;
+        $alumno->nivel = $request->nivel;
+        $alumno->alberca = $request->alberca;
+        $alumno->status = $request->status;
+        $alumno->save();
+
+        echo "registro realizado";
+        return view('privado.alumno.index')->with('alumno',Alumno::all());
     }
 
     /**
@@ -68,9 +91,28 @@ class AlumnoController extends Controller
      * @param  \App\Models\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAlumnoRequest $request, Alumno $alumno)
+    public function update(Request $request, $id)
     {
-        //
+        $alumno = Alumno::find($id);
+
+        $alumno->nombres = $request->nombres;
+        $alumno->apellido_pat = $request->apellido_pat;
+        $alumno->apellido_mat = $request->apellido_mat;
+        $alumno->sexo = $request->sexo;
+        $alumno->fecha_nac = $request->fecha_nac;
+        $alumno->tutor = $request->tutor;
+        $alumno->calle = $request->calle;
+        $alumno->numero = $request->numero;
+        $alumno->colonia = $request->colonia;
+        $alumno->cp = $request->cp;
+        $alumno->comentarios = $request->comentarios;
+        $alumno->fecha_ing = $request->fecha_ing;
+        $alumno->nivel = $request->nivel;
+        $alumno->alberca = $request->alberca;
+        $alumno->status = $request->status;
+        $alumno->save();
+
+        return view('privado.alumno.index')->with('alumno',Alumno::all());
     }
 
     /**
@@ -79,8 +121,10 @@ class AlumnoController extends Controller
      * @param  \App\Models\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alumno $alumno)
+    public function destroy($id)
     {
-        //
+        $alumno = Alumno::find($id);
+        $alumno->delete();
+        return view('privado.alumno.index')->with('alumno',Alumno::all());
     }
 }

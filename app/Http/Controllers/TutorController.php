@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tutor;
-use App\Http\Requests\StoreTutorRequest;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateTutorRequest;
+
+use Illuminate\Http\Request;
 
 class TutorController extends Controller
 {
@@ -15,7 +17,8 @@ class TutorController extends Controller
      */
     public function index()
     {
-        //
+        $tutores= Tutor::all();
+        return view('privado.tutor.index')->with('tutor',Tutor::all());
     }
 
     /**
@@ -25,7 +28,7 @@ class TutorController extends Controller
      */
     public function create()
     {
-        //
+        return view('privado.tutor.index');
     }
 
     /**
@@ -34,9 +37,17 @@ class TutorController extends Controller
      * @param  \App\Http\Requests\StoreTutorRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTutorRequest $request)
+    public function store(Request $request)
     {
-        //
+        $tutor = new Tutor();
+
+        $tutor->nombre = $request->nombre;
+        $tutor->telefono = $request->telefono;
+        $tutor->correo = $request->correo;
+
+        $tutor->save();
+        return view('privado.tutor.index')->with('tutor',Tutor::all());
+    
     }
 
     /**
@@ -68,9 +79,17 @@ class TutorController extends Controller
      * @param  \App\Models\Tutor  $tutor
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTutorRequest $request, Tutor $tutor)
+    public function update(Request $request, $id)
     {
-        //
+        $tutor = Tutor::find($id);
+
+        $tutor->nombre = $request->nombre;
+        $tutor->telefono = $request->telefono;
+        $tutor->correo = $request->correo;
+
+        $tutor->save();
+        return view('privado.tutor.index')->with('tutor',Tutor::all());
+    
     }
 
     /**
@@ -79,8 +98,10 @@ class TutorController extends Controller
      * @param  \App\Models\Tutor  $tutor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tutor $tutor)
+    public function destroy($id)
     {
-        //
+        $tutor = Tutor::find($id);
+        $tutor->delete();
+        return view('privado.tutor.index')->with('tutor',Tutor::all());
     }
 }
