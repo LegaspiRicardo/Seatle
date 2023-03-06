@@ -30,6 +30,7 @@ return new class extends Migration
             $table->unsignedBigInteger('nivel');
             $table->string('alberca', 100);
             $table->string('status', 20);
+            $table->timestamps();
             // ------  Llave foranea para tutor y niveles    --------//
             $table->foreign('tutor')->references('id')->on('tutors');
             $table->foreign('nivel')->references('id')->on('nivels');

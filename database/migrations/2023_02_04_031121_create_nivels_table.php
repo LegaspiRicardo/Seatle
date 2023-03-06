@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('img',255);
             $table->string('color',100);
             $table->string('descripcion',255);
+            $table->timestamps();
         });
     }
 
