@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlumnoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,7 @@ Route::get('/', function () {
 Route::view('/alumnos', 'privado.alumno.index')->name('alumnos');
 Route::view('/tutores', 'privado.tutor.index')->name('tutores');
 Route::view('/profesores', 'privado.profesor.index')->name('profesores');
+Route::view('/niveles', 'privado.nivel.index')->name('niveles');
 Route::view('/panel-control', 'privado.dashboard.index')->name('panel-control');
 Route::view('/inicioSesion', 'privado.sesion.sign-in')->name('inicioSesion');
 
@@ -37,3 +39,9 @@ Route::view('/ubicacion', 'website/ubicacion')->name('ubicacion');
 Route::view('/servicios', 'website/servicios')->name('servicios');
 Route::view('/clasesInfantiles', 'website/clases-ninos')->name('clases-ninos');
 Route::view('/clasesAdultos', 'website/clases-adulto')->name('clases-adultos');
+
+
+
+Route::resource('/alumnoss', AlumnoController::class);
+Route::resource('/tutoress', TutorController::class);
+Route::resource('/niveless', NivelController::class);
