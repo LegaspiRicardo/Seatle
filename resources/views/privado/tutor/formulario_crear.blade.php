@@ -21,9 +21,8 @@
       </div>
 
     <div class="modal-body">
-      <form class="needs-validation" novalidate action="../../../../back_end/controladores/tutor_controlador.php" method="POST"  >
-
-        <input type="hidden" name="opcion" value="4">
+      <form class="needs-validation" novalidate action="/tutoress" method="POST"  >
+        @csrf
 
         <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
         <div class="form-row"> 

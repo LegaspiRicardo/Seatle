@@ -1,21 +1,21 @@
 @extends('privado.componentes.plantilla')
 
-@section('titulo', 'Alumnos')
+@section('titulo', 'Niveles Alumnos')
 
 @section('main')
 
 
-<h3 class="col-10  mx-auto">Alumnos activos:</h3>
+<h3 class="col-10  mx-auto">Niveles:</h3>
 
 <div class="col-8 mx-auto mb-2 text-center">
 
-  @include ('privado.alumno.formulario_crear')
+  @include ('privado.nivel.formulario_crear')
 
 </div>
 
 <div class="col-10 mx-auto ">
 
-  @include ('privado.alumno.data')
+  @include ('privado.nivel.data')
 </div>
 
 
