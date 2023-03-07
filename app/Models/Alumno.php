@@ -20,6 +20,11 @@ class Alumno extends Model
         return $this->belongsTo(Grupo::class);
     }
 
+    public function niveles(): BelongsTo
+    {
+        return $this->belongsTo(Nivel::class);
+    }
+
     public function grupoMixtos(): BelongsTo
     {
         return $this->belongsTo(Grupo_mixto::class);

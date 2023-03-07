@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alumno;
+use App\Models\Nivel;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateAlumnoRequest;
 
@@ -17,8 +18,9 @@ class AlumnoController extends Controller
      */
     public function index()
     {
-        $alumnos= Alumno::all();
-        return view('privado.alumno.index')->with('alumno',Alumno::all());
+        $alumnos = Alumno::all();
+        return view('privado.alumno.index')->with('alumno', Alumno::all())->with('nivel',Nivel::all());
+
     }
 
     /**
@@ -59,7 +61,7 @@ class AlumnoController extends Controller
         $alumno->save();
 
         echo "registro realizado";
-        return view('privado.alumno.index')->with('alumno',Alumno::all());
+        return view('privado.alumno.index')->with('alumno', Alumno::all());
     }
 
     /**
@@ -112,7 +114,7 @@ class AlumnoController extends Controller
         $alumno->status = $request->status;
         $alumno->save();
 
-        return view('privado.alumno.index')->with('alumno',Alumno::all());
+        return view('privado.alumno.index')->with('alumno', Alumno::all());
     }
 
     /**
@@ -125,6 +127,9 @@ class AlumnoController extends Controller
     {
         $alumno = Alumno::find($id);
         $alumno->delete();
-        return view('privado.alumno.index')->with('alumno',Alumno::all());
+        return view('privado.alumno.index')->with('alumno', Alumno::all());
     }
+
+
+
 }
