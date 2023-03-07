@@ -21,7 +21,7 @@
       </div>
 
     <div class="modal-body">
-      <form class="needs-validation" novalidate action="/tutoress" method="POST"  >
+      <form class="needs-validation" novalidate action="/tutores" method="POST"  >
         @csrf
 
         <!------------------------------------Nombre, Modelo, Marca------------------------------------------>

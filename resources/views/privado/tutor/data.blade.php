@@ -12,13 +12,13 @@
   </thead>
   <tbody>
     
-  
+  @foreach($tutor as $tutor)
   <tr>
-      <td>  </td>
+      <td>{{$tutor->nombre}}  </td>
       <td>
-        <span>    </span>
+        <span>{{$tutor->telefono}}     </span>
         <br>
-        <span>   </span>
+        <span>{{$tutor->correo}}    </span>
       </td>
       
       <td> <a  ><img src="../../../PNGs/editar.png" class="tableIcon"> </a></td >
@@ -26,6 +26,6 @@
       <td><a  ><img src="../../../PNGs/delete.png" class="tableIcon"></a></td>
       
   </tr>
-
+@endforeach
   </tbody>
 </table>

@@ -10,6 +10,8 @@
 <div class="scroller">
   <div class="row ">
     
+
+      @foreach ($alumno as $alumno)
     <div class="card col-6 mt-3 mx-auto">
       <!-- --------Bigger screen size card body -------------->
       <div class="card-body pb-0 mb-3 d-none d-xl-block">
@@ -22,7 +24,7 @@
 
           <div class="col-8 mt-2 ml-auto">
             <div class="row text-center ">
-              <h5 class="card-title mb-3 pb-0 "> Nombre niñ@ </h5>
+              <h5 class="card-title mb-3 pb-0 "> {{$alumno->nombres}} {{$alumno->apellido_pat}} {{$alumno->apellido_mat}} </h5>
               <!----------- Titulo claseso---------->
 
               <ul class="col-5 p-0 ml-5 text-left">
@@ -45,10 +47,10 @@
         </div>
 
         <div class="row ">
-          <a href="#" class="nivel col-3 text-center pt-1 mb-0 ml-3">Basico </a>
+          <a href="#" class="nivel col-3 text-center pt-1 mb-0 ml-3">{{$alumno->nivel->nombre}} </a>
           <div class="col-8 ml-5 mt-2  mx-auto">
             <h6 class="d-inline">Fecha de pago: </h6>
-            <p class="d-inline pago"> </p>
+            <p class="d-inline pago" >{{$alumno->fecha_nac}} </p>
           </div>
         </div>
 
@@ -152,7 +154,7 @@
 
     </div>
 
-
+@endforeach
 
 
 
@@ -163,3 +165,5 @@
   </div>
 
 </div>
+
+
