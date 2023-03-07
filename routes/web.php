@@ -27,7 +27,9 @@ Route::view('/niveles', 'privado.nivel.index')->name('niveles');
 Route::view('/panel-control', 'privado.dashboard.index')->name('panel-control');
 Route::view('/inicioSesion', 'privado.sesion.sign-in')->name('inicioSesion');
 
-
+Route::resource('/alumnos-Seattle', AlumnoController::class);
+Route::resource('/tutores', TutorController::class);
+Route::resource('/niveless', NivelController::class);
 
 //Sitio Web
 Route::view('/EscuelaNatacionSeattle', 'website.index')->name('EscuelaNatacionSeattle');
@@ -42,6 +44,3 @@ Route::view('/clasesAdultos', 'website/clases-adulto')->name('clases-adultos');
 
 
 
-Route::resource('/alumnoss', AlumnoController::class);
-Route::resource('/tutoress', TutorController::class);
-Route::resource('/niveless', NivelController::class);
