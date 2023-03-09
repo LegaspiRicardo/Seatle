@@ -20,16 +20,17 @@ Route::get('/', function () {
 
 
 //Seccion privada
-Route::view('/alumnos', 'privado.alumno.index')->name('alumnos');
-Route::view('/tutores', 'privado.tutor.index')->name('tutores');
-Route::view('/profesores', 'privado.profesor.index')->name('profesores');
-Route::view('/niveles', 'privado.nivel.index')->name('niveles');
+Route::view('/alumnos-Seattle', 'privado.alumno.index')->name('alumnos-Seattle');
+Route::view('/tutores-Seattle', 'privado.tutor.index')->name('tutores-Seattle');
+Route::view('/profesores-Seattle', 'privado.profesor.index')->name('profesores-Seattle');
+Route::view('/niveles-Seattle', 'privado.nivel.index')->name('niveles-Seattle');
 Route::view('/panel-control', 'privado.dashboard.index')->name('panel-control');
 Route::view('/inicioSesion', 'privado.sesion.sign-in')->name('inicioSesion');
 
-Route::resource('/alumnos-Seattle', AlumnoController::class);
+Route::resource('/alumnos', AlumnoController::class);
 Route::resource('/tutores', TutorController::class);
-Route::resource('/niveless', NivelController::class);
+Route::resource('/niveles', NivelController::class);
+Route::resource('/profesores', MaestroController::class);
 
 //Sitio Web
 Route::view('/EscuelaNatacionSeattle', 'website.index')->name('EscuelaNatacionSeattle');
