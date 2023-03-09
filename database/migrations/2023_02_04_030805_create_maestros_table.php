@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('comentarios', 255)->nullable();
             $table->string('color', 20)->nullable();
             $table->string('img', 255)->nullable();
+            $table->timestamps();
         });
     }
 
