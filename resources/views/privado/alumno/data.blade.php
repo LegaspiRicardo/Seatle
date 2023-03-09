@@ -11,7 +11,7 @@
   <div class="row ">
     
 
-      @foreach ($alumno as $alumno)
+      @foreach ($alumnos as $alumno)
     <div class="card col-6 mt-3 mx-auto">
       <!-- --------Bigger screen size card body -------------->
       <div class="card-body pb-0 mb-3 d-none d-xl-block">
@@ -47,7 +47,7 @@
         </div>
 
         <div class="row ">
-          <a href="#" class="nivel col-3 text-center pt-1 mb-0 ml-3">{{$alumno->nivel->nombre}} </a>
+          <a href="#" class="nivel col-3 text-center pt-1 mb-0 ml-3">{{$alumno->nivel}} </a>
           <div class="col-8 ml-5 mt-2  mx-auto">
             <h6 class="d-inline">Fecha de pago: </h6>
             <p class="d-inline pago" >{{$alumno->fecha_nac}} </p>
@@ -111,8 +111,7 @@
           <a class="col-3 btn-collapse" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Notas</a>
           <a class="col-3 btn-collapse" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Ver más</a>
           <div class="col-3 text-center p-0">
-            <a><img src="../../../PNGs/editar.png" class="tableIcon text-right m-2"> </a>
-            <a><img src="../../../PNGs/human-error.png" class="tableIcon text-right m-2"> </a>
+          @include ('privado.alumno.edit')
           </div>
         </div>
 

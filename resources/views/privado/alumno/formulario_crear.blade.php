@@ -21,7 +21,7 @@
       </div>
 
       <div class="modal-body text-left">
-        <form class="needs-validation" novalidate action="/alumnoss" method="POST">
+        <form class="needs-validation" novalidate action="/alumnos" method="POST">
           @csrf
 
           <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
@@ -32,13 +32,13 @@
           <div class="row mt-1">
             <div class="col-4  mt-3">
               <img src="../../../PNGs/usuario_masculino.png" alt="" class="img_modal">
-              <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" required>
+              <input type="date" class="form-control mt-2 inputForm" autocomplete="off" id="validationCustom03" name="fecha_nac" required>
             </div>
 
             <div class="col-8 ml-auto pt-3">
               <div class="form-row">
                 <div class="col">
-                  <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" required>
+                  <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom01" name="nombres" required>
                   <label class="col" for="validationCustom01">Nombre(s)</label>
                 </div>
 
@@ -54,12 +54,12 @@
 
               <div class="form-row">
                 <div class="col">
-                  <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" required>
+                  <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom01" name="apellido_pat" required>
                   <label for="validationCustom01">Apellido Paterno</label>
                 </div>
 
                 <div class="col">
-                  <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" required>
+                  <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom02" name="apellido_mat" required>
                   <label for="validationCustom02">Apellido Materno</label>
                 </div>
               </div>
@@ -72,12 +72,13 @@
 
 
                 <div class="col-6 ml-auto">
-                  <input type="search" name="tutor" list="tutors" id="validationCustom01" class="form-control" required>
+                  <input type="text" name="tutor" list="tutors" id="validationCustom01" autocomplete="off" class="form-control" required>
 
                   <datalist id="tutors">
-                    <option value=""> </option>
-
-                  </datalist>
+                    @foreach ($tutores as $tutor)
+                    <option value="{{$tutor->id}}" >  {{$tutor->nombre}} </option>
+                    @endforeach
+                  </datalist> 
 
                   <label for="validationCustom07">Tutor</label>
                   <img src="../../../PNGs/buscar.png" alt="Lupa de busqueda" class="icono_modal">
@@ -95,24 +96,24 @@
           </div>
           <div class="form-row">
             <div class="col">
-              <input type="text" class="form-control inputForm" id="validationCustom01" name="calle" required>
+              <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom01" name="calle" required>
               <label class="col" for="validationCustom01">Calle</label>
             </div>
 
             <div class="col">
-              <input type="text" class="form-control inputForm" id="validationCustom02" name="numero" required>
+              <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom02" name="numero" required>
               <label class="col" for="validationCustom02">Numero</label>
             </div>
           </div>
 
           <div class="form-row">
             <div class="col">
-              <input type="text" class="form-control inputForm" id="validationCustom03" name="colonia" required>
+              <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom03" name="colonia" required>
               <label class="col" for="validationCustom03">Colonia</label>
             </div>
 
             <div class="col">
-              <input type="text" class="form-control inputForm" id="validationCustom03" name="cp" required>
+              <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom03" name="cp" required>
               <label class="col" for="validationCustom03">Codigo Postal</label>
             </div>
           </div>
@@ -134,7 +135,16 @@
               <label for="validationCustom01" class=" col borde_inferior">Alberca</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control inputForm" id="validationCustom03" name="nivel">
+
+
+              <input type="text" name="nivel" list="levels" autocomplete="off" id="validationCustom01" class="form-control" required>
+              <datalist id="levels">
+                @foreach ($niveles as $nivel)
+                <option value="{{$nivel->id}}"> {{$nivel->nivel}} </option>
+                @endforeach
+              </datalist> 
+
+
               <label class="col" for="validationCustom03">Nivel</label>
             </div>
 
@@ -142,7 +152,7 @@
 
           <div class="form-row">
             <div class="col-8">
-              <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios">
+              <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom03" name="comentarios">
               <label class="col" for="validationCustom03">Comentarios</label>
             </div>
 
@@ -206,6 +216,8 @@
     }, false);
   })();
 </script>
+
+
 
 
 </body>
