@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Maestro;
 use App\Http\Requests\StoreMaestroRequest;
 use App\Http\Requests\UpdateMaestroRequest;
+use Illuminate\Http\Request;
 
 class MaestroController extends Controller
 {
@@ -15,7 +16,8 @@ class MaestroController extends Controller
      */
     public function index()
     {
-        //
+        $maestros = Maestro::all();
+        return view('privado.profesor.index')->with('maestro', Maestro::all());
     }
 
     /**
@@ -25,7 +27,7 @@ class MaestroController extends Controller
      */
     public function create()
     {
-        //
+        return view('privado.profesor.index');
     }
 
     /**
@@ -34,9 +36,26 @@ class MaestroController extends Controller
      * @param  \App\Http\Requests\StoreMaestroRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMaestroRequest $request)
+    public function store(Request $request)
     {
-        //
+        $maestro = new Maestro();
+
+        $maestro->nombres = $request->nombres;
+        $maestro->apellidos = $request->apellidos;
+        $maestro->telefono = $request->telefono;
+        $maestro->fecha_nac = $request->fecha_nac;
+        $maestro->fecha_ing = $request->fecha_ing;
+        $maestro->alberca = $request->alberca;
+        $maestro->clave = $request->clave;
+        $maestro->clave1 = $request->clave1;
+        $maestro->status = $request->status;
+        $maestro->comentarios = $request->comentarios;
+        $maestro->color = $request->color;
+        $maestro->img = $request->img;
+        $maestro->save();
+
+        echo ("Registro realizado");
+        return view('privado.profesor.index')->with('maestro', Maestro::all());
     }
 
     /**
@@ -68,9 +87,26 @@ class MaestroController extends Controller
      * @param  \App\Models\Maestro  $maestro
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateMaestroRequest $request, Maestro $maestro)
+    public function update(Request $request, $id)
     {
-        //
+        $maestro = Maestro::find($id);
+
+        $maestro->nombres = $request->nombres;
+        $maestro->apellidos = $request->apellidos;
+        $maestro->telefono = $request->telefono;
+        $maestro->fecha_nac = $request->fecha_nac;
+        $maestro->fecha_ing = $request->fecha_ing;
+        $maestro->alberca = $request->alberca;
+        $maestro->clave = $request->clave;
+        $maestro->clave1 = $request->clave1;
+        $maestro->status = $request->status;
+        $maestro->comentarios = $request->comentarios;
+        $maestro->color = $request->color;
+        $maestro->img = $request->img;
+        $maestro->save();
+
+        echo ("Registro actualizado");
+        return view('privado.profesor.index')->with('maestro', Maestro::all());
     }
 
     /**
@@ -79,8 +115,10 @@ class MaestroController extends Controller
      * @param  \App\Models\Maestro  $maestro
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Maestro $maestro)
+    public function destroy($id)
     {
-        //
+        $maestro = Maestro::find($id);
+        $maestro->delete();
+        return view('privado.profesor.index')->with('maestro', Maestro::all());
     }
 }

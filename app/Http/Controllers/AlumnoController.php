@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Alumno;
 use App\Models\Nivel;
+use App\Models\Tutor;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateAlumnoRequest;
 
@@ -18,8 +19,10 @@ class AlumnoController extends Controller
      */
     public function index()
     {
-        $alumnos = Alumno::all();
-        return view('privado.alumno.index')->with('alumno', Alumno::all())->with('nivel',Nivel::all());
+        return view('privado.alumno.index')
+        ->with('alumnos', Alumno::all())
+        ->with('niveles',Nivel::all())
+        ->with('tutores',Tutor::all());
 
     }
 
@@ -61,7 +64,10 @@ class AlumnoController extends Controller
         $alumno->save();
 
         echo "registro realizado";
-        return view('privado.alumno.index')->with('alumno', Alumno::all());
+        return view('privado.alumno.index')
+        ->with('alumnos', Alumno::all())
+        ->with('niveles',Nivel::all())
+        ->with('tutores',Tutor::all());
     }
 
     /**
@@ -72,7 +78,10 @@ class AlumnoController extends Controller
      */
     public function show(Alumno $alumno)
     {
-        //
+        return view('privado.alumno.edit')
+        ->with('alumnos', Alumno::all())
+        ->with('niveles',Nivel::all())
+        ->with('tutores',Tutor::all());
     }
 
     /**
@@ -81,9 +90,13 @@ class AlumnoController extends Controller
      * @param  \App\Models\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alumno $alumno)
+    public function edit($id)
     {
-        //
+        return view('privado.alumno.edit')
+        ->with('alumnos', Alumno::all())
+        ->with('niveles',Nivel::all())
+        ->with('tutores',Tutor::all())
+        ->with('alumno', Alumno::find($id));
     }
 
     /**
@@ -114,7 +127,10 @@ class AlumnoController extends Controller
         $alumno->status = $request->status;
         $alumno->save();
 
-        return view('privado.alumno.index')->with('alumno', Alumno::all());
+        return view('privado.alumno.index')
+        ->with('alumnos', Alumno::all())
+        ->with('niveles',Nivel::all())
+        ->with('tutores',Tutor::all());
     }
 
     /**
@@ -133,3 +149,5 @@ class AlumnoController extends Controller
 
 
 }
+
+

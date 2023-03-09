@@ -18,7 +18,7 @@ class NivelController extends Controller
     public function index()
     {
         $niveles= Nivel::all();
-        return view('privado.nivel.index');
+        return view('privado.nivel.index')->with('nivel',Nivel::all());
     }
 
     /**
@@ -48,7 +48,7 @@ class NivelController extends Controller
         $nivel->save();
 
         echo "registro realizado";
-        return view('privado.alumno.index')->with('alumno',Nivel::all());
+        return view('privado.nivel.index')->with('nivel',Nivel::all());
     }
 
     /**
