@@ -49,6 +49,13 @@ class AlumnoController extends Controller
         $alumno->nombres = $request->nombres;
         $alumno->apellido_pat = $request->apellido_pat;
         $alumno->apellido_mat = $request->apellido_mat;
+        if($request->hasFile('img')){
+            $img= $request->file('img');
+            $destino='admin/files/alumnos/';
+            $origen=$img->getClientOriginalName();
+            $img->move( $destino,$origen);
+            $alumno->img = $origen;
+        }
         $alumno->sexo = $request->sexo;
         $alumno->fecha_nac = $request->fecha_nac;
         $alumno->tutor = $request->tutor;
@@ -63,7 +70,6 @@ class AlumnoController extends Controller
         $alumno->status = $request->status;
         $alumno->save();
 
-        echo "registro realizado";
         return view('privado.alumno.index')
         ->with('alumnos', Alumno::all())
         ->with('niveles',Nivel::all())
@@ -113,6 +119,15 @@ class AlumnoController extends Controller
         $alumno->nombres = $request->nombres;
         $alumno->apellido_pat = $request->apellido_pat;
         $alumno->apellido_mat = $request->apellido_mat;
+
+        if($request->hasFile('img')){
+            $img= $request->file('img');
+            $destino='admin/files/alumnos/';
+            $origen=$img->getClientOriginalName();
+            $img->move( $destino,$origen);
+            unlink('admin/files/alumnos/'.$alumno->img);
+            $alumno->img = $origen;
+        }
         $alumno->sexo = $request->sexo;
         $alumno->fecha_nac = $request->fecha_nac;
         $alumno->tutor = $request->tutor;
@@ -142,6 +157,7 @@ class AlumnoController extends Controller
     public function destroy($id)
     {
         $alumno = Alumno::find($id);
+        unlink('admin/files/alumnos/'.$alumno->img);
         $alumno->delete();
         return view('privado.alumno.index')->with('alumno', Alumno::all());
     }

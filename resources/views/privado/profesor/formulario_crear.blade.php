@@ -32,9 +32,9 @@ $("#exampleModal1").modal('show');
     </div>
 
   <div class="modal-body">
-    <form class="needs-validation" novalidate action="../../../../back_end/controladores/profesor_controlador.php" method="POST" enctype="multipart/form-data" >
+    <form class="needs-validation" novalidate action="/profesores" method="POST" enctype="multipart/form-data" >
+    @csrf
 
-      <input type="hidden" name="opcion" value="1">
       <!------------------------------------Informacion personal------------------------------------------>
       <div class="Subtitulo text-left">
         <h4>Información personal</h4>

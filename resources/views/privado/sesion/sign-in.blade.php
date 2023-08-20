@@ -48,9 +48,8 @@
 
   <a href="{{ route('EscuelaNatacionSeattle') }}"><img src="../../../PNGs/izquierda.png" class="volver" alt=""></a>
     
-    <form class="form-signin"  method="POST" action="../../../../back_end/controladores/profesor_controlador.php">    
-    <input type="hidden" name="opcion" value="4">  
-
+    <form class="form-signin"  method="POST" action="{{route('login')}}">   
+      @csrf
     
     <div class="text-center mb-3 ">
       <img class="mb-4 imagen-login" src="../../../Imagenes/logo.jpg" alt="" width="150" height="150">
@@ -59,21 +58,14 @@
 
 
   <div class="mb-3">
-    <h6 >Usuario:</h6>
-    <input type="text" id="inputEmail" name="nombres" class="form-control"  required >
+    <h6 >Correo:</h6>
+    <input type="email" id="email" name="email" value="{{old('email')}}"  required >
     
     <h6 class="mt-3">Contraseña:</h6>
-    <input type="password" id="inputPassword" name="contrasena" class="form-control"  required>
+    <input type="password" id="password" name="password" class="form-control"  required>
   </div>
 
-<div class="">
-    <h6 >Puesto:</h6>
-    <select name="puesto" id="inputPuesto" class="form-control text-center" placeholder="Puesto" required>
-      <option value="Admin" class="black">Admin</option>
-      <option value="Profesor" class="black">Profesor</option>
-      <option selected hidden>Seleccione </option>
-    </select>
-  </div>
+
   
   <br>
 

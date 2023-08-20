@@ -9,23 +9,22 @@
 
 <div class="scroller">
   <div class="row ">
-    
 
-      @foreach ($alumnos as $alumno)
+
+    @foreach ($alumnos as $alumno)
     <div class="card col-6 mt-3 mx-auto">
       <!-- --------Bigger screen size card body -------------->
       <div class="card-body pb-0 mb-3 d-none d-xl-block">
 
         <div class="row ">
           <div class="col-3 d-none d-xl-block">
-            <img src="../../../PNGs/usuario_masculino.png" alt="" class="imagen text-center p-0">
+            <img src="/admin/files/alumnos/{{$alumno->img}}" alt="" class="imagen text-center p-0">
           </div>
-
 
           <div class="col-8 mt-2 ml-auto">
             <div class="row text-center ">
               <h5 class="card-title mb-3 pb-0 "> {{$alumno->nombres}} {{$alumno->apellido_pat}} {{$alumno->apellido_mat}} </h5>
-              <!----------- Titulo claseso---------->
+              <!----------- Titulo clases---------->
 
               <ul class="col-5 p-0 ml-5 text-left">
                 <h6 class="card-text  text-left">Clases: </h6>
@@ -50,7 +49,7 @@
           <a href="#" class="nivel col-3 text-center pt-1 mb-0 ml-3">{{$alumno->nivel}} </a>
           <div class="col-8 ml-5 mt-2  mx-auto">
             <h6 class="d-inline">Fecha de pago: </h6>
-            <p class="d-inline pago" >{{$alumno->fecha_nac}} </p>
+            <p class="d-inline pago">{{$alumno->fecha_nac}} </p>
           </div>
         </div>
 
@@ -60,7 +59,7 @@
       <div class="card-body d-none d-md-block d-xl-none">
         <div class="row mb-2 text-center">
           <div class="col-2 mr-auto d-xl-none">
-            <img src="../../../PNGs/usuario_masculino.png" alt="" class="imagen p-0">
+            <img src="/admin/files/alumnos/{{$alumno->img}}" alt="" class="imagen text-center p-0">
           </div>
 
 
@@ -111,7 +110,7 @@
           <a class="col-3 btn-collapse" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Notas</a>
           <a class="col-3 btn-collapse" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Ver más</a>
           <div class="col-3 text-center p-0">
-          @include ('privado.alumno.edit')
+            @include ('privado.alumno.edit')
           </div>
         </div>
 
@@ -153,16 +152,8 @@
 
     </div>
 
-@endforeach
-
-
-
-
-
-
+    @endforeach
 
   </div>
 
 </div>
-
-

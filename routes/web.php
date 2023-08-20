@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\MaestroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,18 +21,31 @@ Route::get('/', function () {
 });
 
 
+require __DIR__.'/auth.php';
+ 
+
+
+
+Route::post('/login', 'Auth\LoginController@store')->name('login');
+
+
+
 //Seccion privada
 Route::view('/alumnos-Seattle', 'privado.alumno.index')->name('alumnos-Seattle');
 Route::view('/tutores-Seattle', 'privado.tutor.index')->name('tutores-Seattle');
 Route::view('/profesores-Seattle', 'privado.profesor.index')->name('profesores-Seattle');
 Route::view('/niveles-Seattle', 'privado.nivel.index')->name('niveles-Seattle');
-Route::view('/panel-control', 'privado.dashboard.index')->name('panel-control');
+Route::view('/panel-control', 'privado.dashboard.index')->name('panel-control')->middleware(['auth']);
 Route::view('/inicioSesion', 'privado.sesion.sign-in')->name('inicioSesion');
 
-Route::resource('/alumnos', AlumnoController::class);
-Route::resource('/tutores', TutorController::class);
-Route::resource('/niveles', NivelController::class);
-Route::resource('/profesores', MaestroController::class);
+Route::resource('/alumnos', AlumnoController::class)->middleware(['auth']);
+Route::resource('/tutores', TutorController::class)->middleware(['auth']);
+Route::resource('/niveles', NivelController::class)->middleware(['auth']);
+Route::resource('/profesores', MaestroController::class)->middleware(['auth']);
+
+
+
+
 
 //Sitio Web
 Route::view('/EscuelaNatacionSeattle', 'website.index')->name('EscuelaNatacionSeattle');
@@ -45,3 +60,6 @@ Route::view('/clasesAdultos', 'website/clases-adulto')->name('clases-adultos');
 
 
 
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

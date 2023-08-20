@@ -46,7 +46,8 @@ class MaestroController extends Controller
         $maestro->fecha_nac = $request->fecha_nac;
         $maestro->fecha_ing = $request->fecha_ing;
         $maestro->alberca = $request->alberca;
-        $maestro->clave = $request->clave;
+        $maestro->email = $request->email;
+        $maestro->password = $request->password;
         $maestro->clave1 = $request->clave1;
         $maestro->status = $request->status;
         $maestro->comentarios = $request->comentarios;
@@ -97,7 +98,8 @@ class MaestroController extends Controller
         $maestro->fecha_nac = $request->fecha_nac;
         $maestro->fecha_ing = $request->fecha_ing;
         $maestro->alberca = $request->alberca;
-        $maestro->clave = $request->clave;
+        $maestro->email = $request->email;
+        $maestro->password = $request->password;
         $maestro->clave1 = $request->clave1;
         $maestro->status = $request->status;
         $maestro->comentarios = $request->comentarios;

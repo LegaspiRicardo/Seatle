@@ -17,8 +17,8 @@ class NivelController extends Controller
      */
     public function index()
     {
-        $niveles= Nivel::all();
-        return view('privado.nivel.index')->with('nivel',Nivel::all());
+        return view('privado.nivel.index'
+        )->with('niveles',Nivel::all());
     }
 
     /**
@@ -42,13 +42,20 @@ class NivelController extends Controller
         $nivel = new Nivel;
 
         $nivel->nivel = $request->nivel;
-        $nivel->img = $request->img;
+        if($request->hasFile('img')){
+            $img= $request->file('img');
+            $destino='admin/files/niveles/';
+            $origen=$img->getClientOriginalName();
+            $img->move( $destino,$origen);
+            $nivel->img = $origen;
+        }
         $nivel->color = $request->color;
         $nivel->descripcion = $request->descripcion;
         $nivel->save();
 
         echo "registro realizado";
-        return view('privado.nivel.index')->with('nivel',Nivel::all());
+        return view('privado.nivel.index')
+        ->with('niveles',Nivel::all());
     }
 
     /**
@@ -59,7 +66,8 @@ class NivelController extends Controller
      */
     public function show(Nivel $nivel)
     {
-        //
+        return view('privado.nivel.index')
+        ->with('niveles',Nivel::all());
     }
 
     /**
@@ -68,9 +76,10 @@ class NivelController extends Controller
      * @param  \App\Models\Nivel  $nivel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Nivel $nivel)
+    public function edit($id)
     {
-        //
+        return view('privado.nivel.edit')
+        ->with('niveles',Nivel::all());
     }
 
     /**
@@ -85,12 +94,20 @@ class NivelController extends Controller
         $nivel = Nivel::find($id);
 
         $nivel->nivel = $request->nivel;
-        $nivel->img = $request->img;
+        if($request->hasFile('img')){
+            $img= $request->file('img');
+            $destino='admin/files/niveles/';
+            $origen=$img->getClientOriginalName();
+            $img->move( $destino,$origen);
+            unlink('admin/files/niveles/'.$nivel->img);
+            $nivel->img = $origen;
+        }
         $nivel->color = $request->color;
         $nivel->descripcion = $request->descripcion;
         $nivel->save();
 
-        return view('privado.nivel.index')->with('nivel',Nivel::all());
+        return view('privado.nivel.index')
+        ->with('niveles',Nivel::all());
     }
 
     /**
@@ -102,7 +119,9 @@ class NivelController extends Controller
     public function destroy($id)
     {
         $nivel = Nivel::find($id);
+        unlink('admin/files/niveles/'.$nivel->img);
         $nivel->delete();
-        return view('privado.nivel.index')->with('nivel',Nivel::all());
+        return view('privado.nivel.index'
+        )->with('niveles',Nivel::all());
     }
 }

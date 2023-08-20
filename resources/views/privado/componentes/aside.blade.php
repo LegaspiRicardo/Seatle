@@ -11,7 +11,7 @@
               </a>
             </li>
             <li>
-              <a class="nav-link " href="{{ route('alumnos') }}">
+              <a class="nav-link " href="{{ url('alumnos') }}">
                 <img src="../../../PNGs/nadador.png" alt="" class="icon-sideBar mr-2">
                 <h5> Alumnos </h5>
               </a>
@@ -30,7 +30,7 @@
             <li class=" pl-4 mb-3"><a class="nav-items " href="../alumno/index.php"> Crear Nuevo </a></li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('profesores') }}">
+              <a class="nav-link" href="{{ url('profesores') }}">
                 <img src="../../../PNGs/silbar.png" alt="" class="icon-sideBar mr-2">
                 <h5> Profesores </h5>
               </a>
@@ -40,7 +40,7 @@
             <li class="pl-4 mb-3"><a class="nav-items" href="../alumno/index.php"> Dar de Baja </a></li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('tutores') }}">
+              <a class="nav-link" href="{{ url('tutores') }}">
                 <img src="../../../PNGs/tutor.png" alt="" class="icon-sideBar mr-2">
                 <h5> Tutores </h5>
               </a>
@@ -51,7 +51,7 @@
 
 
             <li class="nav-item mb-3">
-              <a class="nav-link" href="{{ route('niveles') }}">
+              <a class="nav-link" href="{{ url('niveles') }}">
                 <img src="../../../PNGs/next-level.png" alt="" class="icon-sideBar mr-2">
                 <h5> Niveles </h5>
               </a>
@@ -65,11 +65,23 @@
               </a>
             </li>
 
+
             <li class="nav-item mt-5">
-              <a class="nav-link " href="../../../../back_end/controladores/profesor_controlador.php?opcion=5">
-                <img src="../../../PNGs/logout.png" alt="" class="icon-sideBar mr-2">
-                <h5> Cerrar sesión </h5>
+              <a class="nav-link" href="{{url('configWebsite')}}">
+                <img src="../../../PNGs/web.png" alt="" class="icon-sideBar mr-2">
+                <h5> Config Sitio Web </h5>
               </a>
+            </li>
+
+
+            <li class="nav-item mt-5">
+            <form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <button type="submit">Cerrar sesión</button>
+</form>
+
+
+
             </li>
 
 
