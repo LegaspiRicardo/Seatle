@@ -32,134 +32,139 @@ $("#exampleModal1").modal('show');
     </div>
 
   <div class="modal-body">
-    <form class="needs-validation" novalidate action="/profesores" method="POST" enctype="multipart/form-data" >
-    @csrf
+    <form method="POST" action="{{ route('register') }}">
+                        @csrf
 
-      <!------------------------------------Informacion personal------------------------------------------>
-      <div class="Subtitulo text-left">
-        <h4>Información personal</h4>
-      </div>
+                        <div class="row mb-3"> <!--------------    NOMBRE INPUT ---------->
+                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nombre') }}</label>
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-      <div class="row mt-1">
-          <div class="col-4  mt-3">  
-            <img src="../../../PNGs/usuario_masculino.png" alt="" class="img_modal">
-            <input type="date" class="form-control inputForm" id="validationCustom01" name="fecha_nac" required> 
-            <label for="validationCustom01" class="labels">Fecha Nacimiento</label>
-          </div>
-          
-        <div class="col-8 ml-auto pt-3">
-          <div class="form-row"> 
-            <div class="col">
-              <input type="text" class="form-control inputForm" id="validationCustom02" name="nombres" required>
-              <label for="validationCustom02" class="labels">Nombre(s)</label>
-            </div>
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
 
-            <div class="col">
-              <input type="text" class="form-control inputForm" id="validationCustom03" name="apellidos" required>
-              <label for="validationCustom03" class="labels">Apellidos</label>
-            </div>
-          </div>
 
-          <div class="form-row">
-            <div class="col">
-              <input type="text" class="form-control inputForm" id="validationCustom04" name="telefono" required>
-              <label for="validationCustom04" class="labels">Telefono</label>
-            </div>
+                        <div class="row mb-3"> <!--------------    APELLIDOS INPUT ---------->
+                            <label for="name" class="col-md-4 col-form-label text-md-end">Apellidos</label>
 
-            <div class="col-3 ">
-              <input type="color" class="form-control inputForm colorPicker " id="validationCustom05" name="color">
-              <label for="validationCustom05" class="labels">Color</label>
-              <img src="../../../PNGs/buscar.png" alt="Lupa de busqueda" class="icono_modal">
-            </div>
-          </div>
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('apellidos') is-invalid @enderror" name="apellidos" value="{{ old('apellidos') }}" required autocomplete="apellidos" autofocus>
 
-          <!------------------------------------Fecha ingreso hidden------------------------------------------>
-          <div class="form-row">
-            <div class="col-6 mx-auto">
-              <input type="date" name="fecha_ing"  value="<?php echo date("Y-m-d");?>" id="validationCustom06" class="form-control inputForm" hidden>
-            </div>
-          </div>
+                                @error('apellidos')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
 
-        </div> 
-      </div>          
-        <!------------------------------------Alberca Info------------------------------------------>
+
+
+                        <div class="row mb-3"> <!--------------    APELLIDOS INPUT ---------->
+                            <label for="telefono" class="col-md-4 col-form-label text-md-end">Telefono</label>
+
+                            <div class="col-md-6">
+                                <input id="telefono" type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" value="{{ old('telefono') }}" required autocomplete="telefono" autofocus>
+
+                                @error('telefono')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <!--------------    FECHA INGRESO INPUT ---------->
+                        <input type="date" name="fecha_ing" value="<?php echo date("Y-m-d"); ?>" id="validationCustom06" class="form-control inputForm" hidden>
+
+
+
+                        <!--------------    FECHA INGRESO INPUT ---------->
+                        <div class="col-4  mt-3">
+                            <input type="date" class="form-control inputForm" id="validationCustom01" name="fecha_nac" required>
+                            <label for="validationCustom01" class="labels">Fecha Nacimiento</label>
+                        </div>
+
+
+                        <!--------------    ALBERCA INPUT ---------->
+                        <div class="col-6 styled-select black rounded ">
+                            <select name="alberca" class="form-control">
+                                <option value="Sta Tere">Sta Tere</option>
+                                <option value="Zapopan">Zapopan</option>
+                                <option value=" " selected hidden> </option>
+                            </select>
+                            <label for="validationCustom07" class=" col borde_inferior labels">Alberca</label>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
     
-        <div class="Subtitulo mt-3 text-left">
-          <h4 >Alberca Info</h4>
-          <img src="../../../PNGs/tarjeta-de-identificacion.png" class="icono_subtitulo" alt="">
-        </div>
-
-      <div class="row mt-1">
-          <div class="col-6 styled-select black rounded ">
-            <select name="alberca" class="form-control" >
-                <option value="Sta Tere" >Sta Tere</option>
-                <option value="Zapopan" >Zapopan</option>
-                <option value=" " selected hidden> </option>
-            </select>
-              <label for="validationCustom07" class=" col borde_inferior labels" >Alberca</label>
-          </div>
-
-
-          <div class="col-6 styled-select mx-auto black rounded ">
-            <select name="status" class="form-control" >
-                <option value="Activo" >Activo </option>
-                <option value="Baja" >Baja</option>
-                <option value=" " selected hidden> </option>
-            </select>
-              <label for="validationCustom08" class=" col borde_inferior labels">Estatus</label>
-          </div>
-        </div>       
-
-
-        <div class="row">
-          <div class="col-6">
-            <input type="text" class="form-control inputForm" id="validationCustom09" name="sueldo" required>
-            <label for="validationCustom09" class="labels">Sueldo</label>
-          </div>
-
-          <div class="col">
-            <input type="text" class="form-control inputForm" id="validationCustom10" name="comentarios">
-            <label for="validationCustom10" class="labels">Comentarios</label>
-          </div>
-        </div>
-
-
-
-<br>
-
-
-        <div class="Subtitulo mt-3 mb-3 text-left">
-          <h4 >Sección privada</h4>
-        </div>
-
-
-
-        <div class="row">
-        <label for="validationCustom11" class="labels mb-3 col-10 mx-auto text-center">Exclusiva del sistema</label>
-
-          <div class="col-6">
-            <input type="password" class="form-control inputForm" id="validationCustom12" name="contrasena" placeholder="Ingrese contraseña" required >
-
-          </div>
-
-          <div class="col">
-            <input type="password" class="form-control inputForm" id="validationCustom13" name="contrasena1" placeholder="Confirmar contraseña" required>
-          </div>
-        </div>
-
-        </div>
-        
-        <br>
-
-        <input type="hidden" name="puesto" value="Profesor">
-      <!------------------------------------Modal footer------------------------------------------>
-      <div class="modal-footer">
-        <input type="submit" class=" col-8 btn btn-primary mx-auto" value="Registrar Profesor">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-      </div>
-
-     </form>
    </div>
  </div>
 </div>

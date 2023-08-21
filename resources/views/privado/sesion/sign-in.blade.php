@@ -51,27 +51,27 @@
     <form class="form-signin"  method="POST" action="{{route('login')}}">   
       @csrf
     
-    <div class="text-center mb-3 ">
-      <img class="mb-4 imagen-login" src="../../../Imagenes/logo.jpg" alt="" width="150" height="150">
-      <h1 class="h3 mb-3 font-weight-normal ">Inicio sesión </h1>
-    </div>
+      <div class="text-center mb-3 ">
+        <img class="mb-4 imagen-login" src="../../../Imagenes/logo.jpg" alt="" width="150" height="150">
+        <h1 class="h3 mb-3 font-weight-normal ">Inicio sesión </h1>
+      </div>
 
 
-  <div class="mb-3">
-    <h6 >Correo:</h6>
-    <input type="email" id="email" name="email" value="{{old('email')}}"  required >
-    
-    <h6 class="mt-3">Contraseña:</h6>
-    <input type="password" id="password" name="password" class="form-control"  required>
-  </div>
+      <div class="mb-3">
+        <h6 >Correo:</h6>
+        <input type="email" id="email" name="email" value="{{old('email')}}" class="form-control"  required >
+        
+        <h6 class="mt-3">Contraseña:</h6>
+        <input type="password" id="password" name="password" class="form-control"  required>
+      </div>
 
 
   
-  <br>
+        <br>
 
 
 
-  <input type="submit" class="btn btn-lg btn-primary btn-block mt-4" value="Entrar">
+      <input type="submit" class="btn btn-lg btn-primary btn-block mt-4" value="Entrar">
 </form>
 
 

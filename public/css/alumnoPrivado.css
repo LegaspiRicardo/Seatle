@@ -171,6 +171,7 @@ tr:hover {
 
 label{
     opacity: 0.7;
+    text-align: start;
 }
 
 .form-control{

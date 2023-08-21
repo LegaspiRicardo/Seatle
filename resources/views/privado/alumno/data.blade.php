@@ -64,8 +64,8 @@
 
 
           <div class="col-8 mb-1 p-0">
-            <h5 class="card-title pb-0 "> Eduardo Garibay Perez</h5>
-            <p class="mb-0"># <b>1544</b></p>
+            <h5 class="card-title pb-0 "> {{$alumno->nombres}} {{$alumno->apellido_pat}} {{$alumno->apellido_mat}}</h5>
+            <p class="mb-0"># <b>{{$alumno->id}}</b></p>
           </div>
         </div>
 
@@ -91,11 +91,11 @@
 
         <div class="row">
           <div class="col-6 mr-auto p-0">
-            <a href="#" class="nivel col-3 text-center pb-1 mb-0 ml-3">Basico </a>
+            <a href="#" class="nivel col-3 text-center pb-1 mb-0 ml-3">{{$alumno->nivel}} </a>
           </div>
           <div class="col-6 ml-auto p-0">
             <h6 class="">Fecha de pago: </h6>
-            <p class="pago text-center mb-0">24/05/2023 </p>
+            <p class="pago text-center mb-0">{{$alumno->fecha_nac}} </p>
           </div>
         </div>
 
@@ -105,42 +105,21 @@
 
       <!-- --------Footer -------------->
       <div class="card-footer p-0 bg-transparent ">
-        <div class="row text-right mb-2">
-          <a class="col-3 btn-collapse" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Domicilio</a>
-          <a class="col-3 btn-collapse" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Notas</a>
-          <a class="col-3 btn-collapse" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Ver más</a>
-          <div class="col-3 text-center p-0">
+        <div class="row col-6 ml-auto mb-2 px-0">
+
+          <div class="col text-center p-0">
+            @include ('privado.alumno.read')
+          </div>
+          <div class="col text-center p-0">
             @include ('privado.alumno.edit')
           </div>
         </div>
 
         <div class="row text-center">
           <div class="col-11 mx-auto">
-            <div class="collapse multi-collapse" id="multiCollapseExample1">
-              <div class="card card-body p-2">
-                <h6 class="mb-0">Comentarios:</h6>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-11 mx-auto">
-            <div class="collapse multi-collapse" id="multiCollapseExample2">
-              <div class="card card-body p-2">
-                <h6 class="mb-0">Domicilio:</h6>
-
-                <br>
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-11 mx-auto">
             <div class="collapse multi-collapse" id="multiCollapseExample3">
               <div class="card card-body p-2  text-center">
                 <h6 class="mb-0">Cumpleaños:</h6>
-
               </div>
             </div>
           </div>

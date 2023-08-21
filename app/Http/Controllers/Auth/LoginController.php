@@ -4,13 +4,14 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/panel-control';
 
     public function __construct()
     {
@@ -21,4 +22,16 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
+
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+    
+        // Personaliza el redireccionamiento después del logout
+         return redirect('/inicioSesion'); // Reemplaza '/otra-ruta' con la URL que desees
+    }
+
+
+
 }
