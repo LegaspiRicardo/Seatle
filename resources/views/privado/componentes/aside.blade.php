@@ -3,7 +3,7 @@
     <div class="row d-none d-md-block d-print-block">
       <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
         <div class="sidebar-sticky pt-3">
-          <ul class="nav flex-column">
+          <ul class="nav flex-column pl-4">
             <li class="nav-item ">
               <a class="nav-link mb-3" href="{{ route('panel-control') }}">
                 <img src="../../../PNGs/hogar.png" alt="" class="icon-sideBar mr-2">

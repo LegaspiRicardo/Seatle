@@ -20,7 +20,7 @@
                 </button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body mx-3">
 
 
                 <form data-abide class="needs-validation" novalidate action="/alumnos/{{$alumno->id}}" method="POST" enctype="multipart/form-data">
@@ -45,12 +45,12 @@
                         <div class="col-8 ml-auto pt-3">
                             <div class="form-row">
                                 <div class="col">
-                                    <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" value="{{$alumno->nombres}}" required>
+                                    <input type="text" class="form-control inputForm" id="validationCustom01" name="nombres" value="{{$alumno->nombres}}" readonly>
                                     <label class="col " for="validationCustom01">Nombre(s)</label>
                                 </div>
 
                                 <div class="col-3 styled-select black rounded ">
-                                    <select name="sexo" class="form-control" value="{{$alumno->sexo}}">
+                                    <select name="sexo" class="form-control" value="{{$alumno->sexo}}" readonly>
                                         <option value="Masculino"> Masculino</option>
                                         <option value="Femenino">Femenino</option>
                                         <option value=" {{$alumno->sexo}} " selected hidden><?php echo $alumno->sexo ?> </option>
@@ -61,19 +61,19 @@
 
                             <div class="form-row">
                                 <div class="col">
-                                    <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" value="{{$alumno->apellido_pat}}" required>
+                                    <input type="text" class="form-control inputForm" id="validationCustom01" name="apellido_pat" value="{{$alumno->apellido_pat}}" readonly>
                                     <label class="col " for="validationCustom01">Apellido Paterno</label>
                                 </div>
 
                                 <div class="col">
-                                    <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" value="{{$alumno->apellido_mat}}" required>
+                                    <input type="text" class="form-control inputForm" id="validationCustom02" name="apellido_mat" value="{{$alumno->apellido_mat}}" readonly>
                                     <label class="col " for="validationCustom01">Apellido Materno</label>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="col-4 mx-auto">
-                                    <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" value="{{$alumno->fecha_nac}}"  >
+                                    <input type="date" class="form-control mt-2 inputForm" id="validationCustom03" name="fecha_nac" value="{{$alumno->fecha_nac}}" readonly>
                                     <label class="col" for="validationCustom01">Fecha nac.</label>
                                 </div>
                             </div>
@@ -81,34 +81,32 @@
 
                         </div>
                     </div>
-
-
                     <br>
                     <!------------------------------------Domicilio------------------------------------------>
-                    <div class="Subtitulo text-left">
+                    <div class="Subtitulo text-left mb-3">
                         <h4 class="d-inline mr-3">Domicilio</h4>
                         <img src="../../../PNGs/ubicacion.png" class="icono_subtitulo" alt="">
                     </div>
                     <div class="form-row">
                         <div class="col">
-                            <input type="text" class="form-control inputForm" id="validationCustom01" name="calle" value="{{$alumno->calle}}" required>
+                            <input type="text" class="form-control inputForm" id="validationCustom01" name="calle" value="{{$alumno->calle}}" readonly>
                             <label class="col" for="validationCustom01">Calle</label>
                         </div>
 
                         <div class="col">
-                            <input type="text" class="form-control inputForm" id="validationCustom02" name="numero" value="{{$alumno->numero}}" required>
+                            <input type="text" class="form-control inputForm" id="validationCustom02" name="numero" value="{{$alumno->numero}}" readonly>
                             <label class="col" for="validationCustom02">Numero</label>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="col">
-                            <input type="text" class="form-control inputForm" id="validationCustom03" name="colonia" value="{{$alumno->colonia}}" required>
+                            <input type="text" class="form-control inputForm" id="validationCustom03" name="colonia" value="{{$alumno->colonia}}" readonly>
                             <label class="col" for="validationCustom03">Colonia</label>
                         </div>
 
                         <div class="col">
-                            <input type="text" class="form-control inputForm" id="validationCustom03" name="cp" value="{{$alumno->cp}}" required>
+                            <input type="text" class="form-control inputForm" id="validationCustom03" name="cp" value="{{$alumno->cp}}" readonly>
                             <label class="col" for="validationCustom03">Codigo Postal</label>
                         </div>
                     </div>
@@ -116,13 +114,13 @@
                     <br>
                     <br>
                     <!------------------------------------Alberca Info------------------------------------------>
-                    <div class="Subtitulo text-left">
+                    <div class="Subtitulo text-left mb-3">
                         <h4 class="d-inline mr-3">Alberca Info</h4>
                         <img src="../../../PNGs/tarjeta-de-identificacion.png" class="icono_subtitulo" alt="">
                     </div>
                     <div class="form-row">
                         <div class="col styled-select black rounded ">
-                            <select name="alberca" class="form-control" value="{{$alumno->alberca}}">
+                            <select name="alberca" class="form-control" value="{{$alumno->alberca}}" readonly>
                                 <option value="Sta Tere">Sta Tere</option>
                                 <option value="Zapopan">Zapopan</option>
                                 <option value="{{$alumno->alberca}}" selected hidden>{{$alumno->alberca}} </option>
@@ -130,7 +128,7 @@
                             <label for="validationCustom01" class=" col borde_inferior">Alberca</label>
                         </div>
                         <div class="col">
-                            <input type="search" list="levels" autocomplete="off" class="form-control inputForm" value="{{$alumno->nivel}}" id="validationCustom03" name="nivel" required>
+                            <input type="search" list="levels" autocomplete="off" class="form-control inputForm" value="{{$alumno->nivel}}" id="validationCustom03" name="nivel" readonly>
 
                             <datalist id="levels">
                                 @foreach ($niveles as $nivel)
@@ -148,12 +146,12 @@
 
 
                         <div class="col-8">
-                            <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios" value="{{$alumno->comentarios}}">
+                            <input type="text" class="form-control inputForm" id="validationCustom03" name="comentarios" value="{{$alumno->comentarios}}" readonly>
                             <label class="col" for="validationCustom03">Comentarios</label>
                         </div>
 
                         <div class="col-3 styled-select mx-auto black rounded ">
-                            <select name="status" class="form-control" value="{{$alumno->status}}">
+                            <select name="status" class="form-control" value="{{$alumno->status}}" readonly>
                                 <option value="Activo">Activo </option>
                                 <option value="Pausa">Pausa</option>
                                 <option value="Baja">Baja</option>

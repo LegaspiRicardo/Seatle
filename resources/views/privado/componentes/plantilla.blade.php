@@ -16,7 +16,7 @@
     </div>
 
     <!-------------------------------Main Medium Screen Size------------------------------------------------>
-    <div class="d-none d-md-block d-lg-none col-10  mx-auto">
+    <div class="d-none d-md-block d-lg-none col-10  ml-auto">
         @yield('main')
     </div>
 
@@ -29,6 +29,20 @@
 
 
     <!-------------------------------Footer------------------------------------------------>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 
 </body>
 
