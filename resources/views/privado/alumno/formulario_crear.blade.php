@@ -21,7 +21,7 @@
       </div>
 
       <div class="modal-body text-left">
-        <form class="needs-validation" novalidate action="/alumnos" method="POST">
+        <form data-abide class="needs-validation" novalidate action="/alumnos" method="POST" enctype="multipart/form-data">
           @csrf
 
           <!------------------------------------Nombre, Modelo, Marca------------------------------------------>
@@ -31,24 +31,30 @@
 
           <div class="row mt-1">
             <div class="col-4  mt-3">
-              <img src="../../../PNGs/usuario_masculino.png" alt="" class="img_modal">
-              <input type="date" class="form-control mt-2 inputForm" autocomplete="off" id="validationCustom03" name="fecha_nac" required>
+
+              <div class="col imagen-formulario">
+                <img src="/PNGs/nadador.png" id="preview2" src="#" alt="Preview Image" class="img-form-registro mt-2">
+              </div>
+
+              <div class="col imagen-formulario">
+                <input type="file" data-preview-id="preview2" data-position="2" class="form-control btn-input-img" name="img" accept="image/*" required>
+              </div>
+
+
+              <div class="col- mx-auto text-center">
+                <input type="date" class="form-control mt-2 inputForm" autocomplete="off" id="validationCustom03" name="fecha_nac" required>
+                <label for="validationCustom02">Fecha Nacimiento</label>
+              </div>
+
             </div>
+
+
 
             <div class="col-8 ml-auto pt-3">
               <div class="form-row">
                 <div class="col">
                   <input type="text" class="form-control inputForm" autocomplete="off" id="validationCustom01" name="nombres" required>
                   <label class="col" for="validationCustom01">Nombre(s)</label>
-                </div>
-
-                <div class="col-3 styled-select black rounded ">
-                  <select name="sexo" class="form-control">
-                    <option value="Masculino"> Masculino</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value=" " selected hidden> </option>
-                  </select>
-                  <label for="validationCustom02" class=" col borde_inferior">Sexo</label>
                 </div>
               </div>
 
@@ -65,27 +71,50 @@
               </div>
 
               <!------------------------------------Fecha Ingreso, Tutor------------------------------------------>
-              <div class="form-row">
-                <div class="col-6">
-                  <input type="date" name="fecha_ing" value="<?php echo date("Y-m-d"); ?>" id="validationCustom01" class="form-control" hidden>
+              <div class="form-row mt-1">
+
+
+
+
+                <div class="col styled-select black rounded ">
+                  <select name="sexo" class="form-control mt-2">
+                    <option value="Masculino"> Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value=" " selected hidden> </option>
+                  </select>
+                  <label for="validationCustom02" class=" borde_inferior">Sexo</label>
                 </div>
 
 
+
+
+
+                <input type="date" name="fecha_ing" value="<?php echo date("Y-m-d"); ?>" id="validationCustom01" class="form-control" hidden>
+
+
+
                 <div class="col-6 ml-auto">
-                  <input type="text" name="tutor" list="tutors" id="validationCustom01" autocomplete="off" class="form-control" required>
+                  <input type="text" name="tutor" list="tutors" id="validationCustom01" autocomplete="off" class="form-control mt-2" required>
 
                   <datalist id="tutors">
                     @foreach ($tutores as $tutor)
-                    <option value="{{$tutor->id}}" >  {{$tutor->nombre}} </option>
+                    <option value="{{$tutor->id}}"> {{$tutor->nombre}} </option>
                     @endforeach
-                  </datalist> 
+                  </datalist>
 
                   <label for="validationCustom07">Tutor</label>
                   <img src="../../../PNGs/buscar.png" alt="Lupa de busqueda" class="icono_modal">
                 </div>
+
+
+
               </div>
             </div>
           </div>
+
+
+
+
 
 
           <br>
@@ -142,7 +171,7 @@
                 @foreach ($niveles as $nivel)
                 <option value="{{$nivel->id}}"> {{$nivel->nivel}} </option>
                 @endforeach
-              </datalist> 
+              </datalist>
 
 
               <label class="col" for="validationCustom03">Nivel</label>
@@ -172,8 +201,8 @@
           <br>
 
           <div class="modal-footer">
-            <input type="submit" class=" col-8 btn btn_tutor mx-auto" value="Registrar Alumno">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <input type="submit" class=" col-8 btn btn_alumno mx-auto" value="Registrar Alumno">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
           </div>
 
@@ -217,6 +246,35 @@
   })();
 </script>
 
+
+
+
+
+
+<script>
+  function previewImage() {
+    var input = this;
+    var file = input.files[0];
+    var position = input.dataset.position;
+    var previewId = "preview" + position;
+    var preview = document.getElementById(previewId);
+    var reader = new FileReader();
+
+    reader.addEventListener("load", function() {
+      preview.src = reader.result;
+    }, false);
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+
+  var inputs = document.getElementsByClassName('btn-input-img');
+
+  for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('change', previewImage, false);
+  }
+</script>
 
 
 

@@ -35,6 +35,12 @@ body{
 .btn_alumno{
   background-color: white;
   color: #204e81;
+  border: solid 1px #204e81;
+}
+
+.btn_alumno:hover{
+  color: white;
+  background-color: #204e81;
 }
 
 .btn_tutor{

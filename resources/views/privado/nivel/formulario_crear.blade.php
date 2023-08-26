@@ -1,6 +1,3 @@
-<?php //echo $_GET['resultado']; 
-?>
-
 <!--------------------- Button trigger modal ------------------>
 <button type="button" class="btn  btn_tutor_mas" data-toggle="modal" data-target="#exampleModal17">
     +
@@ -33,14 +30,18 @@ $("#exampleModal1").modal('show');
             </div>
 
             <div class="modal-body">
-                <form class="needs-validation" novalidate action="/niveless" method="POST" >
+                <form data-abide class="needs-validation" novalidate action="/niveles" method="POST" enctype="multipart/form-data">
                     @csrf
                     <!------------------------------------Informacion general------------------------------------------>
                     <div class="row mt-1">
                         <div class="col-4  mt-3">
-                            <img src="../../../PNGs/usuario_masculino.png" alt="" class="img_modal">
-                            <input type="text" class="form-control inputForm" id="validationCustom02" name="img" required>
-                            <label for="validationCustom01" class="labels">Imagen</label>
+                            <div class="col imagen-formulario">
+                                <img src="/PNGs/next-level.png" id="preview2" src="#" alt="Preview Image" class="img-form-registro mt-2">
+                            </div>
+
+                            <div class="col imagen-formulario">
+                                <input type="file" data-preview-id="preview2" data-position="2" class="form-control btn-input-img" name="img" accept="image/*" required>
+                            </div>
                         </div>
 
                         <div class="col-8 ml-auto pt-3">
@@ -51,7 +52,7 @@ $("#exampleModal1").modal('show');
                                 </div>
 
                                 <div class="col-3 ">
-                                    <input type="text" class="form-control inputForm colorPicker " id="validationCustom05" name="color">
+                                    <input type="color" class="form-control inputForm colorPicker " id="validationCustom05" name="color">
                                     <label for="validationCustom05" class="labels">Color</label>
                                     <img src="../../../PNGs/buscar.png" alt="Lupa de busqueda" class="icono_modal">
                                 </div>
@@ -59,7 +60,7 @@ $("#exampleModal1").modal('show');
 
                             <div class="form-row">
                                 <div class="col">
-                                    <textarea class="form-control inputForm" id="validationCustom04"  rows="4" cols="50" name="descripcion" required></textarea>
+                                    <textarea class="form-control inputForm" id="validationCustom04" rows="4" cols="50" name="descripcion" required></textarea>
                                     <label for="validationCustom04" class="labels">Descripción</label>
                                 </div>
 
@@ -116,6 +117,34 @@ $("#exampleModal1").modal('show');
             }, false);
         })();
     </script>
+
+
+    <script>
+        function previewImage() {
+            var input = this;
+            var file = input.files[0];
+            var position = input.dataset.position;
+            var previewId = "preview" + position;
+            var preview = document.getElementById(previewId);
+            var reader = new FileReader();
+
+            reader.addEventListener("load", function() {
+                preview.src = reader.result;
+            }, false);
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+
+        var inputs = document.getElementsByClassName('btn-input-img');
+
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('change', previewImage, false);
+        }
+    </script>
+
+
 
 
     </body>

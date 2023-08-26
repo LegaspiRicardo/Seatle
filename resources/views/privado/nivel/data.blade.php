@@ -14,17 +14,17 @@
     </thead>
     <tbody>
 
-
+    @foreach ($niveles as $nivel)
         <tr>
-            <td>Estrella de Mar </td>
-            <td> <span>Img.jpg </span> </td>
-            <td>Amarillo </td>
-            <td>En estte nivel el niño podrá ... </td>
-            <td> <a><img src="../../../PNGs/editar.png" class="tableIcon"> </a></td>
+            <td>{{$nivel->nivel}} </td>
+            <td> <img src="/admin/files/niveles/{{$nivel->img}}" alt="" class="imagen text-center p-0"> </td>
+            <td>{{$nivel->color}} </td>
+            <td>{{$nivel->descripcion}}</td>
+            <td> @include ('privado.nivel.edit')</td>
 
-            <td><a><img src="../../../PNGs/delete.png" class="tableIcon"></a></td>
+            <td>@include ('privado.nivel.show')</td>
 
         </tr>
-
+@endforeach
     </tbody>
 </table>

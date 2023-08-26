@@ -19,15 +19,16 @@ return new class extends Migration
             $table->string('apellido_pat', 100);
             $table->string('apellido_mat', 100)->nullable();
             $table->string('sexo', 10)->nullable();
+            $table->string('img', 255)->nullable();
             $table->timestamp('fecha_nac')->nullable();
-            $table->unsignedBigInteger('tutor');
+            $table->foreignId('tutor');
             $table->string('calle', 100);
             $table->string('numero', 10);
             $table->string('colonia',100);
             $table->string('cp', 6);
             $table->string('comentarios', 255)->nullable();
             $table->timestamp('fecha_ing')->nullable();
-            $table->unsignedBigInteger('nivel');
+            $table->foreignId('nivel');
             $table->string('alberca', 100);
             $table->string('status', 20);
             $table->timestamps();

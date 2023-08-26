@@ -21,7 +21,8 @@ return new class extends Migration
             $table->timestamp('fecha_nac')->nullable();
             $table->timestamp('fecha_ing')->nullable();
             $table->string('alberca',60);
-            $table->string('clave',60)->nullable();
+            $table->string('email',60)->unique();
+            $table->string('password',60);
             $table->string('clave1',60)->nullable();
             $table->string('status',20)->nullable();
             $table->string('comentarios', 255)->nullable();
