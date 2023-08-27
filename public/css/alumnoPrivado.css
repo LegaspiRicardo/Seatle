@@ -182,20 +182,18 @@ label {
 
 
 .swiper {
-    width: 80%;
-    height: 350px;
-    
-    background: red;
+    width: 100%;
+    height: 550px;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: green;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    width: 100%;
 }
 
 .swiper-slide img {
@@ -206,6 +204,9 @@ label {
 }
 
 
+.numeroId{
+    font-size: 25px;
+}
 
 
 @media only screen and (max-width:768px) {
@@ -233,8 +234,10 @@ label {
         font-size: 13px;
     }
 
-    .imagen {
+    /* .imagen {
         max-width: 70px;
         max-height: 70px;
-    }
+    } */
 }
+
+
