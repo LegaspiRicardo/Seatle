@@ -82,12 +82,13 @@ class AlumnoController extends Controller
      * @param  \App\Models\Alumno  $alumno
      * @return \Illuminate\Http\Response
      */
-    public function show(Alumno $alumno)
+    public function show($id)
     {
-        return view('privado.alumno.edit')
+        return view('privado.alumno.read')
         ->with('alumnos', Alumno::all())
         ->with('niveles',Nivel::all())
-        ->with('tutores',Tutor::all());
+        ->with('tutores',Tutor::all())
+        ->with('alumno', Alumno::find($id));
     }
 
     /**

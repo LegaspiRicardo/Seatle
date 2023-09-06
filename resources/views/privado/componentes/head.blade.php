@@ -18,16 +18,20 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 
-
+<!-- 
     <script src="../../../Calendario/js/jquery.min.js"></script>
     <script src="../../../Calendario/js/moment.min.js"></script>
 
-    <!--Full Calendar-->
+    Full Calendar--><!--
     <link rel="stylesheet" href="../../../Calendario/css/fullcalendar.min.css">
     <script src="../../../Calendario/js/fullcalendar.min.js"></script>
-    <script src="../../../Calendario/locale/es.js"></script>
+    <script src="../../../Calendario/locale/es.js"></script> -->
 
 
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="shortcut icon" href="../Imagenes/favicon.jpg">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 </head>
