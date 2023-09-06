@@ -5,18 +5,15 @@
 @section('main')
 
 
-<h3 class="col-10  mx-auto">Alumnos activos:</h3>
+  <h3 class="col-10  mx-auto">Alumnos activos:</h3>
 
-<div class="col-8 mx-auto mb-2 text-center">
+  <div class="col-8 mx-auto mb-2 text-center">
+    @include ('privado.alumno.formulario_crear')
+  </div>
 
-  @include ('privado.alumno.formulario_crear')
-
-</div>
-
-<div class="col-10 mx-auto ">
-
-  @include ('privado.alumno.data')
-</div>
+  <div class="col-11 ml-auto mr-3 px-2">
+    @include ('privado.alumno.data')
+  </div>
 
 
 @endsection

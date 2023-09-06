@@ -56,6 +56,7 @@
 .card {
     border-radius: 5%;
     max-width: 520px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.203);
 }
 
 .card-body {
@@ -103,6 +104,7 @@ h6 {
     border-radius: 5%;
     font-size: 14px;
 }
+
 
 .img_modal {
     max-width: 120px;
@@ -180,10 +182,13 @@ label {
 }
 
 
+.swiperMedium{
+    height:10%; 
+}
 
 .swiper {
     width: 100%;
-    height: 550px;
+    height: 480px;
 }
 
 .swiper-slide {
@@ -196,11 +201,24 @@ label {
     width: 100%;
 }
 
-.swiper-slide img {
+.swiper-slideMedium {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+
+ .swiper-img {
     display: block;
     width: 100%;
-    height: 100%;
+    max-height: 150px;
     object-fit: cover;
+    border-radius: 50px;
 }
 
 
@@ -215,6 +233,13 @@ label {
         margin-left: 0%;
     }
 
+    .tableIcon {
+        width: 30%;
+    }
+
+    .card-title {
+        text-align: left;
+    }
 }
 
 
@@ -234,10 +259,10 @@ label {
         font-size: 13px;
     }
 
-    /* .imagen {
-        max-width: 70px;
-        max-height: 70px;
-    } */
 }
 
 
+@media only screen and (max-width:420px) {  
+
+
+}
