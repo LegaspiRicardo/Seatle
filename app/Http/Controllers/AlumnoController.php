@@ -84,6 +84,7 @@ class AlumnoController extends Controller
      */
     public function show($id)
     {
+        $alumno=Alumno::find($id);
         return view('privado.alumno.read')
         ->with('alumnos', Alumno::all())
         ->with('niveles',Nivel::all())

@@ -54,19 +54,19 @@
     </div>
     <!-- --------Footer -------------->
     <div class="card-footer p-0 bg-transparent ">
-      <div class="row col-6 ml-auto mb-2 px-0">
+      <div class="row col mt-2 mb-2 px-0">
 
 
+      <div class="col-3 text-center mr-auto p-0">
+          @include ('privado.alumno.edit')
+        </div>
 
-
-        <div class="col text-center p-0">
+  
+        <div class="col-3 text-right p-0">
           @include ('privado.alumno.read')
         </div>
 
 
-        <div class="col text-center p-0">
-          @include ('privado.alumno.edit')
-        </div>
 
 
 
