@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<a type="button" href="{{url('/alumnos/'.$alumno->id.'/show')}}" data-toggle="modal" data-target="#exampleModal{{$alumno->id}}">
+<a type="button" href="{{url('/alumnos/'.$alumno->id.'/show')}}" data-toggle="modal" data-target="#readModal{{$alumno->id}}">
     Ver más
 </a>
 
@@ -9,12 +9,12 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal{{$alumno->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="readModal{{$alumno->id}}" tabindex="-1" aria-labelledby="readModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
 
             <div class="modal-header">
-                <h3 class="modal-title mx-auto" id="exampleModalLabel">Ver Información Alumno</h3>
+                <h3 class="modal-title mx-auto" id="readModalLabel">Ver Información Alumno</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
