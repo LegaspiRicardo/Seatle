@@ -182,8 +182,8 @@ label {
 }
 
 
-.swiperMedium{
-    height:10%; 
+.swiperMedium {
+    height: 10%;
 }
 
 .swiper {
@@ -220,9 +220,32 @@ label {
     border-radius: 50px;
 }
 
-.numeroId{
+.numeroId {
     font-size: 25px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(121, 172, 210);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 142, 173);
+}
+
+.seccion-data-alumnos {
+    overflow-x: hidden;
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+
+
 
 @media only screen and (max-width:768px) {
 
@@ -259,7 +282,4 @@ label {
 }
 
 
-@media only screen and (max-width:420px) {  
-
-
-}
+@media only screen and (max-width:420px) {}

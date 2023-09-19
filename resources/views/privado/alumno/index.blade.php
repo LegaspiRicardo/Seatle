@@ -11,7 +11,7 @@
     @include ('privado.alumno.formulario_crear')
   </div>
 
-  <div class="col-10 mx-auto px-2">
+  <div class="col-11 mx-auto px-2 seccion-data-alumnos">
     @include ('privado.alumno.data')
   </div>
 
